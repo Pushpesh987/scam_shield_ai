@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_dashboard" name="shell-type" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {"colors": {"on-secondary-fixed-variant": "#003ea8", "on-tertiary-fixed": "#002113", "on-primary-container": "#004965", "tertiary": "#56e5a9", "on-primary": "#00354a", "on-primary-fixed": "#001e2c", "on-error-container": "#ffdad6", "outline-variant": "#3e484f", "secondary-fixed": "#dbe1ff", "outline": "#87929a", "surface-tint": "#7bd0ff", "primary-fixed": "#c4e7ff", "surface-dim": "#0e131e", "background": "#0e131e", "tertiary-container": "#30c88f", "surface-container": "#1b1f2b", "tertiary-fixed": "#6ffbbe", "secondary-container": "#0053db", "surface-container-low": "#161b27", "inverse-primary": "#00668a", "surface-container-highest": "#303541", "on-secondary": "#002a78", "on-secondary-fixed": "#00174b", "surface-variant": "#303541", "on-background": "#dee2f2", "on-primary-fixed-variant": "#004c69", "primary-fixed-dim": "#7bd0ff", "surface-container-high": "#252a36", "secondary-fixed-dim": "#b4c5ff", "surface": "#0e131e", "on-error": "#690005", "on-tertiary-container": "#004e34", "on-secondary-container": "#cdd7ff", "secondary": "#b4c5ff", "surface-container-lowest": "#090e19", "on-tertiary": "#003824", "on-tertiary-fixed-variant": "#005236", "tertiary-fixed-dim": "#4edea3", "inverse-on-surface": "#2b303d", "inverse-surface": "#dee2f2", "on-surface-variant": "#bdc8d1", "error": "#ffb4ab", "on-surface": "#dee2f2", "primary-container": "#38bdf8", "primary": "#8ed5ff", "surface-bright": "#343946", "error-container": "#93000a"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "spacing": {"margin-mobile": "1rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-md": "1rem", "gutter-mobile": "1rem", "margin": "2rem", "space-xs": "0.25rem"}, "fontFamily": {"headline-xl-mobile": ["Manrope"], "body-md": ["Manrope"], "title-sm": ["Manrope"], "body-sm": ["Manrope"], "label-lg": ["JetBrains Mono"], "headline-lg-mobile": ["Manrope"], "headline-lg": ["Manrope"], "title-md": ["Manrope"], "body-lg": ["Manrope"], "headline-xl": ["Manrope"], "headline-sm": ["Manrope"], "label-md": ["JetBrains Mono"], "headline-md": ["Manrope"], "label-sm": ["JetBrains Mono"]}, "fontSize": {"headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "body-md": ["14px", {"lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400"}], "title-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400"}], "label-lg": ["13px", {"lineHeight": "18px", "letterSpacing": "0.05em", "fontWeight": "500"}], "headline-lg-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700"}], "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "body-lg": ["16px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-xl": ["44px", {"lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "800"}], "headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600"}], "label-md": ["11px", {"lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500"}], "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "500"}]}}}};</script>
+</head>
+
+<body class="bg-background font-body-md text-on-surface antialiased">
+  <aside
+    class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.3)]">
+    <div class="flex flex-col">
+      <div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest">
+        <div class="w-9 h-9 rounded-xl bg-surface-container-low flex items-center justify-center"><span
+            class="material-symbols-outlined text-primary-container text-[22px]">shield</span></div>
+        <div class="flex flex-col"><span
+            class="font-title-sm text-title-sm text-on-surface tracking-tight leading-none">ScamShield <span
+              class="text-primary-container font-headline-sm text-headline-sm">AI</span></span>
+          <div class="flex items-center gap-space-xs mt-space-xs"><span
+              class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span
+              class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">AI Sentinel
+              Node</span></div>
+        </div>
+      </div>
+      <nav class="flex flex-col gap-space-xs px-space-sm mt-space-md"
+        data-active-classes="bg-surface-container-high text-primary font-title-sm rounded-lg"><a
+          class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"
+          data-path="overview" href="dashboard.html"><span
+            class="material-symbols-outlined text-[20px]">grid_view</span><span
+            class="font-body-md text-body-md">Overview</span></a><a
+          class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"
+          data-path="analyze-message" href="analyze-message.html"><span
+            class="material-symbols-outlined text-[20px]">sms</span><span class="font-body-md text-body-md">Analyze
+            Message</span></a><a
+          class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"
+          data-path="analyze-transcript" href="transcript-analyzer.html"><span
+            class="material-symbols-outlined text-[20px]">record_voice_over</span><span
+            class="font-body-md text-body-md">Analyze Transcript</span></a><a
+          class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"
+          data-path="check-number" href="number-checker.html"><span
+            class="material-symbols-outlined text-[20px]">dialpad</span><span class="font-body-md text-body-md">Check
+            Number</span></a><a
+          class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"
+          data-path="live-protection" href="live-monitoring.html">
+          <div class="flex items-center gap-space-sm"><span
+              class="material-symbols-outlined text-[20px]">radar</span><span class="font-body-md text-body-md">Live
+              Protection</span></div><span
+            class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary">OS-BOUND</span>
+        </a><a
+          class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"
+          data-path="evidence-reports" href="evidence-report.html"><span
+            class="material-symbols-outlined text-[20px]">folder_supervised</span><span
+            class="font-body-md text-body-md">Evidence Reports</span></a><a
+          class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"
+          data-path="history" href="history.html"><span
+            class="material-symbols-outlined text-[20px]">history</span><span
+            class="font-body-md text-body-md">History</span></a><a
+          class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all"
+          data-path="settings" href="settings.html"><span class="material-symbols-outlined text-[20px]">tune</span><span
+            class="font-body-md text-body-md">Settings</span></a></nav>
+    </div>
+    <div class="p-space-sm m-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+      <div class="flex items-center justify-between"><span
+          class="font-label-sm text-label-sm text-on-surface-variant uppercase">Telemetry</span><span
+          class="w-2 h-2 rounded-full bg-tertiary"></span></div>
+      <div class="flex flex-col gap-space-xs font-label-md text-label-md text-outline">
+        <div class="flex items-center justify-between"><span class="text-on-surface-variant">SANDBOX</span><span
+            class="text-tertiary">EPHEMERAL</span></div>
+        <div class="flex items-center justify-between"><span class="text-on-surface-variant">ZERO-LOG</span><span
+            class="text-primary">ENFORCED</span></div>
+        <div class="flex items-center justify-between"><span class="text-on-surface-variant">RUNTIME</span><span
+            class="text-on-surface">v2.4-sec</span></div>
+      </div>
+    </div>
+  </aside>
+  <div class="pl-72">
+    <header
+      class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 flex items-center justify-between px-gutter shadow-[0_1px_8px_rgba(0,0,0,0.25)]">
+      <div class="flex items-center gap-space-md w-96">
+        <div
+          class="w-full flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl bg-surface-container-lowest text-on-surface-variant">
+          <span class="material-symbols-outlined text-[18px]">search</span><span
+            class="font-body-sm text-body-sm flex-1 text-outline">Search hashes, phone numbers, threat actor
+            signatures...</span><kbd
+            class="font-label-sm text-label-sm bg-surface-container-highest px-space-xs py-0.5 rounded text-on-surface">⌘K</kbd>
+        </div>
+      </div>
+      <div class="flex items-center gap-space-md">
+        <div
+          class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-low">
+          <span class="w-2 h-2 rounded-full bg-tertiary"></span><span
+            class="font-label-sm text-label-sm text-on-surface-variant">EAL6+ ENCLAVE ACTIVE</span><span
+            class="text-outline-variant">•</span><span class="font-label-sm text-label-sm text-primary">LATENCY
+            14ms</span></div><button
+          class="relative w-9 h-9 rounded-xl bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all"><span
+            class="material-symbols-outlined text-[20px]">notifications</span><span
+            class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button>
+        <div class="flex items-center gap-space-sm pl-space-xs">
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+              class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+          <div class="hidden md:flex flex-col"><span
+              class="font-title-sm text-title-sm text-on-surface leading-tight">Sarah Chen</span><span
+              class="font-label-sm text-label-sm text-secondary-fixed-dim leading-none">SecOps Tier-2</span></div><span
+            class="material-symbols-outlined text-outline text-[18px]">expand_more</span>
+        </div>
+      </div>
+    </header>
+    <main class="relative pt-16 bg-background min-h-screen">
+      <div class="flex flex-col w-full">
+        <!-- Interactive State Engine Controller (Top Ribbon) -->
+        <div class="w-full px-gutter pt-space-md pb-space-sm bg-surface-container-lowest">
+          <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-sm pb-space-xs">
+            <div class="flex items-center gap-space-sm">
+              <span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+              <span class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Interactive Capability
+                State Emulator</span>
+              <span
+                class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-primary-fixed-dim">TEST
+                HARNESS v2.4</span>
+            </div>
+            <div class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-space-xs">
+              <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+              <span>Simulate 6 Architecture Operational Boundaries:</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-space-xs pt-space-xs">
+            <button
+              class="state-nav-btn text-left p-space-xs rounded bg-surface-container hover:bg-surface-container-high transition-all"
+              id="btn-state-1" onclick="setSystemState(1)">
+              <div class="font-label-sm text-label-sm text-outline">STATE 01</div>
+              <div class="font-title-sm text-body-sm text-on-surface truncate">Audio Unavailable</div>
+            </button>
+            <button
+              class="state-nav-btn text-left p-space-xs rounded bg-surface-container hover:bg-surface-container-high transition-all"
+              id="btn-state-2" onclick="setSystemState(2)">
+              <div class="font-label-sm text-label-sm text-outline">STATE 02</div>
+              <div class="font-title-sm text-body-sm text-on-surface truncate">Waiting for Source</div>
+            </button>
+            <button
+              class="state-nav-btn text-left p-space-xs rounded bg-surface-container hover:bg-surface-container-high transition-all"
+              id="btn-state-3" onclick="setSystemState(3)">
+              <div class="font-label-sm text-label-sm text-outline">STATE 03</div>
+              <div class="font-title-sm text-body-sm text-on-surface truncate">Stream Authorized</div>
+            </button>
+            <button
+              class="state-nav-btn text-left p-space-xs rounded bg-surface-container hover:bg-surface-container-high transition-all"
+              id="btn-state-4" onclick="setSystemState(4)">
+              <div class="font-label-sm text-label-sm text-outline">STATE 04</div>
+              <div class="font-title-sm text-body-sm text-on-surface truncate">Analysis Active</div>
+            </button>
+            <button
+              class="state-nav-btn text-left p-space-xs rounded bg-surface-container hover:bg-surface-container-high transition-all"
+              id="btn-state-5" onclick="setSystemState(5)">
+              <div class="font-label-sm text-label-sm text-outline">STATE 05</div>
+              <div class="font-title-sm text-body-sm text-on-surface truncate">Evidence Detected</div>
+            </button>
+            <button
+              class="state-nav-btn text-left p-space-xs rounded bg-surface-container hover:bg-surface-container-high transition-all"
+              id="btn-state-6" onclick="setSystemState(6)">
+              <div class="font-label-sm text-label-sm text-outline">STATE 06</div>
+              <div class="font-title-sm text-body-sm text-on-surface truncate">Stream Stopped</div>
+            </button>
+          </div>
+        </div>
+        <!-- Mandatory Architectural Sandbox & Cellular Isolation Disclosure -->
+        <div class="px-gutter pt-space-md">
+          <div
+            class="p-space-md rounded-xl bg-surface-container-low flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md">
+            <div class="flex items-start gap-space-md">
+              <div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-primary text-[24px]">gavel</span>
+              </div>
+              <div class="flex flex-col">
+                <div class="flex items-center gap-space-sm flex-wrap">
+                  <span class="font-title-sm text-title-sm text-on-surface">Sandbox &amp; Operating Environment
+                    Perimeter Disclosure</span>
+                  <span
+                    class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-highest text-outline">W3C
+                    MEDIASTREAM RESTRICTION</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant max-w-4xl mt-space-xs">
+                  Microphone analysis strictly captures ambient loudspeaker audio through your physical environment.
+                  Browser security restrictions completely isolate web sandboxes from cellular basebands and direct
+                  telephone calls. This engine cannot capture both sides of an internal encrypted cellular call.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-space-sm shrink-0 w-full lg:w-auto">
+              <a class="flex-1 lg:flex-none flex items-center justify-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-title-sm text-body-sm transition-all"
+                href="transcript-analyzer.html">
+                <span class="material-symbols-outlined text-[16px]">record_voice_over</span>
+                <span>Analyze Transcript</span>
+              </a>
+              <a class="flex-1 lg:flex-none flex items-center justify-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-title-sm text-body-sm transition-all"
+                href="number-checker.html">
+                <span class="material-symbols-outlined text-[16px]">dialpad</span>
+                <span>Check Phone Number</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Main Forensic Live Protection Stage -->
+        <div class="px-gutter py-space-md grid grid-cols-1 xl:grid-cols-12 gap-space-md">
+          <!-- LEFT PANEL: Core Sentinel Radar, Real-Time Frequency FFT & Stream HUD (7 cols) -->
+          <div class="xl:col-span-7 flex flex-col gap-space-md">
+            <!-- Primary Sentinel Radar & Live Threat Telemetry Pod -->
+            <div
+              class="p-space-lg rounded-xl bg-surface-container-low flex flex-col justify-between shadow-xl relative overflow-hidden">
+              <!-- Background Vector Ambient Grid -->
+              <div class="absolute inset-0 opacity-10 pointer-events-none flex items-center justify-center">
+                <svg class="w-full h-full" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <pattern height="32" id="radar-grid" patternunits="userSpaceOnUse" width="32">
+                      <circle cx="16" cy="16" fill="#7bd0ff" r="1"></circle>
+                      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#7bd0ff" stroke-dasharray="2 4"
+                        stroke-width="0.5"></path>
+                    </pattern>
+                  </defs>
+                  <rect fill="url(#radar-grid)" height="100%" width="100%"></rect>
+                </svg>
+              </div>
+              <!-- Header: Status Pill & Telemetry Stats -->
+              <div
+                class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm relative z-10">
+                <div class="flex items-center gap-space-sm">
+                  <div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-highest"
+                    id="status-beacon-wrap">
+                    <span class="w-2.5 h-2.5 rounded-full bg-outline" id="status-dot"></span>
+                    <span class="font-label-md text-label-md tracking-wider uppercase text-on-surface"
+                      id="status-label">INITIALIZING ENGINE</span>
+                  </div>
+                  <span class="font-label-sm text-label-sm text-outline hidden md:inline">NODE // SS-US-CENTRAL4</span>
+                </div>
+                <div class="flex items-center gap-space-md font-label-sm text-label-sm text-outline">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-[16px] text-tertiary">memory</span>
+                    <span class="text-on-surface-variant font-label-md text-label-md">16-BIT 44.1kHz</span>
+                  </div>
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-[16px] text-primary">cached</span>
+                    <span class="text-on-surface-variant font-label-md text-label-md">RING BUFFER: 8.4s</span>
+                  </div>
+                  <span
+                    class="text-tertiary font-label-md text-label-md px-1.5 py-0.5 rounded bg-surface-container-highest">RAM-ONLY</span>
+                </div>
+              </div>
+              <!-- Centerpiece: Concentric Circular Radar & Dynamic Risk Index -->
+              <div class="py-space-xl flex flex-col items-center justify-center relative z-10">
+                <div class="relative w-72 h-72 sm:w-80 sm:h-80 flex items-center justify-center">
+                  <!-- Concentric Scanning Rings -->
+                  <div class="absolute inset-0 rounded-full bg-surface-container-high/40 animate-pulse"
+                    id="radar-outer-ring"></div>
+                  <div class="absolute inset-6 rounded-full bg-surface-container-highest/60" id="radar-mid-ring"></div>
+                  <div class="absolute inset-14 rounded-full bg-surface-container-low flex items-center justify-center"
+                    id="radar-inner-ring"></div>
+                  <!-- Concentric SVG Compass Coordinates -->
+                  <svg class="absolute inset-0 w-full h-full pointer-events-none" viewbox="0 0 320 320">
+                    <circle class="text-outline-variant" cx="160" cy="160" fill="none" r="148" stroke="currentColor"
+                      stroke-dasharray="2 6" stroke-width="1.5"></circle>
+                    <circle class="text-outline-variant" cx="160" cy="160" fill="none" r="110" stroke="currentColor"
+                      stroke-dasharray="1 8" stroke-width="1"></circle>
+                    <!-- Crosshair Lines -->
+                    <line class="text-surface-variant" stroke="currentColor" stroke-dasharray="4 6" stroke-width="1"
+                      x1="160" x2="160" y1="8" y2="312"></line>
+                    <line class="text-surface-variant" stroke="currentColor" stroke-dasharray="4 6" stroke-width="1"
+                      x1="8" x2="312" y1="160" y2="160"></line>
+                    <!-- Scanning Sweeper Line (Active when scanning) -->
+                    <g class="origin-center" id="radar-sweep" style="transform-origin: 160px 160px; display: none;">
+                      <path d="M 160 160 L 308 160 A 148 148 0 0 0 264 55 Z" fill="url(#sweep-gradient)" opacity="0.35">
+                      </path>
+                    </g>
+                    <defs>
+                      <lineargradient id="sweep-gradient" x1="0%" x2="100%" y1="100%" y2="0%">
+                        <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"></stop>
+                        <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.8"></stop>
+                      </lineargradient>
+                    </defs>
+                  </svg>
+                  <!-- Risk Meter Center Gauge -->
+                  <div class="relative flex flex-col items-center justify-center text-center z-20">
+                    <span class="font-label-sm text-label-sm tracking-widest text-outline uppercase"
+                      id="threat-level-badge">NOMINAL MONITOR</span>
+                    <div class="flex items-baseline gap-space-xs my-space-xs">
+                      <span class="font-headline-xl text-headline-xl text-on-surface font-label-lg"
+                        id="risk-score-value">--</span>
+                      <span class="font-label-md text-label-md text-outline">/100</span>
+                    </div>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant" id="risk-rating-subtext">PASSIVE
+                      ENCLAVE</span>
+                    <!-- 10-Segment Miniature Confidence Gauge -->
+                    <div class="flex items-center gap-1 mt-space-sm" id="segment-bar-container">
+                      <div class="w-2.5 h-1 rounded bg-surface-container-highest gauge-bar" data-seg="1"></div>
+                      <div class="w-2.5 h-1 rounded bg-surface-container-highest gauge-bar" data-seg="2"></div>
+                      <div class="w-2.5 h-1 rounded bg-surface-container-highest gauge-bar" data-seg="3"></div>
+                      <div class="w-2.5 h-1 rounded bg-surface-container-highest gauge-bar" data-seg="4"></div>
+                      <div class="w-2.5 h-1 rounded bg-surface-container-highest gauge-bar" data-seg="5"></div>
+                      <div class="w-2.5 h-1 rounded bg-surface-container-highest gauge-bar" data-seg="6"></div>
+                      <div class="w-2.5 h-1 rounded bg-surface-container-highest gauge-bar" data-seg="7"></div>
+                      <div class="w-2.5 h-1 rounded bg-surface-container-highest gauge-bar" data-seg="8"></div>
+                      <div class="w-2.5 h-1 rounded bg-surface-container-highest gauge-bar" data-seg="9"></div>
+                      <div class="w-2.5 h-1 rounded bg-surface-container-highest gauge-bar" data-seg="10"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Real-Time FFT Frequency Waveform Visualizer -->
+              <div class="relative z-10 pt-space-md bg-surface-container-lowest/60 rounded-xl p-space-md">
+                <div class="flex items-center justify-between pb-space-xs">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="material-symbols-outlined text-primary text-[16px]">graphic_eq</span>
+                    <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Acoustic FFT
+                      Spectrum (100Hz - 8000Hz)</span>
+                  </div>
+                  <div class="font-label-sm text-label-sm text-outline" id="acoustic-status">DISCONNECTED</div>
+                </div>
+                <!-- Frequency Bars Array -->
+                <div class="h-16 flex items-end justify-between gap-1 pt-space-xs px-space-xs" id="fft-bars-container">
+                  <!-- 28 FFT bars generated with tailored initial heights -->
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-1 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-2 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-1 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-2 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-3 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-1 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-2 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-3 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-4 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-2 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-3 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-2 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-1 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-2 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-3 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-1 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-4 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-2 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-1 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-3 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-2 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-1 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-2 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-3 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-1 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-2 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-1 transition-all duration-75 fft-bar">
+                  </div>
+                  <div class="w-full bg-surface-container-highest rounded-t-sm h-1 transition-all duration-75 fft-bar">
+                  </div>
+                </div>
+                <div class="flex items-center justify-between font-label-sm text-label-sm text-outline pt-space-xs">
+                  <span>Sub-Bass</span>
+                  <span>Vocal Pitch Formants (300-3400Hz)</span>
+                  <span>Acoustic Sibilance</span>
+                </div>
+              </div>
+            </div>
+            <!-- Live Stream Orchestration Controller & Peripheral Hub -->
+            <div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-md">
+              <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+                <div>
+                  <h3 class="font-title-md text-title-md text-on-surface">Audio Feed Routing &amp; Hardware Dispatch
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Select real-time physical sensor or load
+                    pre-recorded test intercept</p>
+                </div>
+                <!-- Source Selector Toggle Tabs -->
+                <div class="flex items-center p-1 rounded-xl bg-surface-container-lowest">
+                  <button
+                    class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container text-primary font-title-sm text-body-sm transition-all"
+                    id="source-tab-mic" onclick="toggleAudioSource('mic')">
+                    <span class="material-symbols-outlined text-[16px]">mic</span>
+                    <span>Loudspeaker Mic</span>
+                  </button>
+                  <button
+                    class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-title-sm text-body-sm transition-all"
+                    id="source-tab-file" onclick="toggleAudioSource('file')">
+                    <span class="material-symbols-outlined text-[16px]">audio_file</span>
+                    <span>Sample Audio Stream</span>
+                  </button>
+                </div>
+              </div>
+              <!-- Dynamic Secondary Hardware Detail Banner -->
+              <div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between"
+                id="source-detail-card">
+                <div class="flex items-center gap-space-sm">
+                  <span class="material-symbols-outlined text-primary text-[20px]" id="source-icon">mic</span>
+                  <div class="flex flex-col">
+                    <span class="font-title-sm text-body-sm text-on-surface" id="source-title">Default Physical Audio
+                      Input</span>
+                    <span class="font-label-sm text-label-sm text-outline" id="source-desc">CoreAudio // Ambient Speaker
+                      Proximity Capture</span>
+                  </div>
+                </div>
+                <button
+                  class="font-title-sm text-body-sm px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-primary transition-all"
+                  id="grant-perm-btn" onclick="requestPermissionSimulation()">
+                  Grant Permission
+                </button>
+              </div>
+              <!-- Gated Action Controls -->
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm">
+                <button
+                  class="flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-lg bg-surface-container-highest text-outline font-title-sm text-title-sm cursor-not-allowed transition-all"
+                  disabled="" id="ctrl-start" onclick="handleStartAnalysis()">
+                  <span class="material-symbols-outlined text-[18px]">play_arrow</span>
+                  <span>Start Analysis</span>
+                </button>
+                <button
+                  class="flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-lg bg-surface-container-highest text-outline font-title-sm text-title-sm cursor-not-allowed transition-all"
+                  disabled="" id="ctrl-pause" onclick="handlePauseAnalysis()">
+                  <span class="material-symbols-outlined text-[18px]">pause</span>
+                  <span>Pause Stream</span>
+                </button>
+                <button
+                  class="flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-lg bg-surface-container-highest text-outline font-title-sm text-title-sm cursor-not-allowed transition-all"
+                  disabled="" id="ctrl-stop" onclick="handleStopAnalysis()">
+                  <span class="material-symbols-outlined text-[18px]">stop</span>
+                  <span>Stop Stream</span>
+                </button>
+                <button
+                  class="flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-lg bg-surface-container-highest text-outline font-title-sm text-title-sm cursor-not-allowed transition-all"
+                  disabled="" id="ctrl-dossier" onclick="handleExportEvidence()">
+                  <span class="material-symbols-outlined text-[18px]">shield_with_heart</span>
+                  <span>Export Dossier</span>
+                </button>
+              </div>
+              <!-- Haptic / Vibration Best-Effort Toggle with Hardware Disclosure -->
+              <div
+                class="p-space-sm rounded-lg bg-surface-container-lowest flex items-start justify-between gap-space-md">
+                <div class="flex items-start gap-space-sm">
+                  <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">vibration</span>
+                  <div class="flex flex-col">
+                    <div class="flex items-center gap-space-xs">
+                      <span class="font-title-sm text-body-sm text-on-surface">Tactile Threat Pulse (Web Vibration
+                        API)</span>
+                      <span
+                        class="font-label-sm text-label-sm px-1 rounded bg-surface-container text-tertiary">BEST-EFFORT</span>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-outline">
+                      Fires rapid pulsed haptic alerts via <code
+                        class="text-primary font-label-sm">navigator.vibrate([200, 100, 200])</code> upon detection of
+                      high-risk threat vectors.
+                      Subject to browser permission, OS security sandbox, and mobile hardware vibration engine.
+                    </p>
+                  </div>
+                </div>
+                <label class="relative inline-flex items-center cursor-pointer shrink-0 mt-1">
+                  <input checked="" class="sr-only peer" id="vibration-toggle" type="checkbox" />
+                  <div
+                    class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container">
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- RIGHT PANEL: Live Phrase Buffer, Threat Taxonomy & Forensic Event Timeline (5 cols) -->
+          <div class="xl:col-span-5 flex flex-col gap-space-md">
+            <!-- Live Linguistic Token & Phrase Analysis Buffer -->
+            <div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+              <div class="flex items-center justify-between pb-space-xs">
+                <div class="flex items-center gap-space-xs">
+                  <span class="material-symbols-outlined text-primary text-[20px]">short_text</span>
+                  <h3 class="font-title-md text-title-md text-on-surface">Acoustic Token &amp; Transcript Buffer</h3>
+                </div>
+                <span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-outline"
+                  id="transcription-badge">AWAITING AUDIO</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                Real-time on-device speech-to-text tokenized stream parsed against known federal impersonation, wire
+                coercion, and bank compromise lexicons.
+              </p>
+              <!-- Simulated Transcript Terminal Feed -->
+              <div
+                class="h-44 p-space-sm rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-outline overflow-y-auto flex flex-col gap-space-xs"
+                id="transcript-feed-box">
+                <div class="font-label-sm text-label-sm text-outline italic">No incoming streaming speech detected in
+                  current buffer.</div>
+              </div>
+              <!-- Detected High-Risk Phrases Breakdown -->
+              <div class="flex flex-col gap-space-xs pt-space-xs">
+                <div class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Identified Coercion
+                  Markers</div>
+                <div class="flex flex-wrap gap-space-xs" id="detected-tokens-cloud">
+                  <span
+                    class="font-label-sm text-label-sm px-space-xs py-1 rounded bg-surface-container text-outline">No
+                    active signatures</span>
+                </div>
+              </div>
+            </div>
+            <!-- Threat Taxonomy Vector Confidence Cards -->
+            <div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-space-xs">
+                  <span class="material-symbols-outlined text-secondary text-[20px]">psychology</span>
+                  <h3 class="font-title-md text-title-md text-on-surface">ML Threat Vector Decomposition</h3>
+                </div>
+                <span class="font-label-sm text-label-sm text-outline">ON-DEVICE MODEL // V3.2</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs pt-space-xs">
+                <!-- Vector 1 -->
+                <div class="p-space-sm rounded-lg bg-surface-container flex flex-col justify-between gap-space-xs">
+                  <span class="font-label-sm text-label-sm text-outline">SYNTHETIC VOICE</span>
+                  <div class="flex items-baseline justify-between">
+                    <span class="font-headline-sm text-headline-sm text-on-surface font-label-md"
+                      id="tax-synth-val">0.02</span>
+                    <span class="font-label-sm text-label-sm text-tertiary">LOW</span>
+                  </div>
+                  <div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden">
+                    <div class="bg-tertiary h-full transition-all duration-500" id="tax-synth-bar" style="width: 4%">
+                    </div>
+                  </div>
+                </div>
+                <!-- Vector 2 -->
+                <div class="p-space-sm rounded-lg bg-surface-container flex flex-col justify-between gap-space-xs">
+                  <span class="font-label-sm text-label-sm text-outline">COERCION URGENCY</span>
+                  <div class="flex items-baseline justify-between">
+                    <span class="font-headline-sm text-headline-sm text-on-surface font-label-md"
+                      id="tax-urgency-val">0.04</span>
+                    <span class="font-label-sm text-label-sm text-tertiary">LOW</span>
+                  </div>
+                  <div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden">
+                    <div class="bg-tertiary h-full transition-all duration-500" id="tax-urgency-bar" style="width: 6%">
+                    </div>
+                  </div>
+                </div>
+                <!-- Vector 3 -->
+                <div class="p-space-sm rounded-lg bg-surface-container flex flex-col justify-between gap-space-xs">
+                  <span class="font-label-sm text-label-sm text-outline">FINANCIAL ASSET SOLICIT</span>
+                  <div class="flex items-baseline justify-between">
+                    <span class="font-headline-sm text-headline-sm text-on-surface font-label-md"
+                      id="tax-wire-val">0.01</span>
+                    <span class="font-label-sm text-label-sm text-tertiary">LOW</span>
+                  </div>
+                  <div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden">
+                    <div class="bg-tertiary h-full transition-all duration-500" id="tax-wire-bar" style="width: 3%">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Real-Time Forensic Event Timeline -->
+            <div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-sm flex-1">
+              <div class="flex items-center justify-between pb-space-xs">
+                <div class="flex items-center gap-space-xs">
+                  <span class="material-symbols-outlined text-primary text-[20px]">reorder</span>
+                  <h3 class="font-title-md text-title-md text-on-surface">Forensic Incident Stream</h3>
+                </div>
+                <button class="font-label-sm text-label-sm text-outline hover:text-on-surface transition-all"
+                  onclick="clearTimeline()">Clear</button>
+              </div>
+              <div class="flex flex-col gap-space-xs overflow-y-auto max-h-56 pr-space-xs" id="timeline-container">
+                <!-- Timeline Entry Example -->
+                <div
+                  class="flex items-start gap-space-sm p-space-xs rounded bg-surface-container-lowest font-label-sm text-label-sm">
+                  <span class="text-outline shrink-0 font-label-md text-label-md">00:00.0s</span>
+                  <span class="text-on-surface-variant flex-1">Sentinel Client Enclave bootstrapped successfully.</span>
+                  <span class="text-tertiary font-label-sm text-label-sm">OK</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Evidence Dossier Export Modal (Hidden by default, triggered on Export) -->
+        <div class="fixed inset-0 z-50 bg-surface-dim/80 backdrop-blur-md hidden items-center justify-center p-space-md"
+          id="dossier-modal">
+          <div
+            class="bg-surface-container-low w-full max-w-2xl rounded-xl p-space-lg shadow-2xl flex flex-col gap-space-md">
+            <div class="flex items-center justify-between pb-space-xs">
+              <div class="flex items-center gap-space-sm">
+                <span class="material-symbols-outlined text-error text-[24px]">policy</span>
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">Cryptographic Evidence Dossier
+                    #SS-EV-8421</h3>
+                  <span class="font-label-sm text-label-sm text-outline">CHAIN-OF-CUSTODY GENERATED: ZERO-KNOWLEDGE
+                    PROOF</span>
+                </div>
+              </div>
+              <button
+                class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-outline hover:text-on-surface"
+                onclick="closeDossierModal()">
+                <span class="material-symbols-outlined text-[18px]">close</span>
+              </button>
+            </div>
+            <div
+              class="p-space-md rounded bg-surface-container-lowest flex flex-col gap-space-xs font-label-sm text-label-sm">
+              <div class="flex justify-between text-outline">
+                <span>THREAT TYPE:</span>
+                <span class="text-error font-title-sm text-body-sm">CRITICAL IMPERSONATION &amp; WIRE COERCION</span>
+              </div>
+              <div class="flex justify-between text-outline">
+                <span>ACOUSTIC PITCH JITTER:</span>
+                <span class="text-on-surface">420Hz Formant Discontinuity (+94.2% AI confidence)</span>
+              </div>
+              <div class="flex justify-between text-outline">
+                <span>HIGH-RISK KEYWORDS DISCOVERED:</span>
+                <span class="text-error">"IRS Arrest Warrant", "Target Gift Cards", "Do Not Hang Up"</span>
+              </div>
+              <div class="flex justify-between text-outline">
+                <span>SESSION SHA-256 HASH:</span>
+                <span class="text-primary font-label-md text-label-md">e7f9a239c8112d99210084f7b6d1945c2...</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-end gap-space-sm pt-space-xs">
+              <button
+                class="px-space-md py-space-xs rounded bg-surface-container text-on-surface font-title-sm text-body-sm hover:bg-surface-container-high transition-all"
+                onclick="closeDossierModal()">
+                Dismiss
+              </button>
+              <button
+                class="px-space-md py-space-xs rounded bg-primary text-on-primary font-title-sm text-body-sm hover:bg-primary-container transition-all flex items-center gap-space-xs"
+                onclick="alert('Dossier package dispatched to secure local drive with zero-log signature.'); closeDossierModal();">
+                <span class="material-symbols-outlined text-[16px]">download</span>
+                <span>Download Signed PDF &amp; Telemetry</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        // ScamShield Architecture State Emulator
+        let currentState = 1;
+        let activeAudioSource = 'mic';
+        let animationInterval = null;
+
+        const states = {
+          1: {
+            name: "Live audio unavailable in this browser",
+            badgeText: "UNAVAILABLE / SANDBOX LOCK",
+            badgeColor: "bg-surface-container-highest",
+            dotColor: "bg-outline",
+            textColor: "text-outline",
+            riskScore: "--",
+            threatSubtext: "BROWSER SANDBOX RESTRICTED",
+            threatLevelBadge: "HARDWARE RESTRICTED",
+            canStart: false,
+            canPause: false,
+            canStop: false,
+            canDossier: false,
+            fftActive: false,
+            radarSpin: false,
+            transcriptNote: "WebAudio API AudioContext denied or browser sandboxed on restricted mobile runtime.",
+            tokens: [],
+            taxonomy: [0.00, 0.00, 0.00],
+            logMessage: "Capability probe: AudioContext is null. Browser sandbox restricts audio capture."
+          },
+          2: {
+            name: "Waiting for an approved audio source",
+            badgeText: "WAITING FOR SOURCE PERMISSION",
+            badgeColor: "bg-secondary-container/20",
+            dotColor: "bg-secondary",
+            textColor: "text-secondary",
+            riskScore: "00",
+            threatSubtext: "MICROPHONE OR STREAM NEEDED",
+            threatLevelBadge: "STREAM PENDING",
+            canStart: false,
+            canPause: false,
+            canStop: false,
+            canDossier: false,
+            fftActive: false,
+            radarSpin: false,
+            transcriptNote: "Awaiting explicit microphone permission or user uploaded audio stream file.",
+            tokens: [],
+            taxonomy: [0.01, 0.02, 0.00],
+            logMessage: "MediaDevices.getUserMedia prompt issued. Pending user consent."
+          },
+          3: {
+            name: "Ready for an authorized supported audio stream",
+            badgeText: "AUTHORIZED & STANDBY",
+            badgeColor: "bg-tertiary-container/20",
+            dotColor: "bg-tertiary",
+            textColor: "text-tertiary",
+            riskScore: "04",
+            threatSubtext: "NOMINAL BASELINE CALIBRATED",
+            threatLevelBadge: "STANDBY READY",
+            canStart: true,
+            canPause: false,
+            canStop: false,
+            canDossier: false,
+            fftActive: false,
+            radarSpin: false,
+            transcriptNote: "Audio input buffer initialized. Click 'Start Analysis' to commence acoustic parsing.",
+            tokens: ["mic_connected", "sample_rate_44.1khz"],
+            taxonomy: [0.02, 0.03, 0.01],
+            logMessage: "Physical microphone stream verified. Latency: 12ms. Standing by for capture."
+          },
+          4: {
+            name: "Analysis active",
+            badgeText: "STREAMING ACTIVE // ANALYZING",
+            badgeColor: "bg-primary-container/20",
+            dotColor: "bg-primary-container",
+            textColor: "text-primary",
+            riskScore: "18",
+            threatSubtext: "NOMINAL CONVERSATION DETECTED",
+            threatLevelBadge: "ACTIVE SURVEILLANCE",
+            canStart: false,
+            canPause: true,
+            canStop: true,
+            canDossier: false,
+            fftActive: true,
+            radarSpin: true,
+            transcriptNote: "Streaming transcript: '...yes, thank you for reaching out regarding my inquiry yesterday. I have the reference number right here...'",
+            tokens: ["inquiry", "reference_number", "customer_service"],
+            taxonomy: [0.08, 0.12, 0.04],
+            logMessage: "FFT stream nominal. Phoneme jitter within 1.2% human tolerance band."
+          },
+          5: {
+            name: "Suspicious evidence detected",
+            badgeText: "CRITICAL THREAT // FRAUD DETECTED",
+            badgeColor: "bg-error-container/40",
+            dotColor: "bg-error",
+            textColor: "text-error",
+            riskScore: "94",
+            threatSubtext: "HIGH-CONFIDENCE COERCION IDENTIFIED",
+            threatLevelBadge: "IMMEDIATE DANGER",
+            canStart: false,
+            canPause: true,
+            canStop: true,
+            canDossier: true,
+            fftActive: true,
+            radarSpin: true,
+            transcriptNote: "CRITICAL INTERCEPT: '...this is Officer Davis from the Federal Bureau. Do not hang up or local deputies will be dispatched. You must wire funds or purchase Target gift cards immediately...'",
+            tokens: ["federal_bureau", "arrest_warrant", "do_not_hang_up", "target_gift_cards", "wire_immediately"],
+            taxonomy: [0.91, 0.98, 0.88],
+            logMessage: "CRITICAL ALERT: Pitch jitter anomaly (synthetic voice P=0.91) + Gift card wire coercion detected."
+          },
+          6: {
+            name: "Analysis stopped or interrupted",
+            badgeText: "STREAM TERMINATED / DISCONNECTED",
+            badgeColor: "bg-surface-container-highest",
+            dotColor: "bg-outline",
+            textColor: "text-outline",
+            riskScore: "94",
+            threatSubtext: "STREAM HALTED - EVIDENCE CACHED",
+            threatLevelBadge: "INCIDENT RECORDED",
+            canStart: true,
+            canPause: false,
+            canStop: false,
+            canDossier: true,
+            fftActive: false,
+            radarSpin: false,
+            transcriptNote: "Audio capture gracefully paused. 1 Incident logged. Ephemeral ring buffer sealed.",
+            tokens: ["session_closed", "hash_generated"],
+            taxonomy: [0.91, 0.98, 0.88],
+            logMessage: "AudioContext disconnected gracefully. Zero-knowledge evidence fingerprint generated."
+          }
+        };
+
+        function setSystemState(stateNum) {
+          currentState = stateNum;
+          const config = states[stateNum];
+
+          // 1. Update State Emulator Buttons
+          document.querySelectorAll('.state-nav-btn').forEach(btn => {
+            btn.classList.remove('ring-1', 'ring-primary', 'bg-surface-container-high');
+          });
+          const activeBtn = document.getElementById(`btn-state-${stateNum}`);
+          if (activeBtn) {
+            activeBtn.classList.add('ring-1', 'ring-primary', 'bg-surface-container-high');
+          }
+
+          // 2. Status Dot & Label
+          const statusLabel = document.getElementById('status-label');
+          const statusDot = document.getElementById('status-dot');
+          const statusBeacon = document.getElementById('status-beacon-wrap');
+          if (statusLabel) statusLabel.textContent = config.badgeText;
+          if (statusDot) {
+            statusDot.className = `w-2.5 h-2.5 rounded-full ${config.dotColor} ${stateNum === 4 || stateNum === 5 ? 'animate-ping' : ''}`;
+          }
+          if (statusBeacon) {
+            statusBeacon.className = `flex items-center gap-space-xs px-space-sm py-1 rounded-full ${config.badgeColor}`;
+          }
+
+          // 3. Risk Meter & HUD
+          const riskScoreVal = document.getElementById('risk-score-value');
+          const threatLevelBadge = document.getElementById('threat-level-badge');
+          const riskSubtext = document.getElementById('risk-rating-subtext');
+          if (riskScoreVal) {
+            riskScoreVal.textContent = config.riskScore;
+            riskScoreVal.className = `font-headline-xl text-headline-xl font-label-lg ${config.textColor}`;
+          }
+          if (threatLevelBadge) threatLevelBadge.textContent = config.threatLevelBadge;
+          if (riskSubtext) riskSubtext.textContent = config.threatSubtext;
+
+          // Segmented Bars Indicator (10 bars)
+          const numericScore = parseInt(config.riskScore) || 0;
+          const activeSegments = Math.round(numericScore / 10);
+          document.querySelectorAll('.gauge-bar').forEach((bar, idx) => {
+            if (idx < activeSegments) {
+              if (numericScore > 70) {
+                bar.className = 'w-2.5 h-1 rounded bg-error gauge-bar';
+              } else if (numericScore > 30) {
+                bar.className = 'w-2.5 h-1 rounded bg-secondary gauge-bar';
+              } else {
+                bar.className = 'w-2.5 h-1 rounded bg-tertiary gauge-bar';
+              }
+            } else {
+              bar.className = 'w-2.5 h-1 rounded bg-surface-container-highest gauge-bar';
+            }
+          });
+
+          // 4. Radar Sweep & Rings
+          const radarSweep = document.getElementById('radar-sweep');
+          const outerRing = document.getElementById('radar-outer-ring');
+          if (radarSweep) radarSweep.style.display = config.radarSpin ? 'block' : 'none';
+          if (outerRing) {
+            if (stateNum === 5) {
+              outerRing.className = 'absolute inset-0 rounded-full bg-error/20 animate-ping';
+            } else if (stateNum === 4) {
+              outerRing.className = 'absolute inset-0 rounded-full bg-primary/20 animate-pulse';
+            } else {
+              outerRing.className = 'absolute inset-0 rounded-full bg-surface-container-high/40';
+            }
+          }
+
+          // 5. Control Buttons State
+          updateControlBtn('ctrl-start', config.canStart, 'bg-primary text-on-primary hover:bg-primary-container');
+          updateControlBtn('ctrl-pause', config.canPause, 'bg-surface-container-high text-on-surface hover:bg-surface-container-highest');
+          updateControlBtn('ctrl-stop', config.canStop, 'bg-error text-on-error hover:bg-error-container');
+          updateControlBtn('ctrl-dossier', config.canDossier, 'bg-surface-container-highest text-primary hover:bg-primary hover:text-on-primary');
+
+          // 6. Transcript & Token Cloud
+          const transcriptFeed = document.getElementById('transcript-feed-box');
+          const tokenCloud = document.getElementById('detected-tokens-cloud');
+          const transBadge = document.getElementById('transcription-badge');
+          const acousticStatus = document.getElementById('acoustic-status');
+
+          if (transBadge) {
+            transBadge.textContent = stateNum === 4 ? 'STREAMING REALTIME' : (stateNum === 5 ? 'THREAT DETECTED' : 'IDLE');
+            transBadge.className = `font-label-sm text-label-sm px-space-xs py-0.5 rounded ${config.badgeColor} ${config.textColor}`;
+          }
+          if (acousticStatus) {
+            acousticStatus.textContent = config.fftActive ? 'FFT SAMPLING ACTIVE (44.1kHz)' : 'DISCONNECTED';
+            acousticStatus.className = `font-label-sm text-label-sm ${config.fftActive ? 'text-primary' : 'text-outline'}`;
+          }
+
+          if (transcriptFeed) {
+            transcriptFeed.innerHTML = `
+        <div class="font-label-sm text-label-sm text-outline">[${new Date().toISOString().substring(11, 19)}] BUFFER INITIALIZED</div>
+        <div class="${stateNum === 5 ? 'text-error font-title-sm' : (stateNum === 4 ? 'text-on-surface' : 'text-outline italic')}">
+          ${config.transcriptNote}
+        </div>
+      `;
+          }
+
+          if (tokenCloud) {
+            if (config.tokens.length === 0) {
+              tokenCloud.innerHTML = '<span class="font-label-sm text-label-sm px-space-xs py-1 rounded bg-surface-container text-outline">No active signatures</span>';
+            } else {
+              tokenCloud.innerHTML = config.tokens.map(token => {
+                const isDanger = ['federal_bureau', 'arrest_warrant', 'do_not_hang_up', 'target_gift_cards', 'wire_immediately'].includes(token);
+                return `<span class="font-label-sm text-label-sm px-space-xs py-1 rounded ${isDanger ? 'bg-error/20 text-error' : 'bg-surface-container text-primary'} uppercase">#${token}</span>`;
+              }).join('');
+            }
+          }
+
+          // 7. ML Taxonomy Vectors
+          document.getElementById('tax-synth-val').textContent = config.taxonomy[0].toFixed(2);
+          document.getElementById('tax-synth-bar').style.width = `${config.taxonomy[0] * 100}%`;
+          document.getElementById('tax-synth-bar').className = config.taxonomy[0] > 0.5 ? 'bg-error h-full' : 'bg-tertiary h-full';
+
+          document.getElementById('tax-urgency-val').textContent = config.taxonomy[1].toFixed(2);
+          document.getElementById('tax-urgency-bar').style.width = `${config.taxonomy[1] * 100}%`;
+          document.getElementById('tax-urgency-bar').className = config.taxonomy[1] > 0.5 ? 'bg-error h-full' : 'bg-tertiary h-full';
+
+          document.getElementById('tax-wire-val').textContent = config.taxonomy[2].toFixed(2);
+          document.getElementById('tax-wire-bar').style.width = `${config.taxonomy[2] * 100}%`;
+          document.getElementById('tax-wire-bar').className = config.taxonomy[2] > 0.5 ? 'bg-error h-full' : 'bg-tertiary h-full';
+
+          // 8. Add Event to Timeline
+          addTimelineEvent(config.logMessage, stateNum === 5 ? 'CRIT' : (stateNum === 4 ? 'ACT' : 'INFO'));
+
+          // 9. Hardware Vibration Alert Trigger (If State 5 and toggle on)
+          if (stateNum === 5) {
+            triggerVibrationAlert();
+          }
+
+          // 10. FFT Simulation Controller
+          manageFFTSimulation(config.fftActive, stateNum === 5);
+        }
+
+        function updateControlBtn(id, enabled, activeStyles) {
+          const btn = document.getElementById(id);
+          if (!btn) return;
+          btn.disabled = !enabled;
+          if (enabled) {
+            btn.className = `flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-lg font-title-sm text-title-sm cursor-pointer transition-all shadow-md ${activeStyles}`;
+          } else {
+            btn.className = 'flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-lg bg-surface-container-highest text-outline font-title-sm text-title-sm cursor-not-allowed opacity-50';
+          }
+        }
+
+        function addTimelineEvent(text, level) {
+          const timeline = document.getElementById('timeline-container');
+          if (!timeline) return;
+          const now = new Date();
+          const timeStr = `+00:${String(now.getSeconds()).padStart(2, '0')}.${String(Math.floor(now.getMilliseconds() / 100))}`;
+
+          let badgeColor = 'text-outline';
+          if (level === 'CRIT') badgeColor = 'text-error font-title-sm';
+          if (level === 'ACT') badgeColor = 'text-primary';
+          if (level === 'OK') badgeColor = 'text-tertiary';
+
+          const entry = document.createElement('div');
+          entry.className = 'flex items-start gap-space-sm p-space-xs rounded bg-surface-container-lowest font-label-sm text-label-sm';
+          entry.innerHTML = `
+      <span class="text-outline shrink-0 font-label-md text-label-md">${timeStr}s</span>
+      <span class="text-on-surface-variant flex-1">${text}</span>
+      <span class="${badgeColor} font-label-sm text-label-sm">${level}</span>
+    `;
+          timeline.prepend(entry);
+        }
+
+        function clearTimeline() {
+          const timeline = document.getElementById('timeline-container');
+          if (timeline) timeline.innerHTML = '';
+        }
+
+        function triggerVibrationAlert() {
+          const toggle = document.getElementById('vibration-toggle');
+          if (toggle && toggle.checked && 'vibrate' in navigator) {
+            try {
+              navigator.vibrate([200, 100, 200, 100, 300]);
+              console.log("Navigator.vibrate haptic alert fired.");
+            } catch (e) {
+              console.warn("Vibration failed or blocked by policy.", e);
+            }
+          }
+        }
+
+        function manageFFTSimulation(active, isDanger) {
+          if (animationInterval) {
+            clearInterval(animationInterval);
+            animationInterval = null;
+          }
+
+          const bars = document.querySelectorAll('.fft-bar');
+          if (!active) {
+            bars.forEach(bar => {
+              bar.style.height = '4px';
+              bar.className = 'w-full bg-surface-container-highest rounded-t-sm transition-all duration-75 fft-bar';
+            });
+            return;
+          }
+
+          animationInterval = setInterval(() => {
+            bars.forEach((bar, index) => {
+              const rand = Math.floor(Math.random() * 56) + 6;
+              bar.style.height = `${rand}px`;
+              if (isDanger && rand > 40) {
+                bar.className = 'w-full bg-error rounded-t-sm transition-all duration-75 fft-bar';
+              } else if (active) {
+                bar.className = 'w-full bg-primary-container rounded-t-sm transition-all duration-75 fft-bar';
+              }
+            });
+          }, 90);
+        }
+
+        function toggleAudioSource(type) {
+          activeAudioSource = type;
+          const tabMic = document.getElementById('source-tab-mic');
+          const tabFile = document.getElementById('source-tab-file');
+          const sourceTitle = document.getElementById('source-title');
+          const sourceDesc = document.getElementById('source-desc');
+          const sourceIcon = document.getElementById('source-icon');
+
+          if (type === 'mic') {
+            tabMic.className = 'flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container text-primary font-title-sm text-body-sm transition-all';
+            tabFile.className = 'flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-title-sm text-body-sm transition-all';
+            sourceTitle.textContent = "Default Physical Audio Input";
+            sourceDesc.textContent = "CoreAudio // Ambient Speaker Proximity Capture";
+            sourceIcon.textContent = "mic";
+          } else {
+            tabFile.className = 'flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container text-primary font-title-sm text-body-sm transition-all';
+            tabMic.className = 'flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-title-sm text-body-sm transition-all';
+            sourceTitle.textContent = "Intercepted Audio / Voicemail File";
+            sourceDesc.textContent = "Virtual Stream Loader // WAV, MP3, FLAC (Zero-Disk Read)";
+            sourceIcon.textContent = "audio_file";
+          }
+          setSystemState(3); // Setting source makes it authorized & ready
+        }
+
+        function requestPermissionSimulation() {
+          setSystemState(3);
+        }
+
+        function handleStartAnalysis() {
+          setSystemState(4);
+        }
+
+        function handlePauseAnalysis() {
+          setSystemState(6);
+        }
+
+        function handleStopAnalysis() {
+          setSystemState(6);
+        }
+
+        function handleExportEvidence() {
+          const modal = document.getElementById('dossier-modal');
+          if (modal) modal.classList.remove('hidden');
+          if (modal) modal.classList.add('flex');
+        }
+
+        function closeDossierModal() {
+          const modal = document.getElementById('dossier-modal');
+          if (modal) modal.classList.add('hidden');
+          if (modal) modal.classList.remove('flex');
+        }
+
+        // Initialize in State 4 (Analysis Active) by default to show rich visual activity immediately
+        document.addEventListener('DOMContentLoaded', () => {
+          setSystemState(4);
+        });
+        // Fallback direct execution
+        setSystemState(4);
+      </script>
+    </main>
+    <footer class="w-full bg-surface-container-lowest py-space-md mt-space-xl shadow-[0_-1px_4px_rgba(0,0,0,0.15)]">
+      <div class="w-full px-gutter flex flex-col md:flex-row items-center justify-between gap-space-sm">
+        <div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant">
+          <div class="flex items-center gap-space-xs"><span
+              class="material-symbols-outlined text-tertiary text-[14px]">verified_user</span><span>SOC2 TYPE II
+              CERTIFIED</span></div>
+          <div class="flex items-center gap-space-xs"><span
+              class="material-symbols-outlined text-primary text-[14px]">lock</span><span>256-BIT ENCLAVE TLS</span>
+          </div><span>ZERO-KNOWLEDGE CIPHERTEXT MODE ACTIVE</span>
+        </div>
+        <div class="font-label-sm text-label-sm text-outline">© 2025 ScamShield AI Threat Systems. All telemetry
+          confidential.</div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

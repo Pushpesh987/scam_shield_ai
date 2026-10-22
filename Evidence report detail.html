@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary":"#003824","secondary-fixed":"#6ffbbe","primary-fixed-dim":"#4cd7f6","secondary":"#4edea3","error":"#ffb4ab","secondary-container":"#00a572","on-secondary-container":"#00311f","on-primary-fixed":"#001f26","on-surface":"#dfe2f1","on-tertiary-fixed-variant":"#5516be","surface-tint":"#4cd7f6","primary-container":"#06b6d4","tertiary":"#d0bcff","tertiary-fixed-dim":"#d0bcff","inverse-on-surface":"#2c303b","surface-container-low":"#171b26","on-surface-variant":"#bcc9cd","on-tertiary-container":"#4900ae","surface":"#0f131d","tertiary-fixed":"#e9ddff","primary":"#4cd7f6","surface-container-highest":"#313540","tertiary-container":"#b395ff","on-primary-fixed-variant":"#004e5c","surface-bright":"#353944","surface-container-lowest":"#0a0e18","on-tertiary-fixed":"#23005c","on-error":"#690005","background":"#0f131d","outline-variant":"#3d494c","on-tertiary":"#3c0091","inverse-surface":"#dfe2f1","surface-variant":"#313540","on-primary-container":"#00424f","on-primary":"#003640","on-secondary-fixed":"#002113","primary-fixed":"#acedff","on-background":"#dfe2f1","on-secondary-fixed-variant":"#005236","surface-container":"#1c1f2a","surface-container-high":"#262a35","surface-dim":"#0f131d","on-error-container":"#ffdad6","secondary-fixed-dim":"#4edea3","outline":"#869397","inverse-primary":"#00687a","error-container":"#93000a"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},spacing:{"margin-lg":"3rem","space-lg":"2rem",margin:"1.5rem","space-xl":"3rem","margin-sm":"1rem","space-md":"1.25rem","space-xs":"0.375rem","gutter-sm":"1rem",gutter:"1.5rem","space-sm":"0.75rem","gutter-lg":"2rem"},fontFamily:{"body-md":["Plus Jakarta Sans"],"display-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"display-md-mobile":["Plus Jakarta Sans"],"body-xl":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"]},fontSize:{"body-md":["16px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"display-md":["44px",{lineHeight:"52px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"0em",fontWeight:"600"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.01em",fontWeight:"700"}],"label-md":["15px",{lineHeight:"20px",letterSpacing:"0.02em",fontWeight:"600"}],"label-lg":["18px",{lineHeight:"24px",letterSpacing:"0.01em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"400"}],"display-lg-mobile":["38px",{lineHeight:"46px",letterSpacing:"-0.02em",fontWeight:"800"}],"display-md-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-xl":["20px",{lineHeight:"30px",letterSpacing:"0em",fontWeight:"400"}],"display-lg":["56px",{lineHeight:"64px",letterSpacing:"-0.03em",fontWeight:"800"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"600"}],"label-sm":["13px",{lineHeight:"18px",letterSpacing:"0.04em",fontWeight:"700"}],"headline-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.01em",fontWeight:"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface relative min-h-screen selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden"><div class="fixed inset-0 pointer-events-none z-0 overflow-hidden"><div class="absolute -top-[15%] left-1/4 w-[550px] h-[550px] bg-primary/10 rounded-full blur-[140px]"></div><div class="absolute top-[30%] -right-[10%] w-[500px] h-[500px] bg-tertiary/10 rounded-full blur-[160px]"></div><div class="absolute -bottom-[10%] left-[10%] w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[150px]"></div></div><header class="fixed top-0 w-full z-50 px-gutter-sm lg:px-gutter-lg pt-4"><div class="h-20 max-w-[1360px] mx-auto px-6 rounded-full bg-surface-container-low/75 backdrop-blur-2xl shadow-[0_16px_36px_-10px_rgba(0,0,0,0.6)] flex items-center justify-between gap-4"><div class="flex items-center gap-4 shrink-0"><a class="flex items-center gap-3 group" href="#"><div class="relative flex items-center justify-center"><div class="absolute inset-0 rounded-full bg-primary/30 blur-md group-hover:bg-primary/50 transition-all"></div><img alt="Scam Shield Emblem" class="relative h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WlWORERxwAJVv2QUyq2b9TWINfy-LGA2D-_Wf5j2TG0nnVC_XW7doi1vU5q4mX0txFAkH87MeF4kSA5GxoNWfThDif91uTACakiy6xu7zozBZUIehuR3TXeSW2wd1RIqrP3gMmTFebYnEKcnws04ySw_ldFr1Y-bPmQa_3eSonxTYmraOytHEWcz6qu5I_UySE8hBKZrJI0icJfbVUrrpNV4QTttlPYQqu4hTPL29SEu8oSQ22MX8DGnBS"/></div><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-bold">Scam Shield</span></a><div class="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/20 border border-secondary/30"><span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse shadow-[0_0_10px_rgba(78,222,163,0.9)]"></span><span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase font-bold">Live Defense</span></div></div><nav class="hidden xl:flex items-center gap-1" data-active-classes="bg-surface-container-high text-primary font-bold shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2)]"><a class="px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="overview" href="#">Overview</a><a class="px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="upload-call" href="#">Upload Call</a><a class="px-3.5 py-2 rounded-full font-label-md text-label-md bg-surface-container-high text-primary font-bold shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2)] transition-all" data-path="dashboard" href="#">Dashboard</a><a class="px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="evidence-and-ai" href="#">Evidence &amp; AI</a><a class="px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="red-alert" href="#">Red Alert</a><a class="px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="helpline-1930" href="#">Help &amp; 1930</a><a class="px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="settings" href="#">Settings</a></nav><div class="flex items-center gap-3 shrink-0"><a class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-error-container text-on-error-container font-label-md text-label-md hover:bg-error hover:text-on-error transition-all shadow-[0_0_20px_rgba(239,68,68,0.35)] animate-pulse border border-error/30" data-path="helpline-1930" href="#"><span class="material-symbols-outlined text-[18px]">e911_emergency</span><span>1930 Cyber Helpline</span></a><button aria-label="Notifications" class="relative flex items-center justify-center w-10 h-10 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error shadow-[0_0_8px_rgba(239,68,68,0.9)]"></span></button><div class="flex items-center gap-2.5 pl-2 py-1 pr-1.5 rounded-full bg-surface-container-highest/40 backdrop-blur-md"><span class="hidden md:inline font-label-sm text-label-sm text-on-surface font-semibold">Ramesh K.</span><div class="relative"><img alt="Ramesh K." class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHy_R0nG2Fa7tgbOIvAzNrQ5JCPQf4E6IRzLN66Q0ng5osAW2gkqFIZii58A7p8grNH38lSuUZd9yWEOgoRJ5vbHyndQD3zw4J9gwi72j_UNsJI3ixcRlIFGjq3XBWbw3uifaM5SfRJTrWax6a9uoPdo_mxKFuzFv3JSn6MCp0vm-e_91_toMBdYcH4BNoZiShGFIUDOctnF6YyW4hdMEfVd3upHNdlrEDHDeO5f5jTHZy5sxpTClz0Q"/><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(78,222,163,0.8)]"></span></div></div></div></div></header><main class="relative z-10 w-full pt-20 max-w-[1360px] mx-auto px-gutter-sm lg:px-gutter-lg pb-space-xl"><div class="flex flex-col w-full">
+<!-- Specular Ambient Aura Overlay -->
+<div class="relative w-full overflow-hidden">
+<!-- Spatial Top Ambient Radial Spots -->
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[360px] bg-primary/15 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="absolute top-48 -right-24 w-[420px] h-[420px] bg-error/10 rounded-full blur-[150px] pointer-events-none"></div>
+<div class="absolute top-96 -left-32 w-[480px] h-[480px] bg-secondary/10 rounded-full blur-[160px] pointer-events-none"></div>
+<!-- MAIN DOSSIER CONTAINER -->
+<div class="relative z-10 flex flex-col gap-space-lg max-w-[1280px] mx-auto w-full py-margin">
+<!-- 1. HEADER & TELEMETRY STRIP -->
+<section class="flex flex-col gap-space-md">
+<!-- Breadcrumb & Classification Bar -->
+<div class="flex flex-wrap items-center justify-between gap-3">
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="hover:text-primary transition-colors cursor-pointer flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">shield</span>
+              Citizen Dashboard
+            </span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Active Investigation</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-primary font-semibold">Forensic Evidence Dossier #IND-65B-99214</span>
+</nav>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container-highest/60 backdrop-blur-md font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span>SHA-256 Vault Signed</span>
+</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest/60 backdrop-blur-md font-label-sm text-label-sm text-secondary flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(78,222,163,0.9)] animate-ping"></span>
+<span>Evidentiary Audit Locked</span>
+</span>
+</div>
+</div>
+<!-- Master Telemetry Frosted Pane (Level 2 Floating Glass) -->
+<div class="relative rounded-2xl bg-surface-container/70 backdrop-blur-2xl p-space-lg shadow-xl shadow-black/40 overflow-hidden">
+<!-- Top subtle specular highlight -->
+<div class="absolute inset-x-0 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Left: Caller Identification & Subtitles -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-3">
+<span class="px-3 py-1 rounded-full bg-error-container/30 text-error font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-2 shadow-[0_0_16px_rgba(239,68,68,0.3)]">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-pulse shadow-[0_0_10px_rgba(239,68,68,0.9)]"></span>
+                  Critical Scammer (98.4% Confidence)
+                </span>
+<span class="px-3 py-1 rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">gavel</span>
+                  Sec 65B Indian Evidence Act Certified
+                </span>
+<span class="px-3 py-1 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                  100% Registry Verified
+                </span>
+</div>
+<div class="flex items-baseline gap-3 mt-1">
+<h1 class="font-display-md text-display-md text-on-surface font-extrabold tracking-tight">
+                  +91 98210 47291
+                </h1>
+<span class="font-label-md text-label-md text-error font-semibold px-2.5 py-0.5 rounded-md bg-error/10">Spoofed SIM</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">audio_file</span>
+<span>WhatsApp_Call_Unknown_Customs_Inspector.m4a</span>
+<span class="text-outline">•</span>
+<span>Audited Today at 02:41 PM IST</span>
+<span class="text-outline">•</span>
+<span class="text-on-surface font-semibold">Caller Alias: "Inspector Rathore, Mumbai Air Cargo"</span>
+</p>
+</div>
+<!-- Right: Action CTAs -->
+<div class="flex flex-wrap sm:flex-nowrap items-center gap-3 shrink-0">
+<a class="inline-flex items-center justify-center gap-2.5 px-6 h-14 rounded-full bg-gradient-to-r from-error to-error-container text-on-error font-label-lg text-label-lg shadow-[0_0_28px_rgba(239,68,68,0.45)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[22px]">warning</span>
+<span>🚨 View Red Alert &amp; Plan</span>
+</a>
+<button class="inline-flex items-center justify-center gap-2.5 px-6 h-14 rounded-full bg-surface-container-high/90 hover:bg-surface-bright text-on-surface font-label-lg text-label-lg shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-200" onclick="alert('Preparing tamper-proof Section 65B police evidence dossier with cryptographic watermark. Download starting...')" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">description</span>
+<span>📄 Download Police PDF</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. IN PLAIN WORDS FOR YOU & YOUR FAMILY (JARGON-FREE REASSURANCE BANNER) -->
+<section class="relative rounded-2xl bg-surface-container-low/90 backdrop-blur-2xl p-space-lg shadow-xl shadow-black/30 overflow-hidden">
+<!-- Emerald soft edge glow -->
+<div class="absolute inset-0 bg-gradient-to-r from-secondary-container/15 via-transparent to-primary/10 pointer-events-none"></div>
+<div class="absolute inset-x-0 top-0 h-[1.5px] bg-gradient-to-r from-secondary/50 via-primary/30 to-transparent"></div>
+<div class="relative flex flex-col md:flex-row items-start md:items-center gap-space-md">
+<!-- Friendly Senior & Family Icon Avatar -->
+<div class="relative shrink-0 flex items-center justify-center w-16 h-16 rounded-2xl bg-secondary-container/30 text-secondary shadow-[0_0_24px_rgba(78,222,163,0.35)]">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">family_restroom</span>
+<div class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-md">
+<span class="material-symbols-outlined text-[13px] font-black">check</span>
+</div>
+</div>
+<!-- Plain reassurance narrative -->
+<div class="flex-1 flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold tracking-tight">
+                In Plain Words: This caller was an impostor trying to scare you into transferring money.
+              </span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+              No official police agency, Customs department, or court in India ever asks for banking OTPs or threatens digital arrest over WhatsApp or phone calls. You did the exact right thing by hanging up and checking with Scam Shield. You and your savings are completely safe.
+            </p>
+</div>
+<!-- Reassurance Stamp Badge -->
+<div class="shrink-0 flex md:flex-col items-center md:items-end justify-between w-full md:w-auto pt-2 md:pt-0">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold px-3 py-1 rounded-full bg-secondary/10">
+              100% Zero Liability
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Verified against NPCI &amp; MHA</span>
+</div>
+</div>
+</section>
+<!-- 3. CROSS-VERIFICATION NETWORK (4 OFFICIAL REGISTRIES CONSULTED) -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-bold">National Security Cross-Check</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+              4 Official Telemetry Registries Consulted
+            </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md sm:text-right">
+            Cross-referenced across National Cybercrime vaults, RBI banking indexes, and carrier routing pipelines.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1: 1930 Cyber Cell Portal -->
+<div class="relative rounded-2xl bg-surface-container/70 backdrop-blur-xl p-space-md flex flex-col justify-between shadow-lg shadow-black/40 hover:bg-surface-container-high transition-all group overflow-hidden">
+<div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+<div>
+<div class="flex items-center justify-between gap-2 mb-3">
+<div class="w-10 h-10 rounded-xl bg-error-container/30 text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">policy</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-error-container/30 text-error font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  142 Prior Reports
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-2">
+                Cyber Crime Portal (1930)
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-snug">
+                142 citizens across Mumbai, Delhi, and Bengaluru reported this exact phone number posing as the <strong class="text-on-surface">"CBI Narcotics &amp; Customs Cell"</strong>. Documented active extortion syndicate.
+              </p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-error">
+<span class="material-symbols-outlined text-[16px]">priority_high</span> High Threat Flag
+              </span>
+<span>Updated 8m ago</span>
+</div>
+</div>
+<!-- Card 2: Reserve Bank Clearance Index -->
+<div class="relative rounded-2xl bg-surface-container/70 backdrop-blur-xl p-space-md flex flex-col justify-between shadow-lg shadow-black/40 hover:bg-surface-container-high transition-all group overflow-hidden">
+<div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+<div>
+<div class="flex items-center justify-between gap-2 mb-3">
+<div class="w-10 h-10 rounded-xl bg-tertiary-container/30 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-bold">
+                  Unauthorized Channel
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-2">
+                RBI Banking Clearance
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-snug">
+                Caller falsely asserted authority over <strong class="text-on-surface">"RBI Clearances."</strong> This phone number does not correspond to any registered commercial or central bank line. Zero Authorized Banking Status.
+              </p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]">cancel</span> Rogue Account Target
+              </span>
+<span>NPCI Audited</span>
+</div>
+</div>
+<!-- Card 3: Telecom Carrier Routing -->
+<div class="relative rounded-2xl bg-surface-container/70 backdrop-blur-xl p-space-md flex flex-col justify-between shadow-lg shadow-black/40 hover:bg-surface-container-high transition-all group overflow-hidden">
+<div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+<div>
+<div class="flex items-center justify-between gap-2 mb-3">
+<div class="w-10 h-10 rounded-xl bg-primary-container/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">cell_tower</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm font-bold">
+                  VoIP Spoof Detected
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-2">
+                Carrier Routing Registry
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-snug">
+                Call originated from an untraced cloud SIP server routed through international IP addresses (Southeast Asia SOCKS5 Proxy), masked to impersonate a local domestic mobile SIM.
+              </p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[16px]">router</span> SOCKS5 Proxy Mask
+              </span>
+<span>Telecom Audit</span>
+</div>
+</div>
+<!-- Card 4: Extortion Script Linguistic Vault -->
+<div class="relative rounded-2xl bg-surface-container/70 backdrop-blur-xl p-space-md flex flex-col justify-between shadow-lg shadow-black/40 hover:bg-surface-container-high transition-all group overflow-hidden">
+<div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+<div>
+<div class="flex items-center justify-between gap-2 mb-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-container/20 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">smart_toy</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm font-bold">
+                  99.1% Script Match
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-2">
+                Extortion Script Vault
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-snug">
+                Follows the classic 4-step extortion tactic: <strong class="text-on-surface">Illegal Parcel → Video Arrest Threat → Isolation from Family → Urgent Escrow Transfer</strong>. Known Playbook Disarmed.
+              </p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]">psychology</span> Pattern Neutralized
+              </span>
+<span>AI Classifier</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. PLAIN-ENGLISH EVIDENCE (3 CLEAR REASONS WHY THIS WAS 100% FAKE) -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-error uppercase tracking-widest font-bold">Unmasking The Deception</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+            3 Plain Reasons Why This Call Was 100% Fake
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            Clear contrast between the scammer's fabricated threats and actual Indian legal safeguards.
+          </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Reason 01: Urgency & Fear Pressure -->
+<div class="relative rounded-2xl bg-surface-container/70 backdrop-blur-2xl p-space-lg flex flex-col justify-between shadow-xl shadow-black/40 overflow-hidden group">
+<div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-error via-error/40 to-transparent"></div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-display-md text-display-md text-error/30 font-black leading-none group-hover:text-error/60 transition-colors">01</span>
+<span class="px-3 py-1 rounded-full bg-error-container/30 text-error font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">alarm</span>
+                  Psychological Coercion
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                Urgency &amp; Fear Pressure
+              </h3>
+<!-- What Caller Claimed -->
+<div class="p-3.5 rounded-xl bg-surface-container-high/60 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">call_received</span> What The Scammer Claimed
+                </span>
+<p class="font-body-md text-body-md text-on-surface italic">
+                  "The caller claimed an arrest warrant would be served within 2 hours and forcefully instructed you not to hang up or contact your children."
+                </p>
+</div>
+<!-- The Reality -->
+<div class="p-3.5 rounded-xl bg-secondary-container/20 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> The Reality Under Law
+                </span>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+                  Real Indian law enforcement officers never issue instant 2-hour arrest deadlines or demand family isolation over the telephone. Warrants require written judicial notice.
+                </p>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>Protective Rule: Always hang up and contact family first.</span>
+</div>
+</div>
+<!-- Reason 02: Secret Codes & Money Transfer -->
+<div class="relative rounded-2xl bg-surface-container/70 backdrop-blur-2xl p-space-lg flex flex-col justify-between shadow-xl shadow-black/40 overflow-hidden group">
+<div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-error via-error/40 to-transparent"></div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-display-md text-display-md text-error/30 font-black leading-none group-hover:text-error/60 transition-colors">02</span>
+<span class="px-3 py-1 rounded-full bg-error-container/30 text-error font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">pin</span>
+                  Financial Theft Vector
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                Secret Codes &amp; Escrow Transfer
+              </h3>
+<!-- What Caller Claimed -->
+<div class="p-3.5 rounded-xl bg-surface-container-high/60 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">call_received</span> What The Scammer Claimed
+                </span>
+<p class="font-body-md text-body-md text-on-surface italic">
+                  "The caller demanded a 'Mandatory Security Deposit' of ₹2,45,000 to a private beneficiary account and pressured you to read your bank OTP aloud."
+                </p>
+</div>
+<!-- The Reality -->
+<div class="p-3.5 rounded-xl bg-secondary-container/20 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> The Reality Under Law
+                </span>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+                  Legitimate banks and government agencies will never ask for personal SMS OTPs or direct citizen deposits into private individual accounts or 'holding vaults'.
+                </p>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>Protective Rule: OTP means "Only To You", never share.</span>
+</div>
+</div>
+<!-- Reason 03: Impersonation & Fake Badges -->
+<div class="relative rounded-2xl bg-surface-container/70 backdrop-blur-2xl p-space-lg flex flex-col justify-between shadow-xl shadow-black/40 overflow-hidden group">
+<div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-error via-error/40 to-transparent"></div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-display-md text-display-md text-error/30 font-black leading-none group-hover:text-error/60 transition-colors">03</span>
+<span class="px-3 py-1 rounded-full bg-error-container/30 text-error font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">badge</span>
+                  Synthetic Authority
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                Impersonation &amp; Fake Badges
+              </h3>
+<!-- What Caller Claimed -->
+<div class="p-3.5 rounded-xl bg-surface-container-high/60 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">call_received</span> What The Scammer Claimed
+                </span>
+<p class="font-body-md text-body-md text-on-surface italic">
+                  "The caller introduced himself as 'Inspector Rathore, Head of Customs Crime Cell' and offered to display a digital identification badge over WhatsApp video."
+                </p>
+</div>
+<!-- The Reality -->
+<div class="p-3.5 rounded-xl bg-secondary-container/20 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> The Reality Under Law
+                </span>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+                  Indian Police and Judicial Courts never interrogate citizens, present badges, or issue digital clearances via WhatsApp video. The background video was a looped pre-recorded feed.
+                </p>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>Protective Rule: Digital arrests do not exist under Indian Law.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. VERIFIED TRANSCRIPT & RED-FLAG AUDIO FORENSICS PLAYER -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left: Audio Forensic Waveform & Visualizer (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="relative rounded-2xl bg-surface-container/70 backdrop-blur-2xl p-space-lg shadow-xl shadow-black/40 overflow-hidden">
+<div class="absolute inset-x-0 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+<div class="flex items-center justify-between gap-2 mb-4">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-error animate-ping"></div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Audio Forensics Player</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high font-label-sm text-label-sm text-primary">
+                Duration: 01:42
+              </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-5">
+              Extracted forensic audio snippet with high-frequency noise filter applied. Red tags indicate extortion triggers detected in real time.
+            </p>
+<!-- Custom Frosted Audio Player Card -->
+<div class="rounded-xl bg-surface-container-lowest/80 p-space-md flex flex-col gap-3">
+<!-- Timeline counter & Speed selector -->
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="text-primary font-bold">00:42 / 01:42</span>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface">1.0x</span>
+<span class="text-outline">Lossless WAV 48kHz</span>
+</div>
+</div>
+<!-- Interactive Timeline Scrubber with Red-Flag Pins -->
+<div class="relative w-full py-4">
+<!-- Track Bar Background -->
+<div class="h-2 w-full bg-surface-container-highest rounded-full relative overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container w-[41%] rounded-full"></div>
+</div>
+<!-- Red Flag Pins on Scrubber -->
+<div class="absolute top-1 left-[14%] -translate-x-1/2 flex flex-col items-center group cursor-pointer" title="00:14 - Parcel Hook">
+<span class="w-3 h-3 rounded-full bg-error shadow-[0_0_8px_rgba(239,68,68,0.9)] animate-pulse"></span>
+<span class="text-[10px] text-error font-bold mt-1">0:14</span>
+</div>
+<div class="absolute top-1 left-[41%] -translate-x-1/2 flex flex-col items-center group cursor-pointer" title="00:42 - OTP Coercion">
+<span class="w-4 h-4 rounded-full bg-error shadow-[0_0_12px_rgba(239,68,68,1)] ring-2 ring-white"></span>
+<span class="text-[10px] text-white font-extrabold mt-1">0:42</span>
+</div>
+<div class="absolute top-1 left-[76%] -translate-x-1/2 flex flex-col items-center group cursor-pointer" title="01:18 - Extortion Transfer">
+<span class="w-3 h-3 rounded-full bg-error shadow-[0_0_8px_rgba(239,68,68,0.9)]"></span>
+<span class="text-[10px] text-error font-bold mt-1">1:18</span>
+</div>
+</div>
+<!-- Waveform SVG Visualization Graphic -->
+<div class="w-full h-16 flex items-center justify-between gap-[2px] px-1 py-2 bg-surface-container/50 rounded-lg overflow-hidden">
+<span class="w-1.5 h-4 bg-primary/40 rounded-full"></span>
+<span class="w-1.5 h-6 bg-primary/60 rounded-full"></span>
+<span class="w-1.5 h-10 bg-primary/80 rounded-full"></span>
+<span class="w-1.5 h-8 bg-primary rounded-full"></span>
+<span class="w-1.5 h-12 bg-primary rounded-full"></span>
+<span class="w-1.5 h-14 bg-error rounded-full animate-pulse shadow-[0_0_8px_rgba(239,68,68,0.7)]" title="Red Flag at 0:14"></span>
+<span class="w-1.5 h-9 bg-primary/80 rounded-full"></span>
+<span class="w-1.5 h-5 bg-primary/40 rounded-full"></span>
+<span class="w-1.5 h-7 bg-primary/70 rounded-full"></span>
+<span class="w-1.5 h-11 bg-primary rounded-full"></span>
+<span class="w-1.5 h-14 bg-primary rounded-full"></span>
+<span class="w-1.5 h-16 bg-error rounded-full animate-pulse shadow-[0_0_10px_rgba(239,68,68,0.9)]" title="Red Flag at 0:42 (OTP Demand)"></span>
+<span class="w-1.5 h-10 bg-surface-container-highest rounded-full"></span>
+<span class="w-1.5 h-6 bg-surface-container-highest rounded-full"></span>
+<span class="w-1.5 h-8 bg-surface-container-highest rounded-full"></span>
+<span class="w-1.5 h-12 bg-surface-container-highest rounded-full"></span>
+<span class="w-1.5 h-15 bg-error/50 rounded-full" title="Red Flag at 1:18 (Transfer Demand)"></span>
+<span class="w-1.5 h-9 bg-surface-container-highest rounded-full"></span>
+<span class="w-1.5 h-5 bg-surface-container-highest rounded-full"></span>
+<span class="w-1.5 h-3 bg-surface-container-highest rounded-full"></span>
+</div>
+<!-- Media Control Buttons -->
+<div class="flex items-center justify-between pt-1">
+<button class="w-9 h-9 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface transition-colors" title="Replay 10s" type="button">
+<span class="material-symbols-outlined text-[18px]">replay_10</span>
+</button>
+<div class="flex items-center gap-2">
+<button class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-[0_0_20px_rgba(76,215,246,0.5)] hover:scale-105 active:scale-95 transition-all" title="Play Forensic Audio" type="button">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface transition-colors" title="Forward 10s" type="button">
+<span class="material-symbols-outlined text-[18px]">forward_10</span>
+</button>
+</div>
+</div>
+<!-- Acoustic AI Deepfake Analysis Box -->
+<div class="mt-4 p-3.5 rounded-xl bg-tertiary-container/15 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">graphic_eq</span>
+                  Acoustic AI Voice Deepfake Audit
+                </span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">94.7% Synthetic</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+                Synthetic vocal harmonics identified. Micro-pitch anomalies and lack of natural glottal pulses match <strong class="text-tertiary">ElevenLabs / Bark Voice Clone Model artifacts</strong>.
+              </p>
+</div>
+</div>
+<!-- Forensic Evidence Snapshot (Visual Proof Placeholder) -->
+<div class="relative rounded-2xl bg-surface-container/70 backdrop-blur-2xl p-space-md shadow-xl shadow-black/40 overflow-hidden flex flex-col gap-3">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-bold">Forensic Video Capture</span>
+<div class="relative w-full h-44 rounded-xl overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover opacity-80" data-alt="Forensic capture of a fraudulent WhatsApp video call showing a fake police officer badge and fabricated Indian Customs seals with synthetic AI deepfake artifacts overlaid with digital forensic telemetry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKSeTvypkrhEmW5WBE0wlL5onNkYDDFScwnbGiZzHtGW5cN3LNab29-N2OLjjhcRz1OaxOp_Ch7hKvXzc-rHWwgBM_Y0mtXyfeWpAnboWHAF4A7HiRB_x7Ka_dfzb2EnNgNWHtHg4rfQPFdg1cOYr2UAQt1xtnpQaXvB_pw8F49bUEiMnsgkRfANQtwAy7ZCo9yItz0eRUZaDv6b36gKOWGLevz655hPknJZEivUmVGw-a3DR9FZtMZw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-error/80 text-white font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                  Fake Police Desk Overlay
+                </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-black/60 px-2 py-0.5 rounded">Frame #0419</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              The camera feed featured a repeating 6-second video loop of a fabricated police station desk to convince victims of legitimate interrogation.
+            </p>
+</div>
+</div>
+<!-- Right: Tagged Transcript Blocks with Timestamps (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">Synchronized Text Telemetry</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+                Verified Red-Flag Moments in Transcript
+              </h3>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">spellcheck</span>
+              Word Accuracy 99.8%
+            </span>
+</div>
+<!-- Transcript Stream Container -->
+<div class="flex flex-col gap-3">
+<!-- Moment 1: 00:14 -->
+<div class="relative rounded-2xl bg-surface-container/70 backdrop-blur-2xl p-space-md shadow-lg shadow-black/30 flex flex-col gap-2 hover:bg-surface-container-high transition-all">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded bg-surface-container-highest font-mono font-label-sm text-label-sm text-primary font-bold">00:14</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Caller (Inspector Rathore)</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-error-container/30 text-error font-label-sm text-label-sm font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">label_important</span>
+                  Classic Parcel Hook
+                </span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface font-medium leading-relaxed">
+                "Illegal narcotics &amp; foreign contraband seized under your Aadhaar number at Mumbai Air Cargo. Five international passports registered under your name are under seizure."
+              </p>
+<div class="pt-2 flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-error font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> Threat Type:
+                </span>
+<span>Fabricated Aadhaar Misuse Allegation designed to induce initial shock and panic.</span>
+</div>
+</div>
+<!-- Moment 2: 00:42 (OTP Demand - Severe Danger) -->
+<div class="relative rounded-2xl bg-surface-container/90 backdrop-blur-2xl p-space-md shadow-xl shadow-black/40 flex flex-col gap-2 ring-1 ring-error/40 hover:bg-surface-container-high transition-all">
+<div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-error via-error/60 to-transparent"></div>
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded bg-error text-on-error font-mono font-label-sm text-label-sm font-bold">00:42</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Caller (Inspector Rathore)</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold flex items-center gap-1.5 shadow-[0_0_12px_rgba(239,68,68,0.5)]">
+<span class="material-symbols-outlined text-[16px]">lock_open</span>
+                  Severe Danger: OTP Stealing
+                </span>
+</div>
+<p class="font-body-lg text-body-lg text-error font-bold leading-relaxed">
+                "You must immediately disclose the 6-digit verification code received on SMS to verify your national identity and cancel the instant arrest order."
+              </p>
+<div class="pt-2 flex items-center gap-2 text-on-error-container font-label-sm text-label-sm bg-error-container/20 p-2.5 rounded-lg">
+<span class="material-symbols-outlined text-[18px] text-error shrink-0">report</span>
+<span>CRITICAL TELEMETRY: The caller was attempting a real-time net-banking password reset while keeping the victim on the call.</span>
+</div>
+</div>
+<!-- Moment 3: 01:18 (Extortion Transfer) -->
+<div class="relative rounded-2xl bg-surface-container/70 backdrop-blur-2xl p-space-md shadow-lg shadow-black/30 flex flex-col gap-2 hover:bg-surface-container-high transition-all">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded bg-surface-container-highest font-mono font-label-sm text-label-sm text-primary font-bold">01:18</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Caller (Inspector Rathore)</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">payments</span>
+                  Fake Escrow Fraud
+                </span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface font-medium leading-relaxed">
+                "Transfer ₹2,45,000 into the Reserve Bank of India Safe Vault Escrow account for asset clearance certification. This amount is 100% refundable after 15 minutes of forensic clearance."
+              </p>
+<div class="pt-2 flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-tertiary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">account_balance_wallet</span> Destination Target:
+                </span>
+<span>Private mule account at Bandhan Bank, unauthorized and unmonitored by RBI.</span>
+</div>
+</div>
+<!-- Victim's Smart Action: 01:38 -->
+<div class="relative rounded-2xl bg-secondary-container/15 backdrop-blur-2xl p-space-md shadow-lg shadow-black/30 flex flex-col gap-2">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded bg-secondary-container/40 font-mono font-label-sm text-label-sm text-secondary font-bold">01:38</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">Citizen (Ramesh K.)</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">gavel</span>
+                  Correct Response: Call Terminated
+                </span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface font-medium leading-relaxed">
+                "I am disconnecting the call right now to verify this directly with the local police station and my bank branch."
+              </p>
+<div class="pt-1 flex items-center gap-2 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">thumb_up</span>
+<span>Scam Shield Protocol executed successfully. Zero rupees compromised.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. OFFICIAL POLICE FILING & FAMILY SAFEGUARD ACTIONS -->
+<section class="relative rounded-2xl bg-surface-container/80 backdrop-blur-2xl p-space-lg shadow-2xl shadow-black/50 overflow-hidden">
+<!-- Top specular highlight line -->
+<div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Left Column: Pre-formatted 1930 Cyber Cell Action (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-error-container/30 text-error font-label-sm text-label-sm font-bold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+                Official Cybercrime Protocol
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dossier Readiness: 100% Complete</span>
+</div>
+<h2 class="font-display-md text-display-md text-on-surface font-extrabold tracking-tight">
+              Ready to report? Your file is pre-formatted for the 1930 Cyber Cell.
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              We have generated an authorized Section 65B electronic evidence package. You can transmit this file directly to the Indian National Cyber Crime Reporting Portal or report it to 1930 with a single tap.
+            </p>
+<!-- Action Buttons Grid -->
+<div class="flex flex-wrap sm:flex-nowrap items-center gap-space-sm pt-2">
+<!-- Dial 1930 CTA -->
+<a class="inline-flex items-center justify-center gap-3 px-8 h-16 rounded-full bg-gradient-to-r from-error to-error-container text-on-error font-label-lg text-label-lg shadow-[0_0_32px_rgba(239,68,68,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200" href="tel:1930">
+<span class="material-symbols-outlined text-[24px]">call</span>
+<span>🚨 1-Tap Dial 1930 Cyber Fraud</span>
+</a>
+<!-- Family Safeguard CTA -->
+<button class="inline-flex items-center justify-center gap-3 px-7 h-16 rounded-full bg-secondary-container/30 hover:bg-secondary-container/50 text-secondary font-label-lg text-label-lg shadow-[0_0_24px_rgba(78,222,163,0.3)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200" onclick="alert('Evidence summary securely dispatched to Ramesh\'s 3 designated Family Circle contacts via SMS and WhatsApp.')" type="button">
+<span class="material-symbols-outlined text-[22px]">group_add</span>
+<span>👥 Share with Family Circle</span>
+</button>
+</div>
+</div>
+<!-- Right Column: Cryptographic 65B Certificate Box (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-3">
+<div class="rounded-xl bg-surface-container-lowest/90 p-space-md flex flex-col gap-3 shadow-inner">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">verified</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Section 65B Certificate</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono">TAMPER-PROOF</span>
+</div>
+<!-- SHA-256 Hash Display Box -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cryptographic SHA-256 Checksum:</span>
+<div class="p-2.5 rounded-lg bg-surface-container-high font-mono text-[12px] text-primary break-all select-all leading-tight">
+                  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+                </div>
+</div>
+<!-- Dossier Details Metadata -->
+<div class="grid grid-cols-2 gap-2 text-on-surface-variant font-label-sm text-label-sm pt-1">
+<div>
+<span class="text-outline block">Timestamp:</span>
+<span class="text-on-surface font-medium">2025-05-14T09:11:42Z</span>
+</div>
+<div>
+<span class="text-outline block">Certifying Authority:</span>
+<span class="text-on-surface font-medium">ScamShield CyberNode-04</span>
+</div>
+<div>
+<span class="text-outline block">Court Admissibility:</span>
+<span class="text-secondary font-medium">Fully Admissible</span>
+</div>
+<div>
+<span class="text-outline block">Audit Retention:</span>
+<span class="text-on-surface font-medium">Auto-Lock 90 Days</span>
+</div>
+</div>
+<!-- Official Watermark Note -->
+<div class="pt-2 flex items-center justify-between text-[11px] text-outline">
+<span>Citizen Cyber Defense Framework</span>
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[13px]">lock</span>
+                  Encrypted End-to-End
+                </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div></main><footer class="relative z-10 w-full mt-auto bg-surface-container-lowest/80 backdrop-blur-2xl shadow-[0_-16px_36px_-10px_rgba(0,0,0,0.5)]"><div class="max-w-[1360px] mx-auto px-gutter-sm lg:px-gutter-lg py-margin-lg"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-lg items-start pb-margin"><div class="md:col-span-5 flex flex-col gap-space-sm"><div class="flex items-center gap-3"><div class="relative flex items-center justify-center"><div class="absolute inset-0 rounded-full bg-primary/20 blur-sm"></div><img alt="Scam Shield Emblem" class="relative h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WlWORERxwAJVv2QUyq2b9TWINfy-LGA2D-_Wf5j2TG0nnVC_XW7doi1vU5q4mX0txFAkH87MeF4kSA5GxoNWfThDif91uTACakiy6xu7zozBZUIehuR3TXeSW2wd1RIqrP3gMmTFebYnEKcnws04ySw_ldFr1Y-bPmQa_3eSonxTYmraOytHEWcz6qu5I_UySE8hBKZrJI0icJfbVUrrpNV4QTttlPYQqu4hTPL29SEu8oSQ22MX8DGnBS"/></div><span class="font-headline-sm text-headline-sm text-on-surface font-bold">Scam Shield</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-md">Next-generation spatial cyber protection guarding everyday families and seniors against AI voice clones, phishing calls, and financial scams.</p><div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm w-fit border border-secondary/20"><span class="material-symbols-outlined text-[16px]">lock_reset</span><span>100% Privacy Guaranteed &amp; Instant Auto-Delete</span></div></div><div class="md:col-span-3 flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface font-bold">Quick Access</span><nav class="flex flex-col gap-1.5" data-active-classes="text-primary font-bold"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="#">Overview</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="upload-call" href="#">Upload &amp; Analyze Call</a><a class="font-body-md text-body-md text-primary font-bold transition-colors" data-path="dashboard" href="#">Live Threat Dashboard</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="evidence-and-ai" href="#">AI Evidence Vault</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="settings" href="#">Security Settings</a></nav></div><div class="md:col-span-4 flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface font-bold">Emergency &amp; Official Support</span><p class="font-body-md text-body-md text-on-surface-variant">Citizen Financial Cyber Fraud Reporting System:</p><a class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-error-container text-on-error-container font-label-md text-label-md hover:bg-error hover:text-on-error transition-all w-fit shadow-[0_0_18px_rgba(239,68,68,0.3)]" data-path="helpline-1930" href="#"><span class="material-symbols-outlined text-[18px]">sos</span><span>Dial 1930 Cyber Fraud Helpline</span></a><a class="font-body-md text-body-md text-error hover:underline transition-all mt-1" data-path="red-alert" href="#">Trigger Immediate Family Emergency Lockout</a></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-4 font-label-sm text-label-sm text-outline"><p>© 2025 Scam Shield Technologies. In affiliation with citizen emergency response standards.</p><div class="flex items-center gap-6"><a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" href="#">Terms of Defense</a><a class="hover:text-on-surface transition-colors" href="#">Portal Integration</a></div></div></div></footer></body></html>

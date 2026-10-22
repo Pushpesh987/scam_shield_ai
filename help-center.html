@@ -1,0 +1,452 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary":"#003824","secondary-fixed":"#6ffbbe","primary-fixed-dim":"#4cd7f6","secondary":"#4edea3","error":"#ffb4ab","secondary-container":"#00a572","on-secondary-container":"#00311f","on-primary-fixed":"#001f26","on-surface":"#dfe2f1","on-tertiary-fixed-variant":"#5516be","surface-tint":"#4cd7f6","primary-container":"#06b6d4","tertiary":"#d0bcff","tertiary-fixed-dim":"#d0bcff","inverse-on-surface":"#2c303b","surface-container-low":"#171b26","on-surface-variant":"#bcc9cd","on-tertiary-container":"#4900ae","surface":"#0f131d","tertiary-fixed":"#e9ddff","primary":"#4cd7f6","surface-container-highest":"#313540","tertiary-container":"#b395ff","on-primary-fixed-variant":"#004e5c","surface-bright":"#353944","surface-container-lowest":"#0a0e18","on-tertiary-fixed":"#23005c","on-error":"#690005","background":"#0f131d","outline-variant":"#3d494c","on-tertiary":"#3c0091","inverse-surface":"#dfe2f1","surface-variant":"#313540","on-primary-container":"#00424f","on-primary":"#003640","on-secondary-fixed":"#002113","primary-fixed":"#acedff","on-background":"#dfe2f1","on-secondary-fixed-variant":"#005236","surface-container":"#1c1f2a","surface-container-high":"#262a35","surface-dim":"#0f131d","on-error-container":"#ffdad6","secondary-fixed-dim":"#4edea3","outline":"#869397","inverse-primary":"#00687a","error-container":"#93000a"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},spacing:{"margin-lg":"3rem","space-lg":"2rem",margin:"1.5rem","space-xl":"3rem","margin-sm":"1rem","space-md":"1.25rem","space-xs":"0.375rem","gutter-sm":"1rem",gutter:"1.5rem","space-sm":"0.75rem","gutter-lg":"2rem"},fontFamily:{"body-md":["Plus Jakarta Sans"],"display-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"display-md-mobile":["Plus Jakarta Sans"],"body-xl":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"]},fontSize:{"body-md":["16px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"display-md":["44px",{lineHeight:"52px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"0em",fontWeight:"600"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.01em",fontWeight:"700"}],"label-md":["15px",{lineHeight:"20px",letterSpacing:"0.02em",fontWeight:"600"}],"label-lg":["18px",{lineHeight:"24px",letterSpacing:"0.01em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"400"}],"display-lg-mobile":["38px",{lineHeight:"46px",letterSpacing:"-0.02em",fontWeight:"800"}],"display-md-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-xl":["20px",{lineHeight:"30px",letterSpacing:"0em",fontWeight:"400"}],"display-lg":["56px",{lineHeight:"64px",letterSpacing:"-0.03em",fontWeight:"800"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"600"}],"label-sm":["13px",{lineHeight:"18px",letterSpacing:"0.04em",fontWeight:"700"}],"headline-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.01em",fontWeight:"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface relative min-h-screen selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden"><div class="fixed inset-0 pointer-events-none z-0 overflow-hidden"><div class="absolute -top-[15%] left-1/4 w-[550px] h-[550px] bg-primary/10 rounded-full blur-[140px]"></div><div class="absolute top-[30%] -right-[10%] w-[500px] h-[500px] bg-tertiary/10 rounded-full blur-[160px]"></div><div class="absolute -bottom-[10%] left-[10%] w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[150px]"></div></div><header class="fixed top-0 w-full z-50 px-gutter-sm lg:px-gutter-lg pt-4"><div class="h-20 max-w-[1360px] mx-auto px-6 rounded-full bg-surface-container-low/75 backdrop-blur-2xl shadow-[0_16px_36px_-10px_rgba(0,0,0,0.6)] flex items-center justify-between gap-4"><div class="flex items-center gap-4 shrink-0"><a class="flex items-center gap-3 group" href="#"><div class="relative flex items-center justify-center"><div class="absolute inset-0 rounded-full bg-primary/30 blur-md group-hover:bg-primary/50 transition-all"></div><img alt="Scam Shield Emblem" class="relative h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WlWORERxwAJVv2QUyq2b9TWINfy-LGA2D-_Wf5j2TG0nnVC_XW7doi1vU5q4mX0txFAkH87MeF4kSA5GxoNWfThDif91uTACakiy6xu7zozBZUIehuR3TXeSW2wd1RIqrP3gMmTFebYnEKcnws04ySw_ldFr1Y-bPmQa_3eSonxTYmraOytHEWcz6qu5I_UySE8hBKZrJI0icJfbVUrrpNV4QTttlPYQqu4hTPL29SEu8oSQ22MX8DGnBS"></div><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-bold">Scam Shield</span></a><div class="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/20 border border-secondary/30"><span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse shadow-[0_0_10px_rgba(78,222,163,0.9)]"></span><span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase font-bold">Live Defense</span></div></div><nav class="hidden xl:flex items-center gap-1" data-active-classes="bg-surface-container-high text-primary font-bold shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2)]"><a class="px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="overview" href="#">Overview</a><a class="px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="upload-call" href="#">Upload Call</a><a class="px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="dashboard-overview" href="#">Dashboard</a><a class="px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="evidence-and-ai-verification" href="#">Evidence &amp; AI</a><a class="px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="red-alert-verdict-and-scammer-warning" href="#">Red Alert</a><a class="px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="helpline-1930" href="#">Help &amp; 1930</a><a class="px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="settings" href="#">Settings</a></nav><div class="flex items-center gap-3 shrink-0"><a class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-error-container text-on-error-container font-label-md text-label-md hover:bg-error hover:text-on-error transition-all shadow-[0_0_20px_rgba(239,68,68,0.35)] animate-pulse border border-error/30" data-path="helpline-1930" href="#"><span class="material-symbols-outlined text-[18px]">e911_emergency</span><span class="">1930 Cyber Helpline</span></a><button aria-label="Notifications" class="relative flex items-center justify-center w-10 h-10 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error shadow-[0_0_8px_rgba(239,68,68,0.9)]"></span></button><div class="flex items-center gap-2.5 pl-2 py-1 pr-1.5 rounded-full bg-surface-container-highest/40 backdrop-blur-md"><span class="hidden md:inline font-label-sm text-label-sm text-on-surface font-semibold">Ramesh K.</span><div class="relative"><img alt="Ramesh K." class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHy_R0nG2Fa7tgbOIvAzNrQ5JCPQf4E6IRzLN66Q0ng5osAW2gkqFIZii58A7p8grNH38lSuUZd9yWEOgoRJ5vbHyndQD3zw4J9gwi72j_UNsJI3ixcRlIFGjq3XBWbw3uifaM5SfRJTrWax6a9uoPdo_mxKFuzFv3JSn6MCp0vm-e_91_toMBdYcH4BNoZiShGFIUDOctnF6YyW4hdMEfVd3upHNdlrEDHDeO5f5jTHZy5sxpTClz0Q"><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(78,222,163,0.8)]"></span></div></div></div></div></header><main class="relative z-10 w-full max-w-[1360px] mx-auto px-gutter-sm lg:px-gutter-lg pb-space-xl pt-32"><div class="flex flex-col w-full">
+<!-- Dynamic Spatial Backlight Blobs Specific to Crisis Center -->
+<div class="relative w-full">
+<div class="absolute -top-12 left-1/3 w-96 h-96 bg-primary/15 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="absolute top-48 right-10 w-80 h-80 bg-error/15 rounded-full blur-[130px] pointer-events-none"></div>
+<!-- 1. Top Reassurance Header -->
+<header class="relative mb-space-lg">
+<div class="flex flex-wrap items-center gap-space-xs mb-space-sm">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-container/20 text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-bold">24/7 Citizen Safety &amp; Crisis Protocol</span>
+</div>
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-high/60 backdrop-blur-md text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-semibold">CERT-In &amp; MHA I4C Protocol Aligned</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-end">
+<div class="lg:col-span-8">
+<h1 class="font-display-lg text-display-lg font-extrabold tracking-tight text-on-surface leading-tight">
+            Help, Safety &amp; <span class="bg-gradient-to-r from-primary via-surface-tint to-secondary bg-clip-text text-transparent">Emergency Support</span>
+</h1>
+<p class="font-body-xl text-body-xl text-on-surface-variant max-w-2xl mt-space-xs">
+            Clear, step-by-step guidance for citizens and seniors facing cyber fraud, extortion threats, or unauthorized bank debits. Take a deep breath: you are not alone, and prompt action can recover your peace of mind.
+          </p>
+</div>
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col justify-end gap-3">
+<div class="p-space-sm rounded-lg bg-surface-container/70 backdrop-blur-xl shadow-lg flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-secondary-container/30 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">timer_10</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Crucial Response Target</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">Act Within 120 Mins</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- 2. Emergency SOS Helpline Banner (Top Glass Master Card) -->
+<section class="relative mb-space-xl">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low/80 backdrop-blur-2xl p-space-md lg:p-space-lg shadow-[0_24px_50px_-12px_rgba(0,0,0,0.7)]">
+<!-- Ambient chromatic glow highlight on top rim -->
+<div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-error via-primary-container to-secondary opacity-80"></div>
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-error/10 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg relative z-10">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-error-container/40 text-error font-label-sm text-label-sm mb-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+<span class="font-bold tracking-wider uppercase">Official Government Critical Hotline</span>
+</div>
+<h2 class="font-display-md text-display-md text-on-surface font-extrabold tracking-tight mt-1">
+              National Cyber Crime Helpline (1930)
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2 leading-relaxed">
+              Managed directly by the <strong class="text-on-surface font-semibold">Indian Cyber Crime Coordination Centre (I4C)</strong> under the Ministry of Home Affairs. Immediate financial cyber fraud intervention to freeze money flow in real time.
+            </p>
+<div class="mt-space-md flex flex-wrap gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest/60">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+                Toll-Free Across India
+              </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest/60">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+                Operational 24/7 &amp; Multi-lingual
+              </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest/60">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+                Direct Core Banking Integration
+              </span>
+</div>
+</div>
+<!-- Direct CTAs -->
+<div class="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0 lg:w-96">
+<a class="group relative flex items-center justify-center gap-3 px-6 py-4 min-h-[64px] rounded-full bg-gradient-to-r from-error to-error-container text-on-error font-label-lg text-label-lg font-bold shadow-[0_0_32px_rgba(239,68,68,0.45)] hover:shadow-[0_0_48px_rgba(239,68,68,0.6)] transition-all transform hover:-translate-y-0.5 active:translate-y-0" href="tel:1930">
+<span class="material-symbols-outlined text-[28px] animate-bounce">sos</span>
+<span class="">Dial 1930 Now (SOS)</span>
+</a>
+<a class="flex items-center justify-center gap-2.5 px-6 py-3.5 min-h-[56px] rounded-full bg-surface-container-high/80 text-on-surface hover:bg-surface-bright backdrop-blur-xl font-label-md text-label-md font-semibold transition-all shadow-md group" href="https://cybercrime.gov.in" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px] text-primary">public</span>
+<span class="">Visit cybercrime.gov.in</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Auxiliary Helpline Numbers Ribbon -->
+<div class="mt-space-lg pt-space-md border-t border-surface-variant/40 grid grid-cols-1 md:grid-cols-3 gap-space-sm relative z-10">
+<div class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-lowest/50 backdrop-blur-sm">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">local_police</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">All-Emergency Response</div>
+<a class="font-headline-sm text-headline-sm text-on-surface font-bold hover:text-primary transition-colors" href="tel:112">Dial 112</a>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-lowest/50 backdrop-blur-sm">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">elderly</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Senior Citizen Helpline (MoSJE)</div>
+<a class="font-headline-sm text-headline-sm text-on-surface font-bold hover:text-secondary transition-colors" href="tel:14567">Dial 14567</a>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-lowest/50 backdrop-blur-sm">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">RBI Banking Ombudsman</div>
+<a class="font-headline-sm text-headline-sm text-on-surface font-bold hover:text-tertiary transition-colors" href="tel:14448">Dial 14448</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. The Golden Hour Rule & 3-Step Protocol -->
+<section class="relative mb-space-xl">
+<!-- Reassuring High Visibility Banner -->
+<div class="mb-space-md p-space-md rounded-xl bg-gradient-to-r from-secondary-container/25 via-surface-container to-primary-container/20 backdrop-blur-xl shadow-lg flex flex-col md:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-secondary-container/30 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[32px]">nest_clock_farsight_analog</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">The Golden Hour Framework</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Acting within 120 minutes increases funds recovery chances up to 85%</h3>
+</div>
+</div>
+<div class="shrink-0">
+<span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-secondary text-[20px]">security</span>
+            Automated Mule-Hold Trigger
+          </span>
+</div>
+</div>
+<!-- 3 Sequential Step Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Step 1 -->
+<div class="relative flex flex-col justify-between p-space-lg rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-xl overflow-hidden group hover:bg-surface-container/90 transition-all">
+<div class="absolute top-0 right-0 p-6 font-display-lg text-display-lg font-black text-surface-container-highest/50 select-none">
+            01
+          </div>
+<div class="relative z-10">
+<div class="w-12 h-12 rounded-full bg-error-container/30 text-error flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[28px]">credit_card_off</span>
+</div>
+<span class="font-label-sm text-label-sm text-error uppercase font-bold tracking-wider">Immediate Freeze</span>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">Call Your Bank Immediately</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
+              Dial your bank's 24/7 dedicated fraud hotline printed on the back of your debit/credit card. Ask the officer for an instant freeze on your NetBanking login, UPI IDs, and active cards.
+            </p>
+<div class="mt-space-sm p-3 rounded-lg bg-surface-container-lowest/60">
+<span class="font-label-sm text-label-sm text-primary font-semibold block mb-1">State Clearly to Officer:</span>
+<p class="font-body-md text-body-md text-on-surface italic">"I am a victim of cyber fraud. Please freeze my account and issue a Transaction Dispute Ref Number."</p>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-variant/40 relative z-10">
+<span class="font-label-sm text-label-sm text-outline block mb-2 font-semibold">Emergency Bank Hotlines:</span>
+<div class="flex flex-wrap gap-1.5 font-label-sm text-label-sm">
+<a class="px-2.5 py-1 rounded-full bg-surface-container-high hover:bg-primary hover:text-on-primary transition-colors text-on-surface" href="tel:1800112211">SBI: 1800 11 2211</a>
+<a class="px-2.5 py-1 rounded-full bg-surface-container-high hover:bg-primary hover:text-on-primary transition-colors text-on-surface" href="tel:18001600">HDFC: 1800 1600</a>
+<a class="px-2.5 py-1 rounded-full bg-surface-container-high hover:bg-primary hover:text-on-primary transition-colors text-on-surface" href="tel:18001080">ICICI: 1800 1080</a>
+<a class="px-2.5 py-1 rounded-full bg-surface-container-high hover:bg-primary hover:text-on-primary transition-colors text-on-surface" href="tel:18004195959">Axis: 1800 419 5959</a>
+<a class="px-2.5 py-1 rounded-full bg-surface-container-high hover:bg-primary hover:text-on-primary transition-colors text-on-surface" href="tel:18001802222">PNB: 1800 180 2222</a>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col justify-between p-space-lg rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-xl overflow-hidden group hover:bg-surface-container/90 transition-all">
+<div class="absolute top-0 right-0 p-6 font-display-lg text-display-lg font-black text-surface-container-highest/50 select-none">
+            02
+          </div>
+<div class="relative z-10">
+<div class="w-12 h-12 rounded-full bg-primary-container/30 text-primary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[28px]">phone_in_talk</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Inter-Bank Freeze</span>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">Dial 1930 Cyber Cell</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
+              Have your bank account number, the scammer's UPI handle, phone number, and transaction SMS ready. The 1930 team directly alerts the recipient bank and freezes the scammer's mule accounts before funds are withdrawn at ATMs.
+            </p>
+<div class="mt-space-sm p-3 rounded-lg bg-surface-container-lowest/60">
+<span class="font-label-sm text-label-sm text-secondary font-semibold block mb-1">Operator Deliverable:</span>
+<p class="font-body-md text-body-md text-on-surface">You will receive an official <strong class="text-secondary">Citizen Incident Acknowledgment Number</strong> via SMS to track fund freezing.</p>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-variant/40 relative z-10">
+<a class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold hover:shadow-[0_0_20px_rgba(76,215,246,0.5)] transition-all" href="tel:1930">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span class="">Speed Dial 1930 Helpline</span>
+</a>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col justify-between p-space-lg rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-xl overflow-hidden group hover:bg-surface-container/90 transition-all">
+<div class="absolute top-0 right-0 p-6 font-display-lg text-display-lg font-black text-surface-container-highest/50 select-none">
+            03
+          </div>
+<div class="relative z-10">
+<div class="w-12 h-12 rounded-full bg-secondary-container/30 text-secondary flex items-center justify-center mb-space-sm">
+<span class="material-symbols-outlined text-[28px]">folder_special</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">Legal Preservation</span>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">Preserve Forensic Dossier</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
+              Do not delete any WhatsApp chats, SMS alerts, call logs, or download files. File an official complaint at <span class="text-on-surface font-semibold">cybercrime.gov.in</span> within 24 hours attaching all timestamped evidence.
+            </p>
+<div class="mt-space-sm p-3 rounded-lg bg-surface-container-lowest/60">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold block mb-1">Scam Shield Pre-Format:</span>
+<p class="font-body-md text-body-md text-on-surface">We assemble all verified call transcripts and AI indicators into an FIR-ready digital folder.</p>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-variant/40 relative z-10">
+<button class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md font-semibold transition-all" onclick="alert('Compiling pre-formatted cyber complaint dossier with active case telemetry... Your download will start shortly.')" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary">download_for_offline</span>
+<span class="">Generate Police FIR Dossier</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Common Scam Modus Operandi & How to Spot Them (Senior-Friendly Large Cards) -->
+<section class="relative mb-space-xl">
+<div class="mb-space-lg">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">psychology_alt</span>
+<span class="font-bold tracking-wider uppercase">Senior Citizen &amp; Family Awareness</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">
+          Common Scam Modus Operandi &amp; The Ground Truth
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-1">
+          Scammers use extreme emotional pressure, legal panic, and artificial urgency. Read these clear facts so you or your parents can never be deceived.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1: Digital Arrest -->
+<article class="p-space-lg rounded-xl bg-surface-container/60 backdrop-blur-2xl shadow-xl flex flex-col justify-between hover:bg-surface-container/80 transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-14 h-14 rounded-full bg-error-container/30 text-error flex items-center justify-center shadow-[0_0_15px_rgba(239,68,68,0.2)]">
+<span class="material-symbols-outlined text-[30px]">gavel</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-error-container/20 text-error font-label-sm text-label-sm font-bold uppercase tracking-wider">High Frequency</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+              "Digital Arrest" (Fake Police / CBI / ED / Customs)
+            </h3>
+<div class="mt-space-sm p-space-sm rounded-lg bg-surface-container-lowest/60">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold block mb-1">Scammer's False Claim:</span>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+                "An illegal courier parcel containing contraband was intercepted in your name. You must stay on Skype/WhatsApp video in private for 6 hours under 'Digital Arrest' or face SWAT arrest."
+              </p>
+</div>
+<div class="mt-space-sm p-space-sm rounded-lg bg-secondary-container/15 text-on-surface">
+<div class="flex items-center gap-2 text-secondary mb-1">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+<span class="font-label-sm text-label-sm font-bold uppercase">The Ground Truth</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+                There is <strong>no such law as 'Digital Arrest'</strong> in the Indian Penal Code. Law enforcement agencies (CBI, ED, State Police) <em>NEVER</em> conduct interrogations, make arrests, or demand fund transfers over video call.
+              </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-2 text-error font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span class="">Red Flag: Forbidding you from talking to children or family.</span>
+</div>
+</article>
+<!-- Card 2: Electricity Disconnection -->
+<article class="p-space-lg rounded-xl bg-surface-container/60 backdrop-blur-2xl shadow-xl flex flex-col justify-between hover:bg-surface-container/80 transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-14 h-14 rounded-full bg-surface-container-highest text-secondary flex items-center justify-center shadow-[0_0_15px_rgba(78,222,163,0.2)]">
+<span class="material-symbols-outlined text-[30px]">bolt</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm font-bold uppercase tracking-wider">SMS Threat</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+              Electricity Bill Disconnection Panic
+            </h3>
+<div class="mt-space-sm p-space-sm rounded-lg bg-surface-container-lowest/60">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold block mb-1">Scammer's False Claim:</span>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+                "Dear consumer, your electricity will be disconnected tonight at 9:30 PM due to unpaid balance. Immediately dial our Discom officer at 98xxxxxxx or download this APK."
+              </p>
+</div>
+<div class="mt-space-sm p-space-sm rounded-lg bg-secondary-container/15 text-on-surface">
+<div class="flex items-center gap-2 text-secondary mb-1">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+<span class="font-label-sm text-label-sm font-bold uppercase">The Ground Truth</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+                Government power utilities <strong>never provide personal 10-digit mobile numbers</strong> in SMS alerts and <em>never</em> ask consumers to download remote-desktop apps (AnyDesk, QuickSupport) to pay bills.
+              </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-2 text-error font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span class="">Red Flag: Asking to pay a ₹10 "token charge" to test connection.</span>
+</div>
+</article>
+<!-- Card 3: Bank KYC / Aadhaar Expiry -->
+<article class="p-space-lg rounded-xl bg-surface-container/60 backdrop-blur-2xl shadow-xl flex flex-col justify-between hover:bg-surface-container/80 transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-14 h-14 rounded-full bg-primary-container/30 text-primary flex items-center justify-center shadow-[0_0_15px_rgba(76,215,246,0.2)]">
+<span class="material-symbols-outlined text-[30px]">account_balance_wallet</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm font-bold uppercase tracking-wider">OTP Theft</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+              Bank KYC Freeze &amp; Aadhaar Expiry
+            </h3>
+<div class="mt-space-sm p-space-sm rounded-lg bg-surface-container-lowest/60">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold block mb-1">Scammer's False Claim:</span>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+                "Your bank account or SIM card will be deactivated within 24 hours. Update your Aadhaar KYC right now by sharing the 6-digit confirmation code sent to your mobile."
+              </p>
+</div>
+<div class="mt-space-sm p-space-sm rounded-lg bg-secondary-container/15 text-on-surface">
+<div class="flex items-center gap-2 text-secondary mb-1">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+<span class="font-label-sm text-label-sm font-bold uppercase">The Ground Truth</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+                No bank, telecom provider, or government entity will ever ask for a <strong>one-time password (OTP)</strong> over an unsolicited phone call. OTPs are meant for authorising debits, never for verifying status.
+              </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-2 text-error font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span class="">Red Flag: Any request to read back an SMS code received on your phone.</span>
+</div>
+</article>
+</div>
+</section>
+<!-- 5. Contact Scam Shield Human Support (Glass Support Inquiry & Feedback Panel) -->
+<section class="relative mb-space-lg">
+<div class="p-space-lg lg:p-margin rounded-xl bg-surface-container-low/70 backdrop-blur-2xl shadow-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Direct Channels & Reassurance -->
+<div class="lg:col-span-5 flex flex-col justify-between h-full">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+<span class="font-bold tracking-wider uppercase">Human Support Desk</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">
+                Contact Scam Shield Human Support
+              </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2 leading-relaxed">
+                Need help navigating our tools, connecting to local police cyber units, or reporting a newly spotted phone scam pattern? Our emergency care liaisons are standing by.
+              </p>
+</div>
+<!-- Direct Channels Tiles -->
+<div class="mt-space-md space-y-space-sm">
+<div class="p-4 rounded-lg bg-surface-container/60 backdrop-blur-md flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">elderly_woman</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline">Dedicated Senior Assistance Desk</span>
+<a class="font-label-lg text-label-lg text-on-surface font-bold hover:text-primary transition-colors block" href="mailto:senior-care@scamshield.in">senior-care@scamshield.in</a>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-container/60 backdrop-blur-md flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary/20 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">chat</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline">WhatsApp Community Guard</span>
+<a class="font-label-lg text-label-lg text-on-surface font-bold hover:text-secondary transition-colors block" href="https://wa.me/919800019300" rel="noopener noreferrer" target="_blank">+91 98000 19300</a>
+</div>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-container-highest/40 flex items-center gap-3 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">pace</span>
+<span class="">Average response window: <strong>&lt;15 minutes</strong> during daylight hours (08:00 - 22:00 IST).</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Glass Inquiry Form -->
+<div class="lg:col-span-7">
+<form class="p-space-md lg:p-space-lg rounded-xl bg-surface-container/60 backdrop-blur-xl shadow-inner space-y-space-sm" id="emergency-support-form" onsubmit="event.preventDefault(); document.getElementById('support-success-msg').classList.remove('hidden');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 font-semibold" for="full-name">Your Name or Pseudonym</label>
+<input class="w-full h-14 px-4 rounded-full bg-surface-container-lowest/70 text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="full-name" placeholder="e.g. Ramesh Kumar" required="" type="text">
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 font-semibold" for="contact-info">Phone Number or Email</label>
+<input class="w-full h-14 px-4 rounded-full bg-surface-container-lowest/70 text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="contact-info" placeholder="+91 98765 43210 / email" required="" type="text">
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 font-semibold" for="incident-category">Category of Concern</label>
+<div class="relative">
+<select class="w-full h-14 px-4 pr-10 rounded-full bg-surface-container-lowest/70 text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary appearance-none shadow-sm cursor-pointer" id="incident-category">
+<option class="bg-surface-container text-on-surface" value="emergency-advice">Emergency Advice (Money Lost in Last 2 Hours)</option>
+<option class="bg-surface-container text-on-surface" value="report-scam">Report New Scam Phone Number or Audio</option>
+<option class="bg-surface-container text-on-surface" value="senior-setup">Help Setting Up Senior Shield on Parents' Phone</option>
+<option class="bg-surface-container text-on-surface" value="general">General Question / Feedback</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-4 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1 font-semibold" for="incident-description">Describe What Happened</label>
+<textarea class="w-full p-4 rounded-xl bg-surface-container-lowest/70 text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="incident-description" placeholder="Describe the call, caller's demand, what they said, or what app they asked you to install. No technical language needed..." rows="4"></textarea>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<button class="w-full sm:w-auto px-8 min-h-[56px] rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-bold shadow-[0_0_24px_rgba(76,215,246,0.4)] hover:shadow-[0_0_36px_rgba(76,215,246,0.6)] transition-all flex items-center justify-center gap-2" type="submit">
+<span class="">Send Message to Support Team</span>
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">lock</span>
+<span class="">End-to-End Encrypted &amp; Zero Tracking</span>
+</div>
+</div>
+<div class="hidden p-4 rounded-lg bg-secondary-container/20 text-secondary font-label-md text-label-md flex items-center gap-3" id="support-success-msg">
+<span class="material-symbols-outlined text-[22px]">check_circle</span>
+<span class="">Thank you. Your message has reached our triage desk. A responder will connect with you promptly.</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Bottom Reassurance Ribbon -->
+<div class="mt-space-sm p-4 rounded-full bg-surface-container-high/60 backdrop-blur-xl shadow-lg flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+<div class="flex items-center gap-3 pl-2">
+<span class="material-symbols-outlined text-primary text-[24px] animate-pulse">support</span>
+<span class="font-body-md text-body-md text-on-surface">Need immediate voice reassurance right now? Speak to our automated calming counselor or dial 1930 above.</span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<a class="px-5 py-2 rounded-full bg-error-container text-on-error-container hover:bg-error hover:text-on-error font-label-md text-label-md font-bold transition-all shadow-sm" href="tel:1930">
+          Call 1930
+        </a>
+</div>
+</div>
+</div>
+</div></main><footer class="relative z-10 w-full mt-auto bg-surface-container-lowest/80 backdrop-blur-2xl shadow-[0_-16px_36px_-10px_rgba(0,0,0,0.5)]"><div class="max-w-[1360px] mx-auto px-gutter-sm lg:px-gutter-lg py-margin-lg"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-lg items-start pb-margin"><div class="md:col-span-5 flex flex-col gap-space-sm"><div class="flex items-center gap-3"><div class="relative flex items-center justify-center"><div class="absolute inset-0 rounded-full bg-primary/20 blur-sm"></div><img alt="Scam Shield Emblem" class="relative h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WlWORERxwAJVv2QUyq2b9TWINfy-LGA2D-_Wf5j2TG0nnVC_XW7doi1vU5q4mX0txFAkH87MeF4kSA5GxoNWfThDif91uTACakiy6xu7zozBZUIehuR3TXeSW2wd1RIqrP3gMmTFebYnEKcnws04ySw_ldFr1Y-bPmQa_3eSonxTYmraOytHEWcz6qu5I_UySE8hBKZrJI0icJfbVUrrpNV4QTttlPYQqu4hTPL29SEu8oSQ22MX8DGnBS"></div><span class="font-headline-sm text-headline-sm text-on-surface font-bold">Scam Shield</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-md">Next-generation spatial cyber protection guarding everyday families and seniors against AI voice clones, phishing calls, and financial scams.</p><div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm w-fit border border-secondary/20"><span class="material-symbols-outlined text-[16px]">lock_reset</span><span class="">100% Privacy Guaranteed &amp; Instant Auto-Delete</span></div></div><div class="md:col-span-3 flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface font-bold">Quick Access</span><nav class="flex flex-col gap-1.5" data-active-classes="text-primary font-bold"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="#">Overview</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="upload-call" href="#">Upload &amp; Analyze Call</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard-overview" href="#">Live Threat Dashboard</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="evidence-and-ai-verification" href="#">AI Evidence Vault</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="settings" href="#">Security Settings</a></nav></div><div class="md:col-span-4 flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface font-bold">Emergency &amp; Official Support</span><p class="font-body-md text-body-md text-on-surface-variant">Citizen Financial Cyber Fraud Reporting System:</p><a class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-error-container text-on-error-container font-label-md text-label-md hover:bg-error hover:text-on-error transition-all w-fit shadow-[0_0_18px_rgba(239,68,68,0.3)]" data-path="helpline-1930" href="#"><span class="material-symbols-outlined text-[18px]">sos</span><span class="">Dial 1930 Cyber Fraud Helpline</span></a><a class="font-body-md text-body-md text-error hover:underline transition-all mt-1" data-path="red-alert-verdict-and-scammer-warning" href="#">Trigger Immediate Family Emergency Lockout</a></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-4 font-label-sm text-label-sm text-outline"><p class="">© 2025 Scam Shield Technologies. In affiliation with citizen emergency response standards.</p><div class="flex items-center gap-6"><a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" href="#">Terms of Defense</a><a class="hover:text-on-surface transition-colors" href="#">Portal Integration</a></div></div></div></footer>
+
+</body></html>

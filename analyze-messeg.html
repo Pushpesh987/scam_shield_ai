@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed-variant": "#003ea8", "on-tertiary-fixed": "#002113", "on-primary-container": "#004965", "tertiary": "#56e5a9", "on-primary": "#00354a", "on-primary-fixed": "#001e2c", "on-error-container": "#ffdad6", "outline-variant": "#3e484f", "secondary-fixed": "#dbe1ff", "outline": "#87929a", "surface-tint": "#7bd0ff", "primary-fixed": "#c4e7ff", "surface-dim": "#0e131e", "background": "#0e131e", "tertiary-container": "#30c88f", "surface-container": "#1b1f2b", "tertiary-fixed": "#6ffbbe", "secondary-container": "#0053db", "surface-container-low": "#161b27", "inverse-primary": "#00668a", "surface-container-highest": "#303541", "on-secondary": "#002a78", "on-secondary-fixed": "#00174b", "surface-variant": "#303541", "on-background": "#dee2f2", "on-primary-fixed-variant": "#004c69", "primary-fixed-dim": "#7bd0ff", "surface-container-high": "#252a36", "secondary-fixed-dim": "#b4c5ff", "surface": "#0e131e", "on-error": "#690005", "on-tertiary-container": "#004e34", "on-secondary-container": "#cdd7ff", "secondary": "#b4c5ff", "surface-container-lowest": "#090e19", "on-tertiary": "#003824", "on-tertiary-fixed-variant": "#005236", "tertiary-fixed-dim": "#4edea3", "inverse-on-surface": "#2b303d", "inverse-surface": "#dee2f2", "on-surface-variant": "#bdc8d1", "error": "#ffb4ab", "on-surface": "#dee2f2", "primary-container": "#38bdf8", "primary": "#8ed5ff", "surface-bright": "#343946", "error-container": "#93000a" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-mobile": "1rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-md": "1rem", "gutter-mobile": "1rem", "margin": "2rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-xl-mobile": [ "Manrope" ], "body-md": [ "Manrope" ], "title-sm": [ "Manrope" ], "body-sm": [ "Manrope" ], "label-lg": [ "JetBrains Mono" ], "headline-lg-mobile": [ "Manrope" ], "headline-lg": [ "Manrope" ], "title-md": [ "Manrope" ], "body-lg": [ "Manrope" ], "headline-xl": [ "Manrope" ], "headline-sm": [ "Manrope" ], "label-md": [ "JetBrains Mono" ], "headline-md": [ "Manrope" ], "label-sm": [ "JetBrains Mono" ] }, "fontSize": { "headline-xl-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" } ], "title-sm": [ "14px", { "lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "label-lg": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.05em", "fontWeight": "500" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "title-md": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-xl": [ "44px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "label-md": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><div class="w-9 h-9 rounded-xl bg-surface-container-low flex items-center justify-center"><span class="material-symbols-outlined text-primary-container text-[22px]">shield</span></div><div class="flex flex-col"><span class="font-title-sm text-title-sm text-on-surface tracking-tight leading-none">ScamShield <span class="text-primary-container font-headline-sm text-headline-sm">AI</span></span><div class="flex items-center gap-space-xs mt-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">AI Sentinel Node</span></div></div></div><nav class="flex flex-col gap-space-xs px-space-sm mt-space-md" data-active-classes="bg-surface-container-high text-primary font-title-sm rounded-lg"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="analyze-message" href="#"><span class="material-symbols-outlined text-[20px]">sms</span><span class="font-body-md text-body-md">Analyze Message</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="analyze-transcript" href="#"><span class="material-symbols-outlined text-[20px]">record_voice_over</span><span class="font-body-md text-body-md">Analyze Transcript</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="check-number" href="#"><span class="material-symbols-outlined text-[20px]">dialpad</span><span class="font-body-md text-body-md">Check Number</span></a><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="live-protection" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">radar</span><span class="font-body-md text-body-md">Live Protection</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary">OS-BOUND</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="evidence-reports" href="#"><span class="material-symbols-outlined text-[20px]">folder_supervised</span><span class="font-body-md text-body-md">Evidence Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="history" href="#"><span class="material-symbols-outlined text-[20px]">history</span><span class="font-body-md text-body-md">History</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-body-md text-body-md">Settings</span></a></nav></div><div class="p-space-sm m-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Telemetry</span><span class="w-2 h-2 rounded-full bg-tertiary"></span></div><div class="flex flex-col gap-space-xs font-label-md text-label-md text-outline"><div class="flex items-center justify-between"><span class="text-on-surface-variant">SANDBOX</span><span class="text-tertiary">EPHEMERAL</span></div><div class="flex items-center justify-between"><span class="text-on-surface-variant">ZERO-LOG</span><span class="text-primary">ENFORCED</span></div><div class="flex items-center justify-between"><span class="text-on-surface-variant">RUNTIME</span><span class="text-on-surface">v2.4-sec</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 flex items-center justify-between px-gutter shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="flex items-center gap-space-md w-96"><div class="w-full flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl bg-surface-container-lowest text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-body-sm flex-1 text-outline">Search hashes, phone numbers, threat actor signatures...</span><kbd class="font-label-sm text-label-sm bg-surface-container-highest px-space-xs py-0.5 rounded text-on-surface">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-on-surface-variant">EAL6+ ENCLAVE ACTIVE</span><span class="text-outline-variant">•</span><span class="font-label-sm text-label-sm text-primary">LATENCY 14ms</span></div><button class="relative w-9 h-9 rounded-xl bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:flex flex-col"><span class="font-title-sm text-title-sm text-on-surface leading-tight">Sarah Chen</span><span class="font-label-sm text-label-sm text-secondary-fixed-dim leading-none">SecOps Tier-2</span></div><span class="material-symbols-outlined text-outline text-[18px]">expand_more</span></div></div></header><main class="relative pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<script>
+    // Ensure active sidebar state for 'analyze-message'
+    (function syncSidebar() {
+      const activeLink = document.querySelector('aside nav a[data-path="analyze-message"]');
+      if (activeLink) {
+        activeLink.classList.remove('text-on-surface-variant');
+        activeLink.classList.add('bg-surface-container-high', 'text-primary', 'font-title-sm');
+      }
+    })();
+  </script>
+<div class="px-gutter py-space-lg flex flex-col gap-space-lg max-w-[1440px] mx-auto w-full">
+<!-- TOP HEADER & ARCHITECTURE TELEMETRY BAR -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase px-space-xs py-0.5 rounded bg-primary/10 text-primary">Neural Forensic Node</span>
+<span class="text-outline-variant font-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">EAL6+ AST Sandboxed Ingestion</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Analyze Suspicious Content</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+            Linguistic forensic analysis and automated pattern matching for SMS smishing, WhatsApp lures, spear-phishing emails, payment coercion, and fraudulent KYC demands.
+          </p>
+</div>
+<!-- Telemetry Spec Capsules -->
+<div class="flex flex-wrap items-center gap-space-xs font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5 px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="text-outline font-mono">POST</span>
+<span class="text-primary font-mono">/api/v1/analyze/text</span>
+<span class="text-outline-variant">TLS 1.3</span>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-tertiary">fingerprint</span>
+<span>Client Redaction: <strong class="text-tertiary">ENFORCED</strong></span>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-primary">memory</span>
+<span>LLM Threat Vector <strong class="text-primary">v4.2</strong></span>
+</div>
+</div>
+</div>
+<!-- Intel Sync Bar Banner -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs px-space-md py-space-xs rounded-xl bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>Threat Intel Sync: <strong class="text-on-surface font-mono">STIR/SHAKEN</strong>, <strong class="text-on-surface font-mono">PhishTank</strong>, and <strong class="text-on-surface font-mono">FIN-Syndicate Blacklist</strong> synchronized 42s ago.</span>
+</div>
+<div class="flex items-center gap-space-xs text-outline">
+<span>Inference Latency:</span>
+<span class="text-tertiary font-mono">14ms (Enclave Core)</span>
+<span class="text-outline-variant">•</span>
+<span class="text-on-surface-variant">Zero-Log Ephemeral</span>
+</div>
+</div>
+</section>
+<!-- QUICK EXAMPLE SCENARIO SELECTOR -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary">dataset</span>
+          Quick Scenario Injection Presets
+        </span>
+<span class="font-label-sm text-label-sm text-outline">Clicking replaces workspace payload</span>
+</div>
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1" id="scenario-selector">
+<button class="scenario-btn active whitespace-nowrap px-space-sm py-1.5 rounded-lg font-label-sm text-label-sm bg-surface-container-high text-primary flex items-center gap-1.5 transition-all" onclick="loadScenario('bank-wire')" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>Scenario 1: Chase Wire Fraud (SMS / High Risk)</span>
+</button>
+<button class="scenario-btn whitespace-nowrap px-space-sm py-1.5 rounded-lg font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface flex items-center gap-1.5 transition-all" onclick="loadScenario('whatsapp-otp')" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>Scenario 2: WhatsApp Impersonation &amp; OTP (High Risk)</span>
+</button>
+<button class="scenario-btn whitespace-nowrap px-space-sm py-1.5 rounded-lg font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface flex items-center gap-1.5 transition-all" onclick="loadScenario('fake-kyc')" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+<span>Scenario 3: Fake KYC &amp; AnyDesk Remote (Critical)</span>
+</button>
+<button class="scenario-btn whitespace-nowrap px-space-sm py-1.5 rounded-lg font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface flex items-center gap-1.5 transition-all" onclick="loadScenario('shipping-legit')" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Scenario 4: Legitimate FedEx Notice (Low Risk)</span>
+</button>
+<button class="scenario-btn whitespace-nowrap px-space-sm py-1.5 rounded-lg font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface flex items-center gap-1.5 transition-all" onclick="loadScenario('ambiguous-short')" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>Scenario 5: Ambiguous / Short Ping (Unknown)</span>
+</button>
+</div>
+</section>
+<!-- UNTRUSTED MESSAGE EDITOR PANEL -->
+<section class="flex flex-col rounded-xl bg-surface-container-lowest p-space-md gap-space-md shadow-xl relative overflow-hidden">
+<!-- Glow ambient header accent -->
+<div class="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<!-- Controls Toolbar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm relative z-10">
+<!-- Input Source Tabs -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg">
+<button class="channel-pill px-space-sm py-1 rounded font-label-sm text-label-sm bg-surface-container-highest text-primary" onclick="setChannel(this, 'SMS / Smishing')" type="button">SMS / Smishing</button>
+<button class="channel-pill px-space-sm py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" onclick="setChannel(this, 'WhatsApp / Telegram')" type="button">WhatsApp / Telegram</button>
+<button class="channel-pill px-space-sm py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" onclick="setChannel(this, 'Email Body')" type="button">Email Body</button>
+<button class="channel-pill px-space-sm py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" onclick="setChannel(this, 'Payment Request')" type="button">Payment Demand</button>
+<button class="channel-pill px-space-sm py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" onclick="setChannel(this, 'QR / Shortlink')" type="button">QR / Shortlink</button>
+<button class="channel-pill px-space-sm py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" onclick="setChannel(this, 'Other / Raw')" type="button">Raw Untrusted</button>
+</div>
+<!-- Privacy & Mode Toggles -->
+<div class="flex items-center gap-space-md">
+<!-- Font Style Toggle -->
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-1 rounded-lg font-label-sm text-label-sm text-on-surface-variant">
+<span class="text-outline">Font:</span>
+<button class="text-primary font-bold" id="font-mono-btn" onclick="toggleMonoFont(true)" type="button">Mono</button>
+<span class="text-outline-variant">/</span>
+<button class="text-outline hover:text-on-surface" id="font-sans-btn" onclick="toggleMonoFont(false)" type="button">Sans</button>
+</div>
+<!-- PII Redaction Switch -->
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<div class="relative inline-flex items-center">
+<input checked="" class="sr-only peer" id="pii-toggle" onchange="handlePiiToggle()" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary after:border-none after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-container"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified_user</span>
+              Redact Sensitive PII
+            </span>
+</label>
+</div>
+</div>
+<!-- Editor Textarea Area with Line Markers & AST Sandboxing Note -->
+<div class="flex flex-col rounded-lg bg-surface-dim relative group">
+<div class="flex items-center justify-between px-space-sm py-1.5 bg-surface-container-low rounded-t-lg font-label-sm text-label-sm text-outline">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="text-on-surface-variant font-mono">UNTRUSTED_INGESTION_BUFFER_01</span>
+<span class="text-outline-variant">•</span>
+<span class="text-primary" id="current-channel-label">SMS / Smishing</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-mono text-on-surface-variant" id="char-counter">248 / 5,000 chars</span>
+<span class="text-outline-variant">•</span>
+<span class="font-mono text-outline" id="word-counter">38 words</span>
+</div>
+</div>
+<div class="relative flex">
+<!-- Monospace Line Number Column -->
+<div class="hidden sm:flex flex-col items-end py-space-sm px-space-xs bg-surface-container-lowest/50 text-outline-variant font-mono text-body-sm select-none w-10 text-right leading-relaxed">
+<span>01</span>
+<span>02</span>
+<span>03</span>
+<span>04</span>
+<span>05</span>
+<span>06</span>
+</div>
+<!-- Interactive Textarea -->
+<textarea class="w-full bg-transparent p-space-sm text-on-surface placeholder:text-outline/60 focus:outline-none font-mono text-body-md resize-y leading-relaxed" id="payload-editor" oninput="handleEditorInput()" placeholder="Paste raw SMS message, WhatsApp conversation, suspicious email body, or payment demand text here... (All inputs treated as strictly untrusted text; instructions inside payload will never be executed)." rows="6">URGENT FROM CHASE FRAUD ALERT: Your checking acct has been suspended due to 3 unauthorized debit attempts of $2,500.00. You MUST wire security funds immediately to clear the federal tax lien or your assets will be impounded. Do not visit branch. Verify identity &amp; one-time passcode now: https://chase-secure-auth9.com/verify-now</textarea>
+</div>
+<!-- AST Sandboxing Guard Rail Footer -->
+<div class="px-space-sm py-1.5 bg-surface-container-low rounded-b-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5 text-outline">
+<span class="material-symbols-outlined text-[15px] text-tertiary">security</span>
+<span>Untrusted Data Isolation: System strictly analyzes syntax and intent. Prompt injection vectors neutralized via AST token isolation.</span>
+</div>
+<div class="flex items-center gap-1 text-tertiary" id="pii-status-chip">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>PII Redactor: 2 Tokens Masked Client-Side</span>
+</div>
+</div>
+</div>
+<!-- Editor Actions & State Switcher Dock -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pt-space-xs">
+<!-- Error & Simulator Toggle Toolbar -->
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded-lg">
+<span class="font-label-sm text-label-sm text-outline px-2">Simulate UI States:</span>
+<button class="px-space-xs py-1 rounded font-label-sm text-label-sm bg-surface-container-highest text-primary" id="sim-result-btn" onclick="setSimulatorState('analyzed')" type="button">Live Report</button>
+<button class="px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" id="sim-load-btn" onclick="setSimulatorState('loading')" type="button">Loading State</button>
+<button class="px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-error" id="sim-err-btn" onclick="setSimulatorState('error')" type="button">Endpoint Error</button>
+<button class="px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" id="sim-over-btn" onclick="setSimulatorState('oversize')" type="button">Oversize Warning</button>
+</div>
+<!-- Submit & Clear Action Buttons -->
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-all font-title-sm text-title-sm flex items-center gap-1.5" onclick="clearInput()" type="button">
+<span class="material-symbols-outlined text-[18px]">backspace</span>
+            Clear Input
+          </button>
+<button class="px-space-lg py-2 rounded-lg bg-secondary-container hover:bg-primary-container text-on-primary transition-all font-title-sm text-title-sm flex items-center gap-2 shadow-lg shadow-primary-container/20 active:scale-[0.98]" id="analyze-trigger-btn" onclick="triggerNeuralAnalysis()" type="button">
+<span class="material-symbols-outlined text-[20px] animate-spin hidden" id="analyze-spinner">progress_activity</span>
+<span class="material-symbols-outlined text-[20px]" id="analyze-icon">radar</span>
+<span>Analyze for Scams</span>
+</button>
+</div>
+</div>
+</section>
+<!-- SYSTEM ALERTS CONTAINER (DISCONNECTION & OVERSIZED WARNINGS) -->
+<div class="hidden flex-col gap-space-sm" id="alert-container">
+<!-- Error: Endpoint Unreachable -->
+<div class="hidden flex items-start justify-between gap-space-sm p-space-md rounded-xl bg-error-container text-on-error-container shadow-lg" id="error-endpoint-banner">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-error text-[24px]">cloud_off</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-bold">API Ingestion Endpoint Unreachable</span>
+<span class="font-body-md text-body-md">Endpoint <code class="font-mono bg-black/30 px-1 rounded">/api/v1/analyze/text</code> returned HTTP 503 Gateway Timeout. Check host connection or Sentinel Enclave mTLS auth certificate. Local heuristic inference fallback is suspended in strict enterprise compliance mode.</span>
+</div>
+</div>
+<button class="text-on-error-container hover:opacity-80 p-1" onclick="setSimulatorState('analyzed')" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Warning: Oversized Payload Warning -->
+<div class="hidden flex items-start justify-between gap-space-sm p-space-md rounded-xl bg-surface-container-highest text-secondary-fixed shadow-lg" id="error-oversize-banner">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">warning</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-bold">Payload Nearing Neural Context Window Limit</span>
+<span class="font-body-md text-body-md">The supplied payload exceeds 5,000 characters. While AST token chunking is active, processing conversational transcripts exceeding 10,000 characters may cause semantic drift or truncation of earlier conversation context.</span>
+</div>
+</div>
+<button class="text-secondary-fixed hover:opacity-80 p-1" onclick="setSimulatorState('analyzed')" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<!-- FORENSIC REPORT CARDS & NEURAL DECONSTRUCTION -->
+<div class="flex flex-col gap-space-lg" id="results-workspace">
+<!-- TOP METRIC OVERVIEW BAR -->
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-space-md">
+<!-- Risk Calibration Gauge (Cols 1-5) -->
+<div class="xl:col-span-5 rounded-xl bg-surface-container-lowest p-space-md flex flex-col justify-between gap-space-md shadow-xl relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-outline tracking-wider">AI Threat Confidence Calibration</span>
+<span class="material-symbols-outlined text-[16px] text-outline" title="Calibrated across 1.4M smishing lures">info</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-error-container text-error font-mono flex items-center gap-1" id="risk-category-pill">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+              HIGH RISK
+            </span>
+</div>
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-error font-bold font-mono tracking-tight" id="risk-numeric-score">92</span>
+<span class="font-title-md text-title-md text-outline">/ 100</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-on-surface font-mono" id="calibration-ece">Confidence: 94.6%</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">ECE Calibrated: 0.021</span>
+</div>
+</div>
+<!-- 10-Segment Calibrated Hardware Micro-bar Gauge -->
+<div class="flex flex-col gap-1.5">
+<div class="grid grid-cols-10 gap-1 w-full h-2.5 rounded overflow-hidden p-0.5 bg-surface-dim" id="gauge-bar-track">
+<!-- Bar segments populated dynamically -->
+<div class="h-full rounded-sm bg-tertiary"></div>
+<div class="h-full rounded-sm bg-tertiary"></div>
+<div class="h-full rounded-sm bg-tertiary"></div>
+<div class="h-full rounded-sm bg-primary"></div>
+<div class="h-full rounded-sm bg-secondary"></div>
+<div class="h-full rounded-sm bg-secondary"></div>
+<div class="h-full rounded-sm bg-error"></div>
+<div class="h-full rounded-sm bg-error"></div>
+<div class="h-full rounded-sm bg-error"></div>
+<div class="h-full rounded-sm bg-surface-container-highest"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>0 (CLEAN)</span>
+<span>50 (SUSPICIOUS)</span>
+<span>100 (CRITICAL LURE)</span>
+</div>
+</div>
+<!-- Low Score Critical Notice -->
+<div class="p-space-xs rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm flex items-start gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary flex-shrink-0 mt-0.5">help</span>
+<span class="leading-tight">
+<strong>Calibration Protocol:</strong> A low score signifies that no sufficiently high-confidence attack vector was confirmed in this excerpt. It does <em>not</em> guarantee sender authenticity.
+            </span>
+</div>
+</div>
+<!-- Threat Vector Taxonomies (Cols 6-12) -->
+<div class="xl:col-span-7 rounded-xl bg-surface-container-lowest p-space-md flex flex-col justify-between gap-space-sm shadow-xl">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-outline tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">local_police</span>
+              Identified Threat Taxonomy &amp; Actor Signatures
+            </span>
+<span class="font-label-sm text-label-sm text-outline font-mono" id="vector-count-label">4 ACTIVE VECTORS DETECTED</span>
+</div>
+<!-- Chip Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-space-xs" id="taxonomy-chips-container">
+<!-- Chip 1 -->
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col gap-0.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-error font-mono">#IMPERSONATION</span>
+<span class="text-outline font-mono">91%</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Chase Fraud Division</span>
+</div>
+<!-- Chip 2 -->
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col gap-0.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-error font-mono">#OTP_THEFT</span>
+<span class="text-outline font-mono">94%</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Out-of-Band 2FA Bypass</span>
+</div>
+<!-- Chip 3 -->
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col gap-0.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-primary font-mono">#TYPOSQUAT</span>
+<span class="text-outline font-mono">98%</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface truncate">chase-secure-auth9.com</span>
+</div>
+<!-- Chip 4 -->
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col gap-0.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-error font-mono">#URGENCY_INDUCTION</span>
+<span class="text-outline font-mono">96%</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Federal Asset Impound Threat</span>
+</div>
+<!-- Chip 5 -->
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col gap-0.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary font-mono">#CHANNEL_ISOLATION</span>
+<span class="text-outline font-mono">87%</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface truncate">"Do not visit branch" advice</span>
+</div>
+<!-- Chip 6 -->
+<div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col gap-0.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-outline font-mono">#SYNDICATE_SIG</span>
+<span class="text-outline font-mono">418</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Financier-9 Threat Actor</span>
+</div>
+</div>
+<!-- Micro Sparkline Telemetry Indicator -->
+<div class="flex items-center justify-between pt-1 font-label-sm text-label-sm text-outline">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[15px] text-tertiary">hub</span>
+<span>Syndicate Cluster: <strong>Cluster #FIN-902 (Eastern Europe / High Vol SMS Relay)</strong></span>
+</div>
+<span class="font-mono text-primary">MATCH_CONF_SCORE: 0.984</span>
+</div>
+</div>
+</section>
+<!-- SPLIT FORENSIC ANALYSIS VIEW -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- LEFT COLUMN: CONTEXTUAL TOKEN EXTRACTION & HIGHLIGHTED PAYLOAD (Cols 1-6) -->
+<div class="lg:col-span-6 rounded-xl bg-surface-container-lowest p-space-md flex flex-col gap-space-md shadow-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">code_blocks</span>
+<h2 class="font-title-md text-title-md text-on-surface">Highlighted Suspicious Context</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">LEXICAL_DECONSTRUCT_v4</span>
+</div>
+<!-- Annotated Message Box -->
+<div class="p-space-md rounded-xl bg-surface-dim flex flex-col gap-space-sm font-mono text-body-md leading-relaxed" id="annotated-payload-box">
+<p class="text-on-surface">
+<mark class="bg-error-container/40 text-error px-1 py-0.5 rounded cursor-help" title="Intent: Urgent Panic Induction">URGENT FROM CHASE FRAUD ALERT:</mark>
+              Your checking acct has been suspended due to 3 unauthorized debit attempts of $2,500.00.
+              <mark class="bg-error-container/40 text-error px-1 py-0.5 rounded cursor-help" title="Coercion: Threat of federal intervention without verification">You MUST wire security funds immediately to clear the federal tax lien</mark>
+              or your assets will be impounded.
+              <mark class="bg-secondary-container/40 text-secondary px-1 py-0.5 rounded cursor-help" title="Channel Isolation: Preventing target from verifying through safe paths">Do not visit branch.</mark>
+              Verify identity &amp;
+              <mark class="bg-error-container/40 text-error px-1 py-0.5 rounded cursor-help" title="Credential Harvesting: 2FA / OTP token theft target">one-time passcode</mark>
+              now:
+              <mark class="bg-primary/20 text-primary underline underline-offset-4 px-1 py-0.5 rounded cursor-help" title="Typosquat phishing link: 3hr old registration">https://chase-secure-auth9.com/verify-now</mark>
+</p>
+</div>
+<!-- Flagged Token Breakdown Monospace Table -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline px-1">
+<span>TOKEN STRING EXTRACTED</span>
+<span>CLASSIFIER WEIGHT</span>
+<span>VULNERABILITY CLASS</span>
+</div>
+<div class="flex flex-col gap-1 font-mono text-body-sm" id="token-extraction-list">
+<!-- Item 1 -->
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low text-on-surface">
+<span class="text-error truncate max-w-[200px]">"wire security funds immediately"</span>
+<span class="text-on-surface-variant font-label-sm">0.96 (CRITICAL)</span>
+<span class="text-outline font-label-sm">Financial Coercion</span>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low text-on-surface">
+<span class="text-primary truncate max-w-[200px]">"chase-secure-auth9.com"</span>
+<span class="text-on-surface-variant font-label-sm">0.98 (SUSPICIOUS)</span>
+<span class="text-outline font-label-sm">Disposable Domain</span>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low text-on-surface">
+<span class="text-secondary truncate max-w-[200px]">"one-time passcode"</span>
+<span class="text-on-surface-variant font-label-sm">0.94 (HIGH RISK)</span>
+<span class="text-outline font-label-sm">MFA Interception</span>
+</div>
+<!-- Item 4 -->
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low text-on-surface">
+<span class="text-outline truncate max-w-[200px]">"Do not visit branch"</span>
+<span class="text-on-surface-variant font-label-sm">0.87 (HIGH RISK)</span>
+<span class="text-outline font-label-sm">Anti-Verification Cue</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: FORENSIC EXPLANATION & THREAT VECTORS (Cols 7-12) -->
+<div class="lg:col-span-6 rounded-xl bg-surface-container-lowest p-space-md flex flex-col justify-between gap-space-md shadow-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">psychology</span>
+<h2 class="font-title-md text-title-md text-on-surface">Forensic Threat Vector Breakdown</h2>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-primary font-mono">AST_DEEP_INSPECT</span>
+</div>
+<!-- Neural Vector Weights Bars -->
+<div class="flex flex-col gap-space-sm" id="neural-weights-bars">
+<!-- Vector 1 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Artificial Urgency / Panic Induction</span>
+<span class="text-error font-mono">96% (Extreme)</span>
+</div>
+<div class="w-full bg-surface-dim h-2 rounded overflow-hidden">
+<div class="bg-error h-full rounded transition-all duration-500" style="width: 96%"></div>
+</div>
+</div>
+<!-- Vector 2 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Authority Impersonation (Major Bank)</span>
+<span class="text-error font-mono">91% (High)</span>
+</div>
+<div class="w-full bg-surface-dim h-2 rounded overflow-hidden">
+<div class="bg-error h-full rounded transition-all duration-500" style="width: 91%"></div>
+</div>
+</div>
+<!-- Vector 3 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Direct Asset Solicit / Unverified Wire Rails</span>
+<span class="text-error font-mono">88% (High)</span>
+</div>
+<div class="w-full bg-surface-dim h-2 rounded overflow-hidden">
+<div class="bg-error h-full rounded transition-all duration-500" style="width: 88%"></div>
+</div>
+</div>
+<!-- Vector 4 -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Credential / 2FA Intercept Intent</span>
+<span class="text-error font-mono">94% (Critical)</span>
+</div>
+<div class="w-full bg-surface-dim h-2 rounded overflow-hidden">
+<div class="bg-error h-full rounded transition-all duration-500" style="width: 94%"></div>
+</div>
+</div>
+</div>
+<!-- Cryptographic & Heuristic Evidence Log -->
+<div class="flex flex-col gap-space-xs rounded-lg bg-surface-dim p-space-sm">
+<span class="font-label-sm text-label-sm uppercase text-outline tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">analytics</span>
+              Cryptographic &amp; Heuristic Evidence Log
+            </span>
+<ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant pt-1" id="forensic-points-list">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-error flex-shrink-0 mt-0.5">cancel</span>
+<span><strong>Domain Age Anomaly:</strong> Domain <code class="font-mono text-primary bg-surface-container-low px-1 rounded">chase-secure-auth9.com</code> was registered 3 hours ago via an anonymous privacy registrar (Njalla/Namecheap).</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-error flex-shrink-0 mt-0.5">cancel</span>
+<span><strong>Actor Signature Match:</strong> Lexical matching confirms an 89.2% vector match with known "Financier-9" smishing syndicate lure pattern #418 targeting US retail banking.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-error flex-shrink-0 mt-0.5">cancel</span>
+<span><strong>Policy Violation:</strong> Requests 2FA active passcode. Legitimate institutions strictly prohibit requesting live OTPs or passcodes over inbound SMS or chat links.</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- RECOMMENDED ACTION & INCIDENT RESOLUTION PROTOCOL (INTERACTIVE CHECKLIST) -->
+<section class="rounded-xl bg-surface-container-lowest p-space-md flex flex-col gap-space-md shadow-xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">checklist_rtl</span>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface">Recommended Action &amp; Incident Resolution Protocol</h2>
+<span class="font-body-sm text-body-sm text-outline">Deterministic response workflow calibrated for active financial coercion vectors.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>RFC 3161 Evidence Envelope Ready</span>
+</div>
+</div>
+<!-- Interactive Checklist Steps -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-sm" id="resolution-steps">
+<!-- Step 1 -->
+<label class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer">
+<input checked="" class="mt-1 w-4 h-4 rounded bg-surface-container-highest text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+<div class="flex flex-col gap-0.5">
+<span class="font-title-sm text-title-sm text-on-surface">Step 1: Total Silence</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">DO NOT reply, click links, or communicate with the sender. Inbound acknowledgment confirms target viability.</span>
+</div>
+</label>
+<!-- Step 2 -->
+<label class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer">
+<input checked="" class="mt-1 w-4 h-4 rounded bg-surface-container-highest text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+<div class="flex flex-col gap-0.5">
+<span class="font-title-sm text-title-sm text-on-surface">Step 2: Carrier &amp; FTC Alert</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Forward payload to <strong>7726 (SPAM)</strong> on your mobile device and log report in the FTC Consumer Sentinel network.</span>
+</div>
+</label>
+<!-- Step 3 -->
+<label class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer">
+<input class="mt-1 w-4 h-4 rounded bg-surface-container-highest text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+<div class="flex flex-col gap-0.5">
+<span class="font-title-sm text-title-sm text-on-surface">Step 3: Direct Institutional Call</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Call Chase using exclusively the official fraud phone number printed on your physical debit/credit card.</span>
+</div>
+</label>
+<!-- Step 4 -->
+<label class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer">
+<input class="mt-1 w-4 h-4 rounded bg-surface-container-highest text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+<div class="flex flex-col gap-0.5">
+<span class="font-title-sm text-title-sm text-on-surface">Step 4: Seal Incident Dossier</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Generate a cryptographic PDF evidence packet with SHA-256 payload hash and cryptographic timestamp.</span>
+</div>
+</label>
+</div>
+<!-- Action Export Buttons -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock_clock</span>
+<span>Cryptographic Dossier Hash: <code class="font-mono text-on-surface bg-surface-dim px-1.5 py-0.5 rounded">sha256:7f4d92a1e8...b91c</code></span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-all font-title-sm text-title-sm flex items-center gap-1.5" id="copy-summary-btn" onclick="copyRedactedSummary()" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span>Copy Redacted Summary</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-error/20 hover:text-error text-on-surface transition-all font-title-sm text-title-sm flex items-center gap-1.5" id="blocklist-btn" onclick="addSenderToBlocklist()" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+<span>Add Sender Hash to Blocklist</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-secondary-container hover:bg-primary-container text-on-primary transition-all font-title-sm text-title-sm flex items-center gap-2 shadow-lg shadow-primary-container/20" onclick="exportIncidentReport()" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Export Incident Dossier (PDF)</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- INTERACTIVE APPLICATION SCRIPT LOGIC -->
+<script>
+    // Scenario Presets Database
+    const SCENARIOS = {
+      'bank-wire': {
+        channel: 'SMS / Smishing',
+        payload: 'URGENT FROM CHASE FRAUD ALERT: Your checking acct has been suspended due to 3 unauthorized debit attempts of $2,500.00. You MUST wire security funds immediately to clear the federal tax lien or your assets will be impounded. Do not visit branch. Verify identity & one-time passcode now: https://chase-secure-auth9.com/verify-now',
+        riskLabel: 'HIGH RISK',
+        riskScore: 92,
+        riskColor: 'error',
+        confidence: '94.6%',
+        ece: '0.021',
+        vectorCount: '4 ACTIVE VECTORS DETECTED',
+        chips: [
+          { tag: '#IMPERSONATION', conf: '91%', text: 'Chase Fraud Division', color: 'error' },
+          { tag: '#OTP_THEFT', conf: '94%', text: 'Out-of-Band 2FA Bypass', color: 'error' },
+          { tag: '#TYPOSQUAT', conf: '98%', text: 'chase-secure-auth9.com', color: 'primary' },
+          { tag: '#URGENCY_INDUCTION', conf: '96%', text: 'Federal Asset Impound Threat', color: 'error' },
+          { tag: '#CHANNEL_ISOLATION', conf: '87%', text: '"Do not visit branch" advice', color: 'secondary' },
+          { tag: '#SYNDICATE_SIG', conf: '418', text: 'Financier-9 Threat Actor', color: 'outline' }
+        ],
+        annotatedHtml: `<p class="text-on-surface">
+          <mark class="bg-error-container/40 text-error px-1 py-0.5 rounded cursor-help">URGENT FROM CHASE FRAUD ALERT:</mark>
+          Your checking acct has been suspended due to 3 unauthorized debit attempts of $2,500.00.
+          <mark class="bg-error-container/40 text-error px-1 py-0.5 rounded cursor-help">You MUST wire security funds immediately to clear the federal tax lien</mark>
+          or your assets will be impounded.
+          <mark class="bg-secondary-container/40 text-secondary px-1 py-0.5 rounded cursor-help">Do not visit branch.</mark>
+          Verify identity &amp;
+          <mark class="bg-error-container/40 text-error px-1 py-0.5 rounded cursor-help">one-time passcode</mark>
+          now:
+          <mark class="bg-primary/20 text-primary underline underline-offset-4 px-1 py-0.5 rounded cursor-help">https://chase-secure-auth9.com/verify-now</mark>
+        </p>`,
+        tokens: [
+          { token: '"wire security funds immediately"', weight: '0.96 (CRITICAL)', cat: 'Financial Coercion', color: 'error' },
+          { token: '"chase-secure-auth9.com"', weight: '0.98 (SUSPICIOUS)', cat: 'Disposable Domain', color: 'primary' },
+          { token: '"one-time passcode"', weight: '0.94 (HIGH RISK)', cat: 'MFA Interception', color: 'secondary' },
+          { token: '"Do not visit branch"', weight: '0.87 (HIGH RISK)', cat: 'Anti-Verification Cue', color: 'outline' }
+        ],
+        vectors: [
+          { name: 'Artificial Urgency / Panic Induction', pct: 96, label: '96% (Extreme)', color: 'bg-error' },
+          { name: 'Authority Impersonation (Major Bank)', pct: 91, label: '91% (High)', color: 'bg-error' },
+          { name: 'Direct Asset Solicit / Unverified Wire Rails', pct: 88, label: '88% (High)', color: 'bg-error' },
+          { name: 'Credential / 2FA Intercept Intent', pct: 94, label: '94% (Critical)', color: 'bg-error' }
+        ],
+        evidencePoints: [
+          { status: 'bad', title: 'Domain Age Anomaly:', desc: 'Domain chase-secure-auth9.com registered 3 hours ago via anonymous privacy registrar.' },
+          { status: 'bad', title: 'Actor Signature Match:', desc: 'Lexical matching identifies high similarity with known Financier-9 smishing syndicate lure #418.' },
+          { status: 'bad', title: 'Policy Violation:', desc: 'Legitimate institutions strictly prohibit requesting active OTPs or bank transfers over SMS alerts.' }
+        ]
+      },
+      'whatsapp-otp': {
+        channel: 'WhatsApp / Telegram',
+        payload: 'Hi mom, my old phone slipped into water and broke! This is my temporary emergency number. Can you please forward me the 6-digit WhatsApp verification code you just got via SMS? I urgently need to authenticate my work WhatsApp group before my meeting in 10 minutes!',
+        riskLabel: 'HIGH RISK',
+        riskScore: 89,
+        riskColor: 'error',
+        confidence: '92.3%',
+        ece: '0.019',
+        vectorCount: '3 ACTIVE VECTORS DETECTED',
+        chips: [
+          { tag: '#FAMILY_IMPERSONATION', conf: '94%', text: 'Kinship Fake Emergency', color: 'error' },
+          { tag: '#ACCOUNT_TAKEOVER', conf: '96%', text: 'WhatsApp Session Steal', color: 'error' },
+          { tag: '#SOCIAL_ENGINEERING', conf: '88%', text: 'Manufactured Urgency', color: 'error' },
+          { tag: '#CARRIER_RELAY', conf: '72%', text: 'Virtual SIM VoIP Origination', color: 'primary' }
+        ],
+        annotatedHtml: `<p class="text-on-surface">
+          <mark class="bg-error-container/40 text-error px-1 py-0.5 rounded cursor-help">Hi mom, my old phone slipped into water and broke!</mark>
+          This is my temporary emergency number. Can you please
+          <mark class="bg-error-container/40 text-error px-1 py-0.5 rounded cursor-help">forward me the 6-digit WhatsApp verification code</mark>
+          you just got via SMS?
+          <mark class="bg-secondary-container/40 text-secondary px-1 py-0.5 rounded cursor-help">I urgently need to authenticate my work WhatsApp before 10 minutes!</mark>
+        </p>`,
+        tokens: [
+          { token: '"Hi mom, my old phone broke"', weight: '0.94 (CRITICAL)', cat: 'Family Impersonation', color: 'error' },
+          { token: '"6-digit WhatsApp verification code"', weight: '0.97 (CRITICAL)', cat: 'Session Hijack OTP', color: 'error' },
+          { token: '"before my meeting in 10 minutes"', weight: '0.84 (HIGH)', cat: 'Artificial Urgency', color: 'secondary' }
+        ],
+        vectors: [
+          { name: 'Kinship Impersonation / "Hi Mum" Vector', pct: 94, label: '94% (Extreme)', color: 'bg-error' },
+          { name: 'Secondary Account Takeover (Session Hijack)', pct: 97, label: '97% (Critical)', color: 'bg-error' },
+          { name: 'Time-Windowed Emotional Coercion', pct: 86, label: '86% (High)', color: 'bg-error' },
+          { name: 'VoIP Inbound Line Anomaly', pct: 82, label: '82% (High)', color: 'bg-secondary' }
+        ],
+        evidencePoints: [
+          { status: 'bad', title: 'Classic Kinship Hijack:', desc: 'Pattern matches the globally prolific "Hi Mum / Broken Phone" takeover vector mapped across 80,000+ consumer complaints.' },
+          { status: 'bad', title: 'Targeted Verification Code:', desc: 'Requesting an inbound SMS registration code will instantaneously transfer ownership of your WhatsApp account to the attacker device.' },
+          { status: 'bad', title: 'Zero Channel Trust:', desc: 'Number has never had interaction history with your device and is hosted on an overseas MVNO gateway.' }
+        ]
+      },
+      'fake-kyc': {
+        channel: 'Raw Untrusted',
+        payload: 'CRITICAL SECURITY: Mandatory FinCEN KYC Re-verification required for your cryptocurrency wallet. Failure to verify will result in complete account forfeiture within 24 hours. Connect immediately with our verified agent via AnyDesk ID: 948-281-019 to execute smart contract safety validation.',
+        riskLabel: 'CRITICAL THREAT',
+        riskScore: 98,
+        riskColor: 'error',
+        confidence: '99.1%',
+        ece: '0.008',
+        vectorCount: '5 ACTIVE VECTORS DETECTED',
+        chips: [
+          { tag: '#REMOTE_DESKTOP_LURE', conf: '99%', text: 'AnyDesk / TeamViewer Trap', color: 'error' },
+          { tag: '#FAKE_REGULATORY_KYC', conf: '95%', text: 'FinCEN / SEC Coercion', color: 'error' },
+          { tag: '#ASSET_DRAIN_INTENT', conf: '98%', text: 'Smart Contract Drainer', color: 'error' },
+          { tag: '#FORFEITURE_THREAT', conf: '92%', text: 'Asset Confiscation Bluff', color: 'error' }
+        ],
+        annotatedHtml: `<p class="text-on-surface">
+          <mark class="bg-error-container/40 text-error px-1 py-0.5 rounded cursor-help">CRITICAL SECURITY: Mandatory FinCEN KYC Re-verification</mark>
+          required for your cryptocurrency wallet.
+          <mark class="bg-error-container/40 text-error px-1 py-0.5 rounded cursor-help">Failure to verify will result in complete account forfeiture within 24 hours.</mark>
+          Connect immediately with our verified agent via
+          <mark class="bg-error-container/40 text-error px-1 py-0.5 rounded cursor-help">AnyDesk ID: 948-281-019</mark>
+          to execute smart contract safety validation.
+        </p>`,
+        tokens: [
+          { token: '"AnyDesk ID: 948-281-019"', weight: '0.99 (CRITICAL)', cat: 'Remote Access Tool', color: 'error' },
+          { token: '"Mandatory FinCEN KYC"', weight: '0.95 (CRITICAL)', cat: 'Authority Falsification', color: 'error' },
+          { token: '"complete account forfeiture"', weight: '0.92 (HIGH)', cat: 'Coercive Blackmail', color: 'error' }
+        ],
+        vectors: [
+          { name: 'Remote Desktop Exploitation (AnyDesk/RAT)', pct: 99, label: '99% (Hostile)', color: 'bg-error' },
+          { name: 'False Regulatory / Federal Authority Claim', pct: 95, label: '95% (Extreme)', color: 'bg-error' },
+          { name: 'Wallet Drainer Smart Contract Payload', pct: 98, label: '98% (Hostile)', color: 'bg-error' },
+          { name: 'Confiscation & Liquidation Pressure', pct: 91, label: '91% (High)', color: 'bg-error' }
+        ],
+        evidencePoints: [
+          { status: 'bad', title: 'Remote Control Exploit:', desc: 'Prompts installation and credential handover of AnyDesk remote administration software, granting total keyboard control.' },
+          { status: 'bad', title: 'Regulatory Impersonation:', desc: 'FinCEN and the Treasury Department never communicate directly with end-users or operate consumer desk support.' },
+          { status: 'bad', title: 'Known Drainer Syndicate:', desc: 'Remote ID matches known cluster linked to automatic keystroke exfiltration and Metamask seed vault draining.' }
+        ]
+      },
+      'shipping-legit': {
+        channel: 'SMS / Smishing',
+        payload: 'FedEx: Your package (tracking #982183921029) is scheduled for delivery tomorrow between 1:00 PM and 5:00 PM. No signature required. Manage your delivery preferences in the FedEx app or visit https://www.fedex.com/fedextracking',
+        riskLabel: 'LOW RISK',
+        riskScore: 12,
+        riskColor: 'tertiary',
+        confidence: '96.2%',
+        ece: '0.015',
+        vectorCount: '0 VECTORS DETECTED',
+        chips: [
+          { tag: '#OFFICIAL_DOMAIN', conf: '99%', text: 'fedex.com (Authentic)', color: 'tertiary' },
+          { tag: '#NO_PAYMENT_DEMAND', conf: '100%', text: 'Standard Informational', color: 'tertiary' },
+          { tag: '#STANDARD_LOGISTICS', conf: '94%', text: 'Real Tracking Lexicon', color: 'tertiary' }
+        ],
+        annotatedHtml: `<p class="text-on-surface">
+          FedEx: Your package (tracking #982183921029) is scheduled for delivery tomorrow between 1:00 PM and 5:00 PM. No signature required. Manage your delivery preferences in the FedEx app or visit
+          <mark class="bg-tertiary/20 text-tertiary underline px-1 py-0.5 rounded cursor-help">https://www.fedex.com/fedextracking</mark>
+        </p>`,
+        tokens: [
+          { token: '"fedex.com/fedextracking"', weight: '0.02 (CLEAN)', cat: 'Authenticated Domain', color: 'tertiary' },
+          { token: '"No signature required"', weight: '0.01 (CLEAN)', cat: 'Non-Urgent Notice', color: 'outline' }
+        ],
+        vectors: [
+          { name: 'Artificial Urgency / Panic Induction', pct: 4, label: '4% (Clean)', color: 'bg-tertiary' },
+          { name: 'Authority Impersonation', pct: 6, label: '6% (Clean)', color: 'bg-tertiary' },
+          { name: 'Direct Asset Solicit / Fee Demands', pct: 0, label: '0% (Clean)', color: 'bg-tertiary' },
+          { name: 'Credential / 2FA Intercept Intent', pct: 1, label: '1% (Clean)', color: 'bg-tertiary' }
+        ],
+        evidencePoints: [
+          { status: 'good', title: 'Legitimate FQDN:', desc: 'Destination hostname matches the official cryptographic root TLS certificate for FedEx Corporation.' },
+          { status: 'good', title: 'Absence of Fee Coercion:', desc: 'No redelivery fee, uncollected tariff, or gift card payment demanded.' },
+          { status: 'good', title: 'Sender Reputational Score:', desc: 'Shortcode verified under the Cellular Telecommunications Industry Association (CTIA) directory.' }
+        ]
+      },
+      'ambiguous-short': {
+        channel: 'SMS / Smishing',
+        payload: 'Hey are you free right now? Need to ask you a quick question.',
+        riskLabel: 'UNKNOWN / LOW CONFIDENCE',
+        riskScore: 38,
+        riskColor: 'secondary',
+        confidence: '42.1%',
+        ece: '0.088',
+        vectorCount: '1 AMBIGUOUS INDICATOR',
+        chips: [
+          { tag: '#CONVERSATION_OPENER', conf: '65%', text: 'Unsolicited Probe', color: 'secondary' },
+          { tag: '#INSUFFICIENT_CONTEXT', conf: '88%', text: 'Too Short for AST Anchor', color: 'outline' }
+        ],
+        annotatedHtml: `<p class="text-on-surface">
+          <mark class="bg-secondary/20 text-secondary px-1 py-0.5 rounded cursor-help">Hey are you free right now?</mark>
+          Need to ask you a quick question.
+        </p>`,
+        tokens: [
+          { token: '"Hey are you free right now?"', weight: '0.38 (UNCERTAIN)', cat: 'Generic Opener', color: 'secondary' }
+        ],
+        vectors: [
+          { name: 'Artificial Urgency / Panic Induction', pct: 28, label: '28% (Low)', color: 'bg-secondary' },
+          { name: 'Authority Impersonation', pct: 10, label: '10% (Low)', color: 'bg-secondary' },
+          { name: 'Direct Asset Solicit / Unverified Wire Rails', pct: 5, label: '5% (Clean)', color: 'bg-tertiary' },
+          { name: 'Credential / 2FA Intercept Intent', pct: 12, label: '12% (Low)', color: 'bg-secondary' }
+        ],
+        evidencePoints: [
+          { status: 'warn', title: 'Insufficient Linguistic Mass:', desc: 'Message payload contains only 11 tokens. Confidence interval is statistically degraded (ECE 0.088).' },
+          { status: 'warn', title: 'Potential Pig-Butchering Opener:', desc: 'Scammers frequently start with a friendly wrong-number ping to establish rapport before pivoting to crypto investments.' }
+        ]
+      }
+    };
+
+    // Load Scenario handler
+    function loadScenario(scenarioKey) {
+      const data = SCENARIOS[scenarioKey];
+      if (!data) return;
+
+      // Update Scenario buttons active class
+      document.querySelectorAll('#scenario-selector .scenario-btn').forEach(btn => {
+        btn.classList.remove('bg-surface-container-high', 'text-primary');
+        btn.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+      });
+      event.currentTarget.classList.add('bg-surface-container-high', 'text-primary');
+      event.currentTarget.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+
+      // Fill Editor
+      const editor = document.getElementById('payload-editor');
+      editor.value = data.payload;
+      handleEditorInput();
+
+      // Channel pill
+      document.querySelectorAll('.channel-pill').forEach(pill => {
+        if (pill.innerText.trim() === data.channel) {
+          pill.classList.add('bg-surface-container-highest', 'text-primary');
+          pill.classList.remove('text-on-surface-variant');
+        } else {
+          pill.classList.remove('bg-surface-container-highest', 'text-primary');
+          pill.classList.add('text-on-surface-variant');
+        }
+      });
+      document.getElementById('current-channel-label').innerText = data.channel;
+
+      // Render Results
+      renderAnalysisView(data);
+    }
+
+    // Set Channel
+    function setChannel(el, channelName) {
+      document.querySelectorAll('.channel-pill').forEach(pill => {
+        pill.classList.remove('bg-surface-container-highest', 'text-primary');
+        pill.classList.add('text-on-surface-variant');
+      });
+      el.classList.add('bg-surface-container-highest', 'text-primary');
+      el.classList.remove('text-on-surface-variant');
+      document.getElementById('current-channel-label').innerText = channelName;
+    }
+
+    // Toggle Font Mono/Sans
+    function toggleMonoFont(isMono) {
+      const editor = document.getElementById('payload-editor');
+      const monoBtn = document.getElementById('font-mono-btn');
+      const sansBtn = document.getElementById('font-sans-btn');
+
+      if (isMono) {
+        editor.classList.remove('font-body-md');
+        editor.classList.add('font-mono');
+        monoBtn.className = 'text-primary font-bold';
+        sansBtn.className = 'text-outline hover:text-on-surface';
+      } else {
+        editor.classList.remove('font-mono');
+        editor.classList.add('font-body-md');
+        sansBtn.className = 'text-primary font-bold';
+        monoBtn.className = 'text-outline hover:text-on-surface';
+      }
+    }
+
+    // Handle Editor Input Counter & PII status
+    function handleEditorInput() {
+      const editor = document.getElementById('payload-editor');
+      const charCount = editor.value.length;
+      const wordCount = editor.value.trim().split(/\s+/).filter(Boolean).length;
+
+      document.getElementById('char-counter').innerText = `${charCount} / 5,000 chars`;
+      document.getElementById('word-counter').innerText = `${wordCount} words`;
+
+      if (charCount > 5000) {
+        document.getElementById('error-oversize-banner').classList.remove('hidden');
+        document.getElementById('alert-container').classList.remove('hidden');
+      } else {
+        document.getElementById('error-oversize-banner').classList.add('hidden');
+      }
+    }
+
+    // Handle PII Redaction toggle
+    function handlePiiToggle() {
+      const isChecked = document.getElementById('pii-toggle').checked;
+      const statusChip = document.getElementById('pii-status-chip');
+      if (isChecked) {
+        statusChip.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>PII Redactor: Active (2 Tokens Masked)</span>`;
+        statusChip.className = 'flex items-center gap-1 text-tertiary font-label-sm text-label-sm';
+      } else {
+        statusChip.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-error"></span><span>PII Redactor: Bypassed (Raw Ciphertext)</span>`;
+        statusChip.className = 'flex items-center gap-1 text-error font-label-sm text-label-sm';
+      }
+    }
+
+    // Clear Input
+    function clearInput() {
+      const editor = document.getElementById('payload-editor');
+      editor.value = '';
+      handleEditorInput();
+      editor.focus();
+    }
+
+    // Trigger Neural Scan with Animation
+    function triggerNeuralAnalysis() {
+      const spinner = document.getElementById('analyze-spinner');
+      const icon = document.getElementById('analyze-icon');
+      const btn = document.getElementById('analyze-trigger-btn');
+
+      spinner.classList.remove('hidden');
+      icon.classList.add('hidden');
+      btn.classList.add('opacity-75');
+
+      setTimeout(() => {
+        spinner.classList.add('hidden');
+        icon.classList.remove('hidden');
+        btn.classList.remove('opacity-75');
+        // Refresh analysis
+        const currentText = document.getElementById('payload-editor').value.toLowerCase();
+        if (currentText.includes('fedex')) {
+          renderAnalysisView(SCENARIOS['shipping-legit']);
+        } else if (currentText.includes('anydesk')) {
+          renderAnalysisView(SCENARIOS['fake-kyc']);
+        } else if (currentText.includes('mom') || currentText.includes('whatsapp')) {
+          renderAnalysisView(SCENARIOS['whatsapp-otp']);
+        } else if (currentText.length < 50) {
+          renderAnalysisView(SCENARIOS['ambiguous-short']);
+        } else {
+          renderAnalysisView(SCENARIOS['bank-wire']);
+        }
+      }, 650);
+    }
+
+    // Render Analysis View
+    function renderAnalysisView(data) {
+      // Risk category badge
+      const catPill = document.getElementById('risk-category-pill');
+      catPill.innerText = data.riskLabel;
+      if (data.riskScore > 75) {
+        catPill.className = 'font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-error-container text-error font-mono flex items-center gap-1';
+        catPill.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>${data.riskLabel}`;
+      } else if (data.riskScore > 30) {
+        catPill.className = 'font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-high text-secondary font-mono flex items-center gap-1';
+        catPill.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>${data.riskLabel}`;
+      } else {
+        catPill.className = 'font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-tertiary-container/30 text-tertiary font-mono flex items-center gap-1';
+        catPill.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>${data.riskLabel}`;
+      }
+
+      // Numeric Score
+      const numScore = document.getElementById('risk-numeric-score');
+      numScore.innerText = data.riskScore;
+      if (data.riskScore > 75) {
+        numScore.className = 'font-headline-xl text-headline-xl text-error font-bold font-mono tracking-tight';
+      } else if (data.riskScore > 30) {
+        numScore.className = 'font-headline-xl text-headline-xl text-secondary font-bold font-mono tracking-tight';
+      } else {
+        numScore.className = 'font-headline-xl text-headline-xl text-tertiary font-bold font-mono tracking-tight';
+      }
+
+      // ECE
+      document.getElementById('calibration-ece').innerText = `Confidence: ${data.confidence}`;
+
+      // Gauge Bar Render
+      const gauge = document.getElementById('gauge-bar-track');
+      gauge.innerHTML = '';
+      const totalBars = 10;
+      const activeCount = Math.round(data.riskScore / 10);
+      for (let i = 0; i < totalBars; i++) {
+        const bar = document.createElement('div');
+        bar.className = 'h-full rounded-sm transition-all duration-300';
+        if (i < activeCount) {
+          if (i < 3) bar.classList.add('bg-tertiary');
+          else if (i < 6) bar.classList.add('bg-secondary');
+          else bar.classList.add('bg-error');
+        } else {
+          bar.classList.add('bg-surface-container-highest');
+        }
+        gauge.appendChild(bar);
+      }
+
+      // Vector count label
+      document.getElementById('vector-count-label').innerText = data.vectorCount;
+
+      // Taxonomy Chips
+      const chipsContainer = document.getElementById('taxonomy-chips-container');
+      chipsContainer.innerHTML = '';
+      data.chips.forEach(c => {
+        const colorClass = c.color === 'error' ? 'text-error' : c.color === 'primary' ? 'text-primary' : c.color === 'tertiary' ? 'text-tertiary' : 'text-secondary';
+        chipsContainer.innerHTML += `
+          <div class="p-space-xs rounded-lg bg-surface-container-low flex flex-col gap-0.5">
+            <div class="flex items-center justify-between font-label-sm text-label-sm">
+              <span class="${colorClass} font-mono">${c.tag}</span>
+              <span class="text-outline font-mono">${c.conf}</span>
+            </div>
+            <span class="font-body-sm text-body-sm text-on-surface truncate">${c.text}</span>
+          </div>
+        `;
+      });
+
+      // Annotated payload box
+      document.getElementById('annotated-payload-box').innerHTML = data.annotatedHtml;
+
+      // Tokens
+      const tokenList = document.getElementById('token-extraction-list');
+      tokenList.innerHTML = '';
+      data.tokens.forEach(t => {
+        const colorClass = t.color === 'error' ? 'text-error' : t.color === 'primary' ? 'text-primary' : t.color === 'tertiary' ? 'text-tertiary' : 'text-secondary';
+        tokenList.innerHTML += `
+          <div class="flex items-center justify-between p-2 rounded bg-surface-container-low text-on-surface">
+            <span class="${colorClass} truncate max-w-[200px]">${t.token}</span>
+            <span class="text-on-surface-variant font-label-sm">${t.weight}</span>
+            <span class="text-outline font-label-sm">${t.cat}</span>
+          </div>
+        `;
+      });
+
+      // Neural Weights
+      const weightsContainer = document.getElementById('neural-weights-bars');
+      weightsContainer.innerHTML = '';
+      data.vectors.forEach(v => {
+        const textClass = v.pct > 70 ? 'text-error' : v.pct > 30 ? 'text-secondary' : 'text-tertiary';
+        weightsContainer.innerHTML += `
+          <div class="flex flex-col gap-1">
+            <div class="flex items-center justify-between font-label-sm text-label-sm">
+              <span class="text-on-surface">${v.name}</span>
+              <span class="${textClass} font-mono">${v.label}</span>
+            </div>
+            <div class="w-full bg-surface-dim h-2 rounded overflow-hidden">
+              <div class="${v.color} h-full rounded transition-all duration-500" style="width: ${v.pct}%"></div>
+            </div>
+          </div>
+        `;
+      });
+
+      // Evidence points
+      const pointsList = document.getElementById('forensic-points-list');
+      pointsList.innerHTML = '';
+      data.evidencePoints.forEach(p => {
+        const icon = p.status === 'bad' ? 'cancel' : p.status === 'good' ? 'check_circle' : 'help';
+        const color = p.status === 'bad' ? 'text-error' : p.status === 'good' ? 'text-tertiary' : 'text-secondary';
+        pointsList.innerHTML += `
+          <li class="flex items-start gap-2">
+            <span class="material-symbols-outlined text-[16px] ${color} flex-shrink-0 mt-0.5">${icon}</span>
+            <span><strong>${p.title}</strong> ${p.desc}</span>
+          </li>
+        `;
+      });
+    }
+
+    // Simulator Switcher (Live, Loading, Error, Oversize)
+    function setSimulatorState(state) {
+      const errBanner = document.getElementById('error-endpoint-banner');
+      const overBanner = document.getElementById('error-oversize-banner');
+      const alertContainer = document.getElementById('alert-container');
+      const resultsWorkspace = document.getElementById('results-workspace');
+
+      // Reset Simulator buttons
+      ['sim-result-btn', 'sim-load-btn', 'sim-err-btn', 'sim-over-btn'].forEach(id => {
+        const b = document.getElementById(id);
+        b.className = 'px-space-xs py-1 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface';
+      });
+
+      if (state === 'analyzed') {
+        document.getElementById('sim-result-btn').className = 'px-space-xs py-1 rounded font-label-sm text-label-sm bg-surface-container-highest text-primary';
+        alertContainer.classList.add('hidden');
+        errBanner.classList.add('hidden');
+        overBanner.classList.add('hidden');
+        resultsWorkspace.classList.remove('opacity-30', 'pointer-events-none');
+      } else if (state === 'loading') {
+        document.getElementById('sim-load-btn').className = 'px-space-xs py-1 rounded font-label-sm text-label-sm bg-surface-container-highest text-primary';
+        triggerNeuralAnalysis();
+      } else if (state === 'error') {
+        document.getElementById('sim-err-btn').className = 'px-space-xs py-1 rounded font-label-sm text-label-sm bg-surface-container-highest text-error';
+        alertContainer.classList.remove('hidden');
+        errBanner.classList.remove('hidden');
+        overBanner.classList.add('hidden');
+        resultsWorkspace.classList.add('opacity-30', 'pointer-events-none');
+      } else if (state === 'oversize') {
+        document.getElementById('sim-over-btn').className = 'px-space-xs py-1 rounded font-label-sm text-label-sm bg-surface-container-highest text-primary';
+        alertContainer.classList.remove('hidden');
+        overBanner.classList.remove('hidden');
+        errBanner.classList.add('hidden');
+        resultsWorkspace.classList.remove('opacity-30', 'pointer-events-none');
+      }
+    }
+
+    // Action Micro-interactions
+    function copyRedactedSummary() {
+      const btn = document.getElementById('copy-summary-btn');
+      const originalHtml = btn.innerHTML;
+      btn.innerHTML = `<span class="material-symbols-outlined text-[18px] text-tertiary">done</span><span class="text-tertiary">Copied Redacted!</span>`;
+      setTimeout(() => {
+        btn.innerHTML = originalHtml;
+      }, 2000);
+    }
+
+    function addSenderToBlocklist() {
+      const btn = document.getElementById('blocklist-btn');
+      const originalHtml = btn.innerHTML;
+      btn.innerHTML = `<span class="material-symbols-outlined text-[18px] text-error">gavel</span><span class="text-error">Sender Hash Blacklisted!</span>`;
+      setTimeout(() => {
+        btn.innerHTML = originalHtml;
+      }, 2500);
+    }
+
+    function exportIncidentReport() {
+      alert("RFC 3161 Tamper-Sealed PDF Evidence Dossier generated with SHA-256 integrity hash: [sha256:7f4d92a1e8...b91c]. Downloading bundle...");
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest py-space-md mt-space-xl shadow-[0_-1px_4px_rgba(0,0,0,0.15)]"><div class="w-full px-gutter flex flex-col md:flex-row items-center justify-between gap-space-sm"><div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary text-[14px]">verified_user</span><span>SOC2 TYPE II CERTIFIED</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[14px]">lock</span><span>256-BIT ENCLAVE TLS</span></div><span>ZERO-KNOWLEDGE CIPHERTEXT MODE ACTIVE</span></div><div class="font-label-sm text-label-sm text-outline">© 2025 ScamShield AI Threat Systems. All telemetry confidential.</div></div></footer></div></body></html>

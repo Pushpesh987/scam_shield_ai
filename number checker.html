@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-highest": "#303541", "error": "#ffb4ab", "secondary-fixed": "#dbe1ff", "on-surface-variant": "#bdc8d1", "surface-dim": "#0e131e", "primary-fixed": "#c4e7ff", "surface-bright": "#343946", "on-secondary-container": "#cdd7ff", "on-primary-fixed-variant": "#004c69", "on-error": "#690005", "tertiary": "#56e5a9", "on-background": "#dee2f2", "surface-variant": "#303541", "surface-container-lowest": "#090e19", "tertiary-fixed-dim": "#4edea3", "on-tertiary-fixed": "#002113", "tertiary-fixed": "#6ffbbe", "on-secondary": "#002a78", "on-tertiary-fixed-variant": "#005236", "primary-container": "#38bdf8", "on-secondary-fixed": "#00174b", "error-container": "#93000a", "secondary-container": "#0053db", "on-error-container": "#ffdad6", "on-primary-fixed": "#001e2c", "secondary": "#b4c5ff", "tertiary-container": "#30c88f", "surface-tint": "#7bd0ff", "primary-fixed-dim": "#7bd0ff", "surface-container-high": "#252a36", "surface-container": "#1b1f2b", "secondary-fixed-dim": "#b4c5ff", "inverse-on-surface": "#2b303d", "primary": "#8ed5ff", "outline": "#87929a", "background": "#0e131e", "on-surface": "#dee2f2", "on-tertiary-container": "#004e34", "on-primary-container": "#004965", "inverse-primary": "#00668a", "on-secondary-fixed-variant": "#003ea8", "surface-container-low": "#161b27", "on-primary": "#00354a", "inverse-surface": "#dee2f2", "surface": "#0e131e", "outline-variant": "#3e484f", "on-tertiary": "#003824" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.5rem", "margin-mobile": "1rem", "space-md": "1rem", "margin": "2rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter-mobile": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem" }, "fontFamily": { "title-sm": [ "Manrope" ], "headline-md": [ "Manrope" ], "label-md": [ "JetBrains Mono" ], "label-lg": [ "JetBrains Mono" ], "headline-lg": [ "Manrope" ], "body-sm": [ "Manrope" ], "headline-xl-mobile": [ "Manrope" ], "headline-xl": [ "Manrope" ], "headline-lg-mobile": [ "Manrope" ], "body-md": [ "Manrope" ], "headline-sm": [ "Manrope" ], "title-md": [ "Manrope" ], "label-sm": [ "JetBrains Mono" ], "body-lg": [ "Manrope" ] }, "fontSize": { "title-sm": [ "14px", { "lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-md": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" } ], "label-lg": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.05em", "fontWeight": "500" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-xl-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "headline-xl": [ "44px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "title-md": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "500" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><div class="w-9 h-9 rounded-xl bg-surface-container-low flex items-center justify-center"><span class="material-symbols-outlined text-primary-container text-[22px]">shield</span></div><div class="flex flex-col"><span class="font-title-sm text-title-sm text-on-surface tracking-tight leading-none">ScamShield <span class="text-primary-container font-headline-sm text-headline-sm">AI</span></span><div class="flex items-center gap-space-xs mt-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">AI Sentinel Node</span></div></div></div><nav class="flex flex-col gap-space-xs px-space-sm mt-space-md" data-active-classes="bg-surface-container-high text-primary font-title-sm rounded-lg"><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="overview" href="#">Overview</a><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="analyze-message" href="#">Analyze Message</a><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="analyze-transcript" href="#">Analyze Transcript</a><a aria-current="page" class="flex items-center px-space-sm py-space-sm transition-all bg-surface-container-high text-primary font-title-sm rounded-lg" data-path="check-number" href="#">Check Number</a><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="live-protection" href="#"><span class="font-body-md text-body-md">Live Protection</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary">OS-BOUND</span></a><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="evidence-reports" href="#">Evidence Reports</a><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="history" href="#">History</a><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="settings" href="#">Settings</a></nav></div><div class="p-space-sm m-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Telemetry</span><span class="w-2 h-2 rounded-full bg-tertiary"></span></div><div class="flex flex-col gap-space-xs font-label-md text-label-md text-outline"><div class="flex items-center justify-between"><span class="text-on-surface-variant">SANDBOX</span><span class="text-tertiary">EPHEMERAL</span></div><div class="flex items-center justify-between"><span class="text-on-surface-variant">ZERO-LOG</span><span class="text-primary">ENFORCED</span></div><div class="flex items-center justify-between"><span class="text-on-surface-variant">RUNTIME</span><span class="text-on-surface">v2.4-sec</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 flex items-center justify-between px-gutter shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="flex items-center gap-space-md w-96"><div class="w-full flex items-center gap-space-sm px-space-sm py-space-xs rounded-xl bg-surface-container-lowest text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-body-sm flex-1 text-outline">Search phone numbers, spoof records, carrier routing...</span><kbd class="font-label-sm text-label-sm bg-surface-container-highest px-space-xs py-0.5 rounded text-on-surface">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-on-surface-variant">EAL6+ ENCLAVE ACTIVE</span><span class="text-outline-variant">•</span><span class="font-label-sm text-label-sm text-primary">LATENCY 14ms</span></div><button class="relative w-9 h-9 rounded-xl bg-surface-container-low flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:flex flex-col"><span class="font-title-sm text-title-sm text-on-surface leading-tight">Analyst Chen</span><span class="font-label-sm text-label-sm text-secondary-fixed-dim leading-none">SecOps Tier-2</span></div><span class="material-symbols-outlined text-outline text-[18px]">expand_more</span></div></div></header><main class="relative pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive State Scripts & Mock Data Store -->
+<script>
+    window.scamShieldState = {
+      activeScenario: 'high_risk',
+      ephemeralMode: true,
+      bypassCache: false,
+      historyPurged: false
+    };
+
+    const scenarios = {
+      high_risk: {
+        number: '+1 (800) 419-0284',
+        carrier: 'Twilio / Bandwidth.com VoIP Gateway (Virtual Non-Fixed)',
+        badgeText: 'HIGH RISK — ACTIVE IMPERSONATION & SPOOFING DETECTED',
+        badgeClass: 'bg-error-container/30 text-error',
+        dotClass: 'bg-error animate-ping',
+        carrierColor: 'text-error',
+        attestation: 'Level C (Gateway Attestation — Originating caller identity NOT verified by originating carrier)',
+        attestationLevel: 'C',
+        firstSeen: '14 days ago',
+        lastReported: '11 minutes ago',
+        complaints: '342 authenticated complaints',
+        confidence: 'HIGH (Multi-Source Corroborated)',
+        gaugeBars: [
+          'bg-tertiary', 'bg-tertiary', 'bg-tertiary',
+          'bg-amber-400', 'bg-amber-400', 'bg-amber-400',
+          'bg-error', 'bg-error', 'bg-error', 'bg-error'
+        ],
+        score: '9.4',
+        scoreLabel: 'CRITICAL THREAT VECTOR',
+        scoreColor: 'text-error',
+        riskActiveIndex: 0,
+        sources: [
+          { name: 'FTC Sentinel Consumer Network', status: '142 Impersonation Complaints', reliability: 'VERIFIED REGULATORY FEED (High)', time: '28 mins ago', statusClass: 'text-error' },
+          { name: 'STIR/SHAKEN Cryptographic Feed', status: 'Attestation Level C (Unauthenticated)', reliability: 'CARRIER CRYPTOGRAPHIC (Authoritative)', time: 'Live', statusClass: 'text-error' },
+          { name: 'ScamShield Peer Telemetry', status: '89 Peer Reports (IRS Tax Lien / AnyDesk)', reliability: 'COMMUNITY REPORTED (Crowdsourced)', time: '14 mins ago', statusClass: 'text-error' },
+          { name: 'Carrier CNAM Feed (Live)', status: 'CNAM: "US TREASURY DEPT" [MISMATCH]', reliability: 'CARRIER CNAM FEED', time: 'Live', statusClass: 'text-error' }
+        ],
+        vectors: [
+          { title: 'Caller-ID / Entity Name Mismatch', desc: 'CNAM claims US Treasury, but route origin points to virtual disposable VoIP tenant.', icon: 'warning', color: 'text-error' },
+          { title: 'Reported Lure: Criminal Coercion', desc: 'IRS warrant intimidation demanding Bitcoin ATM purchase or immediate Wire transmittal.', icon: 'crisis_alert', color: 'text-error' },
+          { title: 'STIR/SHAKEN Signature Failure', desc: 'Gateway lack of subscriber binding. Attestation grade C indicates spoof vulnerability.', icon: 'fingerprint_off', color: 'text-error' }
+        ]
+      },
+      caution: {
+        number: '+1 (415) 890-4412',
+        carrier: 'Onvoy LLC dba Inteliquent (VoIP Service Provider)',
+        badgeText: 'CAUTION — UNVERIFIED VOIP ORIGIN & BURST CALL DYNAMICS',
+        badgeClass: 'bg-amber-950/40 text-amber-400',
+        dotClass: 'bg-amber-400 animate-pulse',
+        carrierColor: 'text-amber-400',
+        attestation: 'Level B (Partial Attestation — Originating provider verified customer, not number ownership)',
+        attestationLevel: 'B',
+        firstSeen: '3 days ago',
+        lastReported: '4 hours ago',
+        complaints: '14 flagged signals',
+        confidence: 'MODERATE (Automated Anomaly Detection)',
+        gaugeBars: [
+          'bg-tertiary', 'bg-tertiary', 'bg-tertiary',
+          'bg-amber-400', 'bg-amber-400', 'bg-amber-400',
+          'bg-surface-container-highest', 'bg-surface-container-highest', 'bg-surface-container-highest', 'bg-surface-container-highest'
+        ],
+        score: '5.8',
+        scoreLabel: 'SUSPICIOUS VOIP BEHAVIOR',
+        scoreColor: 'text-amber-400',
+        riskActiveIndex: 1,
+        sources: [
+          { name: 'FTC Sentinel Consumer Network', status: '2 Unverified Reports', reliability: 'VERIFIED REGULATORY FEED (High)', time: '4 hours ago', statusClass: 'text-amber-400' },
+          { name: 'STIR/SHAKEN Cryptographic Feed', status: 'Attestation Level B (Partial Verification)', reliability: 'CARRIER CRYPTOGRAPHIC (Authoritative)', time: 'Live', statusClass: 'text-amber-400' },
+          { name: 'ScamShield Peer Telemetry', status: 'Robotic automated voice test ping recorded', reliability: 'COMMUNITY REPORTED (Crowdsourced)', time: '2 hours ago', statusClass: 'text-amber-400' },
+          { name: 'Carrier CNAM Feed (Live)', status: 'CNAM: "WIRELESS CALLER" [Unlisted Enterprise]', reliability: 'CARRIER CNAM FEED', time: 'Live', statusClass: 'text-on-surface-variant' }
+        ],
+        vectors: [
+          { title: 'Robocall Burst Velocity', desc: 'Sudden high-frequency outbound spikes detected over ephemeral 48-hour window.', icon: 'campaign', color: 'text-amber-400' },
+          { title: 'Partial Cryptographic Attestation', desc: 'STIR/SHAKEN Level B: Carrier authenticated subscriber contract, but number is unverified.', icon: 'shield_locked', color: 'text-amber-400' }
+        ]
+      },
+      clean: {
+        number: '+1 (650) 253-0000',
+        carrier: 'Google LLC (Mountain View PBX Direct Carrier Routing)',
+        badgeText: 'NO KNOWN REPORTS — CRYPTOGRAPHIC ATTESTATION VERIFIED',
+        badgeClass: 'bg-tertiary/10 text-tertiary',
+        dotClass: 'bg-tertiary',
+        carrierColor: 'text-tertiary',
+        attestation: 'Level A (Full Attestation — Carrier cryptographically verified caller identity & number rights)',
+        attestationLevel: 'A',
+        firstSeen: '2,400+ days ago',
+        lastReported: 'No incidents recorded',
+        complaints: '0 authenticated complaints',
+        confidence: 'HIGH (Legitimate Enterprise PBX)',
+        gaugeBars: [
+          'bg-tertiary', 'bg-tertiary',
+          'bg-surface-container-highest', 'bg-surface-container-highest', 'bg-surface-container-highest',
+          'bg-surface-container-highest', 'bg-surface-container-highest', 'bg-surface-container-highest', 'bg-surface-container-highest', 'bg-surface-container-highest'
+        ],
+        score: '1.2',
+        scoreLabel: 'LOW RISK TELEPHONY PROFILE',
+        scoreColor: 'text-tertiary',
+        riskActiveIndex: 2,
+        sources: [
+          { name: 'FTC Sentinel Consumer Network', status: 'No Violations or Scam Dossiers Listed', reliability: 'VERIFIED REGULATORY FEED (High)', time: 'Live', statusClass: 'text-tertiary' },
+          { name: 'STIR/SHAKEN Cryptographic Feed', status: 'Attestation Level A (End-to-End Cryptographic Match)', reliability: 'CARRIER CRYPTOGRAPHIC (Authoritative)', time: 'Live', statusClass: 'text-tertiary' },
+          { name: 'ScamShield Peer Telemetry', status: 'Zero Flags Across 1.2M Community Queries', reliability: 'COMMUNITY REPORTED (Crowdsourced)', time: 'Live', statusClass: 'text-tertiary' },
+          { name: 'Carrier CNAM Feed (Live)', status: 'CNAM: "GOOGLE LLC HQ" [Registered Entity Match]', reliability: 'CARRIER CNAM FEED', time: 'Live', statusClass: 'text-tertiary' }
+        ],
+        vectors: [
+          { title: 'Legitimate Enterprise Trunking', desc: 'Cryptographically signed STIR/SHAKEN SIP payload matches verified corporate registrar.', icon: 'verified', color: 'text-tertiary' },
+          { title: 'Zero Caller-ID Anomaly', desc: 'Geographic and E.164 signaling align consistently across multi-tier telecommunication gateways.', icon: 'lock_open_right', color: 'text-tertiary' }
+        ]
+      },
+      unknown: {
+        number: '+1 (907) 555-0143',
+        carrier: 'Matanuska Telecom (Unallocated / Dormant Rate Center)',
+        badgeText: 'UNKNOWN — INSUFFICIENT CARRIER TELEMETRY DATA',
+        badgeClass: 'bg-surface-container-highest text-on-surface-variant',
+        dotClass: 'bg-on-surface-variant',
+        carrierColor: 'text-on-surface-variant',
+        attestation: 'Level UNKNOWN (No STIR/SHAKEN token emitted or trunk unprovisioned)',
+        attestationLevel: '?',
+        firstSeen: 'First observed just now',
+        lastReported: 'N/A',
+        complaints: '0 recorded reports',
+        confidence: 'LOW (Sparse Telemetry Footprint)',
+        gaugeBars: [
+          'bg-surface-container-highest', 'bg-surface-container-highest', 'bg-surface-container-highest',
+          'bg-surface-container-highest', 'bg-surface-container-highest', 'bg-surface-container-highest',
+          'bg-surface-container-highest', 'bg-surface-container-highest', 'bg-surface-container-highest', 'bg-surface-container-highest'
+        ],
+        score: 'N/A',
+        scoreLabel: 'DATA INDETERMINATE',
+        scoreColor: 'text-on-surface-variant',
+        riskActiveIndex: 3,
+        sources: [
+          { name: 'FTC Sentinel Consumer Network', status: 'Insufficient Query Volume', reliability: 'VERIFIED REGULATORY FEED (High)', time: 'Live', statusClass: 'text-on-surface-variant' },
+          { name: 'STIR/SHAKEN Cryptographic Feed', status: 'Unsigned / Legacy Analog Gateway Ingestion', reliability: 'CARRIER CRYPTOGRAPHIC (Authoritative)', time: 'Live', statusClass: 'text-on-surface-variant' },
+          { name: 'ScamShield Peer Telemetry', status: 'First-seen query footprint (Zero reports logged)', reliability: 'COMMUNITY REPORTED (Crowdsourced)', time: 'Live', statusClass: 'text-on-surface-variant' },
+          { name: 'Carrier CNAM Feed (Live)', status: 'CNAM: "UNASSIGNED OR PRIVATE"', reliability: 'CARRIER CNAM FEED', time: 'Live', statusClass: 'text-on-surface-variant' }
+        ],
+        vectors: [
+          { title: 'Sparse Telemetry Warning', desc: 'Newly minted or unrouted line. Exercise caution as lack of history does not confirm legitimacy.', icon: 'help_outline', color: 'text-on-surface-variant' }
+        ]
+      }
+    };
+
+    function switchScenario(key) {
+      window.scamShieldState.activeScenario = key;
+      const loader = document.getElementById('loading-state-panel');
+      const errorPanel = document.getElementById('error-state-panel');
+      const resultPanel = document.getElementById('result-main-panel');
+      
+      // Reset active tabs
+      document.querySelectorAll('.scenario-pill').forEach(el => {
+        el.classList.remove('bg-primary', 'text-on-primary');
+        el.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+      });
+      const activeBtn = document.getElementById(`pill-${key}`);
+      if(activeBtn) {
+        activeBtn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        activeBtn.classList.add('bg-primary', 'text-on-primary');
+      }
+
+      if (key === 'loading') {
+        loader.classList.remove('hidden');
+        errorPanel.classList.add('hidden');
+        resultPanel.classList.add('hidden');
+        return;
+      }
+      if (key === 'error') {
+        loader.classList.add('hidden');
+        errorPanel.classList.remove('hidden');
+        resultPanel.classList.add('hidden');
+        return;
+      }
+
+      loader.classList.add('hidden');
+      errorPanel.classList.add('hidden');
+      resultPanel.classList.remove('hidden');
+
+      const data = scenarios[key];
+      if (!data) return;
+
+      // Update input display
+      document.getElementById('target-phone-input').value = data.number;
+
+      // Update Header Card
+      const badge = document.getElementById('res-badge');
+      badge.className = `inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full font-label-sm text-label-sm uppercase tracking-wider ${data.badgeClass}`;
+      badge.innerHTML = `<span class="w-2 h-2 rounded-full ${data.dotClass}"></span><span>${data.badgeText}</span>`;
+
+      document.getElementById('res-number').textContent = data.number;
+      document.getElementById('res-carrier').textContent = data.carrier;
+      document.getElementById('res-attestation').textContent = data.attestation;
+      document.getElementById('res-attestation-tag').textContent = `GRADE ${data.attestationLevel}`;
+      document.getElementById('res-firstseen').textContent = data.firstSeen;
+      document.getElementById('res-lastseen').textContent = data.lastReported;
+      document.getElementById('res-complaints').textContent = data.complaints;
+      document.getElementById('res-confidence').textContent = data.confidence;
+      
+      // Score & Gauge
+      document.getElementById('res-score').textContent = data.score;
+      document.getElementById('res-score').className = `font-label-lg text-headline-lg font-bold ${data.scoreColor}`;
+      document.getElementById('res-scorelabel').textContent = data.scoreLabel;
+
+      const gaugeContainer = document.getElementById('gauge-bars');
+      gaugeContainer.innerHTML = '';
+      data.gaugeBars.forEach((barClass) => {
+        const bar = document.createElement('div');
+        bar.className = `h-2.5 flex-1 rounded-sm ${barClass} transition-all duration-300`;
+        gaugeContainer.appendChild(bar);
+      });
+
+      // Highlight active category matrix box
+      document.querySelectorAll('.cat-matrix-item').forEach((box, idx) => {
+        if (idx === data.riskActiveIndex) {
+          box.classList.remove('bg-surface-container-low', 'opacity-60');
+          box.classList.add('bg-surface-container-high', 'shadow-md');
+        } else {
+          box.classList.add('bg-surface-container-low', 'opacity-60');
+          box.classList.remove('bg-surface-container-high', 'shadow-md');
+        }
+      });
+
+      // Update Sources
+      const tbody = document.getElementById('sources-tbody');
+      tbody.innerHTML = '';
+      data.sources.forEach(s => {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-surface-container-high/40 transition-colors';
+        tr.innerHTML = `
+          <td class="py-space-sm px-space-md font-title-sm text-title-sm text-on-surface">${s.name}</td>
+          <td class="py-space-sm px-space-md font-label-md text-label-md ${s.statusClass}">${s.status}</td>
+          <td class="py-space-sm px-space-md">
+            <span class="inline-flex items-center gap-space-xs px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-highest text-on-surface-variant">
+              ${s.reliability}
+            </span>
+          </td>
+          <td class="py-space-sm px-space-md font-label-sm text-label-sm text-outline">${s.time}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      // Update Vectors
+      const vectorsList = document.getElementById('vectors-list');
+      vectorsList.innerHTML = '';
+      data.vectors.forEach(v => {
+        const item = document.createElement('div');
+        item.className = 'p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm shadow-sm';
+        item.innerHTML = `
+          <span class="material-symbols-outlined ${v.color} text-[22px] mt-0.5">${v.icon}</span>
+          <div class="flex flex-col min-w-0">
+            <span class="font-title-sm text-title-sm text-on-surface leading-tight">${v.title}</span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">${v.desc}</span>
+          </div>
+        `;
+        vectorsList.appendChild(item);
+      });
+    }
+
+    function triggerSearch() {
+      switchScenario('loading');
+      setTimeout(() => {
+        switchScenario('high_risk');
+      }, 700);
+    }
+
+    function clearPhoneInput() {
+      const input = document.getElementById('target-phone-input');
+      input.value = '';
+      input.focus();
+    }
+
+    function toggleReportModal() {
+      const modal = document.getElementById('report-modal');
+      modal.classList.toggle('hidden');
+    }
+
+    function purgeHistory() {
+      const histBody = document.getElementById('history-tbody');
+      histBody.innerHTML = `
+        <tr>
+          <td colspan="4" class="py-space-lg text-center font-label-md text-label-md text-outline">
+            Lookup memory purged. 0 session records retained. Zero-Knowledge guarantee intact.
+          </td>
+        </tr>
+      `;
+      const btn = document.getElementById('purge-btn');
+      btn.textContent = 'PURGED';
+      btn.disabled = true;
+      btn.classList.add('opacity-40');
+    }
+  </script>
+<!-- PROTOCOL TELEMETRY BAR & SUB-HEADER -->
+<section class="w-full px-gutter pt-space-lg pb-space-sm flex flex-col gap-space-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">
+<span>ScamShield Console</span>
+<span>/</span>
+<span>Telephony Intelligence</span>
+<span>/</span>
+<span class="text-primary">Check Phone Number</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-0.5">Telephony Reputation Sentinel</h1>
+</div>
+<!-- Protocol Endpoint & Telemetry Badges -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<div class="px-space-sm py-1 rounded bg-surface-container-lowest font-label-sm text-label-sm text-outline flex items-center gap-space-xs shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>POST /api/v1/numbers/check</span>
+<span class="text-outline-variant">•</span>
+<span class="text-primary">TLS 1.3</span>
+<span class="text-outline-variant">•</span>
+<span class="text-tertiary">Zero-Log Cache</span>
+</div>
+<div class="px-space-sm py-1 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface-variant flex items-center gap-space-xs shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>STIR/SHAKEN FEED: LIVE</span>
+</div>
+<div class="px-space-sm py-1 rounded bg-surface-container-low font-label-sm text-label-sm text-primary flex items-center gap-space-xs shadow-sm">
+<span>LATENCY 18ms</span>
+</div>
+</div>
+</div>
+<!-- State Emulator Switcher Toolbar (Interactive Verification) -->
+<div class="w-full p-space-xs rounded-xl bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-xs shadow-sm">
+<div class="flex items-center gap-space-xs pl-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">science</span>
+<span class="font-label-sm text-label-sm text-outline uppercase">Emulator State:</span>
+</div>
+<div class="flex flex-wrap items-center gap-1">
+<button class="scenario-pill px-space-sm py-1 rounded font-label-sm text-label-sm bg-primary text-on-primary transition-all" id="pill-high_risk" onclick="switchScenario('high_risk')">
+          HIGH RISK (Spoofed Treasury)
+        </button>
+<button class="scenario-pill px-space-sm py-1 rounded font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" id="pill-caution" onclick="switchScenario('caution')">
+          CAUTION (VoIP Unverified)
+        </button>
+<button class="scenario-pill px-space-sm py-1 rounded font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" id="pill-clean" onclick="switchScenario('clean')">
+          NO KNOWN REPORTS (Clean)
+        </button>
+<button class="scenario-pill px-space-sm py-1 rounded font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" id="pill-unknown" onclick="switchScenario('unknown')">
+          UNKNOWN (Insuff. Data)
+        </button>
+<button class="scenario-pill px-space-sm py-1 rounded font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" id="pill-loading" onclick="switchScenario('loading')">
+          Loading State
+        </button>
+<button class="scenario-pill px-space-sm py-1 rounded font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-all" id="pill-error" onclick="switchScenario('error')">
+          Lookup Error
+        </button>
+</div>
+</div>
+</section>
+<!-- MAIN VIEWPORT CONTAINER -->
+<div class="w-full px-gutter py-space-sm flex flex-col gap-space-lg">
+<!-- TOP CRITICAL SPOOFING & ZERO-TRUST SECURITY ADVISORY CARD -->
+<div class="w-full rounded-xl bg-surface-container-low p-space-md shadow-lg relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-44 h-44 rounded-full bg-error-container/10 blur-3xl pointer-events-none"></div>
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-error-container/20 flex items-center justify-center shrink-0 text-error">
+<span class="material-symbols-outlined text-[24px]">gpp_maybe</span>
+</div>
+<div class="flex flex-col gap-space-xs flex-1">
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<span class="font-title-sm text-title-sm text-error uppercase tracking-wider flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+              Zero-Trust Telephony Principle: Caller ID Is Not Proof of Identity
+            </span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container-highest text-error font-medium">CRITICAL SAFETY DIRECTIVE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Due to legacy SS7 carrier architecture vulnerabilities, incoming caller-ID can be easily falsified (spoofed) by malicious actors using low-cost SIP VoIP trunking. Even if an inbound call displays as your verified commercial bank, local police precinct, or tax agency, <strong class="text-error font-semibold">NEVER rely on caller ID alone</strong>. Always terminate the session immediately and dial the organization back using an independently verified directory number or the phone number embossed on your payment card.
+          </p>
+<div class="mt-space-xs p-space-sm rounded-lg bg-surface-container-highest/60 flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-semibold text-primary">Absence of Reports ≠ Verified Safety:</span> Newly registered SIM cards, ephemeral VoIP routes, and spear-phishing campaigns execute attacks hours before complaints register in federal registries.
+            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- PRIMARY QUERY CONSOLE -->
+<div class="w-full rounded-xl bg-surface-container p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Telephony Reputation &amp; STIR/SHAKEN Attestation Query</h2>
+<p class="font-body-sm text-body-sm text-outline">
+            Cryptographic cross-referencing across FTC Sentinel, NANPA allocations, FCC Robocall Database, and 28 carrier registries.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>EAL6+ ENCLAVE ATTESTED</span>
+</div>
+</div>
+<!-- Main Input Bar Form -->
+<div class="flex flex-col md:flex-row items-stretch gap-space-sm">
+<!-- Country Selector -->
+<div class="relative w-full md:w-52 shrink-0">
+<select class="w-full h-14 bg-surface-container-lowest text-on-surface font-label-md text-label-md px-space-md rounded-xl appearance-none cursor-pointer focus:outline-none shadow-sm" id="country-code-select">
+<option value="+1">+1 (US / Canada)</option>
+<option value="+44">+44 (United Kingdom)</option>
+<option value="+61">+61 (Australia)</option>
+<option value="+91">+91 (India)</option>
+<option value="+49">+49 (Germany)</option>
+<option value="+33">+33 (France)</option>
+</select>
+<div class="pointer-events-none absolute right-space-md top-1/2 -translate-y-1/2 text-outline">
+<span class="material-symbols-outlined text-[20px]">arrow_drop_down</span>
+</div>
+</div>
+<!-- Phone Number Input with Clear and Validation Indicator -->
+<div class="relative flex-1 flex items-center bg-surface-container-lowest rounded-xl shadow-sm px-space-md">
+<span class="material-symbols-outlined text-outline text-[20px] mr-space-sm">dialpad</span>
+<input class="w-full bg-transparent font-label-lg text-title-md text-on-surface tracking-wide focus:outline-none placeholder:text-outline" id="target-phone-input" placeholder="+1 (555) 000-0000" type="text" value="+1 (800) 419-0284"/>
+<div class="flex items-center gap-space-xs ml-space-sm">
+<button class="w-7 h-7 rounded-lg flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container-high transition-all" onclick="clearPhoneInput()" title="Clear number">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+<div class="flex items-center gap-1 px-2 py-1 rounded bg-surface-container font-label-sm text-label-sm text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>E.164 OK</span>
+</div>
+</div>
+</div>
+<!-- Check Number CTA Button -->
+<button class="h-14 px-space-lg rounded-xl bg-gradient-to-r from-secondary-container to-primary-container text-on-primary font-title-sm text-title-sm flex items-center justify-center gap-space-sm shadow-md hover:opacity-95 transition-all shrink-0" onclick="triggerSearch()">
+<span class="material-symbols-outlined text-[22px]">radar</span>
+<span>Scan Number</span>
+</button>
+</div>
+<!-- Quick Scenario Preset Pills -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline mr-1 uppercase">Sample Vectors:</span>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-low hover:bg-surface-container-high text-error font-label-sm text-label-sm transition-all flex items-center gap-1" onclick="switchScenario('high_risk')">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+          +1 (800) 419-0284 (High Risk / Spoofed Treasury)
+        </button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-low hover:bg-surface-container-high text-amber-400 font-label-sm text-label-sm transition-all flex items-center gap-1" onclick="switchScenario('caution')">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+          +1 (415) 890-4412 (Caution / VoIP Unallocated)
+        </button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-low hover:bg-surface-container-high text-tertiary font-label-sm text-label-sm transition-all flex items-center gap-1" onclick="switchScenario('clean')">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+          +1 (650) 253-0000 (No Known Reports)
+        </button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm transition-all flex items-center gap-1" onclick="switchScenario('unknown')">
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface-variant"></span>
+          +1 (907) 555-0143 (Unknown Data)
+        </button>
+</div>
+<!-- Privacy & Ephemeral Lookup Safeguards Bar -->
+<div class="pt-space-sm mt-space-xs flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest/80 p-space-md rounded-xl">
+<div class="flex flex-wrap items-center gap-space-lg">
+<label class="flex items-center gap-space-sm cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded bg-surface-container text-primary-container focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-title-sm text-title-sm text-on-surface">Ephemeral Session Query</span>
+<span class="font-label-sm text-label-sm text-tertiary px-1.5 py-0.5 rounded bg-tertiary/10">PURGED ON EXIT</span>
+</label>
+<label class="flex items-center gap-space-sm cursor-pointer select-none">
+<input class="w-4 h-4 rounded bg-surface-container text-primary-container focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant">Bypass Local Cache (Cryptographic Direct Pull)</span>
+</label>
+</div>
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">security</span>
+<span>k-anonymity SHA-256 routing enforced</span>
+</div>
+</div>
+</div>
+<!-- REPUTATION RESULT REGION -->
+<!-- STATE 1: LOADING STATE PANEL -->
+<div class="hidden w-full p-space-xl rounded-xl bg-surface-container flex flex-col items-center justify-center gap-space-md shadow-xl text-center" id="loading-state-panel">
+<div class="w-12 h-12 rounded-full border-4 border-primary-container/20 border-t-primary-container animate-spin"></div>
+<div class="flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">Resolving Telephony Registry &amp; Attestation Graph...</span>
+<span class="font-label-sm text-label-sm text-outline">Querying STIR/SHAKEN PA token registries, CNAM directories, and carrier switches</span>
+</div>
+</div>
+<!-- STATE 2: LOOKUP ERROR PANEL -->
+<div class="hidden w-full p-space-lg rounded-xl bg-error-container/20 shadow-xl flex items-start gap-space-md" id="error-state-panel">
+<div class="w-10 h-10 rounded-xl bg-error/20 flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-[24px]">error</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-title-sm text-title-sm text-error uppercase">Registry Connection Timeout / Rate Limit Triggered</span>
+<p class="font-body-md text-body-md text-on-surface">
+          The upstream NANPA carrier switch did not return an attestation block within the 1,500ms safety SLA window. Your query was purged from RAM to preserve zero-log integrity.
+        </p>
+<button class="mt-space-xs px-space-md py-1.5 rounded-lg bg-surface-container-high text-on-surface font-title-sm text-title-sm w-fit hover:bg-surface-container transition-all" onclick="switchScenario('high_risk')">
+          Retry Query with Secondary Gateway
+        </button>
+</div>
+</div>
+<!-- STATE 3: FULL RESULTS MAIN PANEL -->
+<div class="w-full flex flex-col gap-space-lg" id="result-main-panel">
+<!-- A. Reputation Summary Header Card -->
+<div class="w-full rounded-xl bg-surface-container p-space-lg shadow-xl flex flex-col gap-space-md">
+<!-- Top Status Banner Badge -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm pb-space-sm">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full font-label-sm text-label-sm uppercase tracking-wider bg-error-container/30 text-error" id="res-badge">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span>HIGH RISK — ACTIVE IMPERSONATION &amp; SPOOFING DETECTED</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline">CONFIDENCE RATING:</span>
+<span class="font-label-sm text-label-sm text-on-surface bg-surface-container-high px-space-xs py-0.5 rounded" id="res-confidence">
+              HIGH (Multi-Source Corroborated)
+            </span>
+</div>
+</div>
+<!-- Phone & Primary Metadata Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-8 flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-baseline gap-space-md">
+<span class="font-label-lg text-headline-xl text-on-surface tracking-tight" id="res-number">
+                +1 (800) 419-0284
+              </span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest font-label-sm text-label-sm text-secondary" id="res-attestation-tag">
+                GRADE C
+              </span>
+</div>
+<div class="flex items-center gap-space-xs font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-outline">hub</span>
+<span class="font-medium text-on-surface" id="res-carrier">Twilio / Bandwidth.com VoIP Gateway (Virtual Non-Fixed)</span>
+</div>
+<div class="mt-space-xs p-space-sm rounded-lg bg-surface-container-lowest flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px] mt-0.5">fingerprint</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">STIR/SHAKEN Protocol Attestation</span>
+<span class="font-body-sm text-body-sm text-on-surface" id="res-attestation">
+                  Level C (Gateway Attestation — Originating caller identity NOT verified by originating carrier)
+                </span>
+</div>
+</div>
+</div>
+<!-- Gauge and Numeric Score Box -->
+<div class="lg:col-span-4 p-space-md rounded-xl bg-surface-container-lowest flex flex-col justify-between gap-space-sm shadow-inner">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">Scam Threat Index</span>
+<span class="font-label-sm text-label-sm text-error uppercase font-semibold" id="res-scorelabel">CRITICAL THREAT VECTOR</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-1">
+<span class="font-label-lg text-headline-lg font-bold text-error" id="res-score">9.4</span>
+<span class="font-label-md text-label-md text-outline">/ 10.0</span>
+</div>
+<!-- Segmented Gauge Track -->
+<div class="w-full flex items-center gap-1" id="gauge-bars">
+<div class="h-2.5 flex-1 rounded-sm bg-tertiary"></div>
+<div class="h-2.5 flex-1 rounded-sm bg-tertiary"></div>
+<div class="h-2.5 flex-1 rounded-sm bg-tertiary"></div>
+<div class="h-2.5 flex-1 rounded-sm bg-amber-400"></div>
+<div class="h-2.5 flex-1 rounded-sm bg-amber-400"></div>
+<div class="h-2.5 flex-1 rounded-sm bg-amber-400"></div>
+<div class="h-2.5 flex-1 rounded-sm bg-error"></div>
+<div class="h-2.5 flex-1 rounded-sm bg-error"></div>
+<div class="h-2.5 flex-1 rounded-sm bg-error"></div>
+<div class="h-2.5 flex-1 rounded-sm bg-error"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline pt-1">
+<span>0 (BENIGN)</span>
+<span>5 (SUSPICIOUS)</span>
+<span>10 (SEVERE)</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Metadata Ticker -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm pt-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">First Activity Observed</span>
+<span class="font-title-sm text-title-sm text-on-surface mt-0.5" id="res-firstseen">14 days ago</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Most Recent Incident</span>
+<span class="font-title-sm text-title-sm text-on-surface mt-0.5" id="res-lastseen">11 minutes ago</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Corroborated Reports</span>
+<span class="font-title-sm text-title-sm text-on-surface mt-0.5" id="res-complaints">342 authenticated</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">E.164 Regulatory Line Type</span>
+<span class="font-title-sm text-title-sm text-on-surface mt-0.5">Toll-Free Virtual VoIP</span>
+</div>
+</div>
+</div>
+<!-- B. Category Definition & Disclaimer Matrix -->
+<div class="w-full flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Standardized Threat Classification Framework</span>
+<span class="font-label-sm text-label-sm text-primary">SCAMSHIELD TELEPHONY v2.4 SPEC</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-sm">
+<!-- Box 1: HIGH RISK -->
+<div class="cat-matrix-item p-space-md rounded-xl bg-surface-container-high shadow-md flex flex-col gap-space-xs transition-all">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-error font-bold flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+                HIGH RISK
+              </span>
+<span class="font-label-sm text-label-sm text-error font-mono">CRITICAL</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Active fraud patterns, verified coercive impersonation, or high volume of corroborating forensic reports across federal feeds.
+            </p>
+</div>
+<!-- Box 2: CAUTION -->
+<div class="cat-matrix-item p-space-md rounded-xl bg-surface-container-low opacity-60 flex flex-col gap-space-xs transition-all">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-amber-400 font-bold flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                CAUTION
+              </span>
+<span class="font-label-sm text-label-sm text-amber-400 font-mono">SUSPICIOUS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              VoIP origin with unverified caller signature, suspicious burst call velocity, or low-sample ambiguous reports.
+            </p>
+</div>
+<!-- Box 3: NO KNOWN REPORTS -->
+<div class="cat-matrix-item p-space-md rounded-xl bg-surface-container-low opacity-60 flex flex-col gap-space-xs transition-all">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-tertiary font-bold flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                NO KNOWN REPORTS
+              </span>
+<span class="font-label-sm text-label-sm text-tertiary font-mono">CLEAN/RECENT</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              No incident logs in monitored registries. <strong class="text-on-surface">NOTE:</strong> Does not certify total safety; burner lines lack immediate history.
+            </p>
+</div>
+<!-- Box 4: UNKNOWN -->
+<div class="cat-matrix-item p-space-md rounded-xl bg-surface-container-low opacity-60 flex flex-col gap-space-xs transition-all">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface-variant font-bold flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-on-surface-variant"></span>
+                UNKNOWN
+              </span>
+<span class="font-label-sm text-label-sm text-outline font-mono">INDETERMINATE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Insufficient carrier telemetry, unallocated range, or disconnected endpoint lacking baseline route telemetry.
+            </p>
+</div>
+</div>
+</div>
+<!-- C & D. TWO-COLUMN SPLIT: FORENSIC VECTORS & ATTRIBUTION SOURCES -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- D. Granular Threat Indicators & Forensic Insights (5 cols) -->
+<div class="lg:col-span-5 rounded-xl bg-surface-container p-space-md shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">troubleshoot</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Forensic Threat Indicators</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">HEURISTIC AI EVAL</span>
+</div>
+<!-- Dynamic List of Threat Vectors -->
+<div class="flex flex-col gap-space-sm" id="vectors-list">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm shadow-sm">
+<span class="material-symbols-outlined text-error text-[22px] mt-0.5">warning</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface leading-tight">Caller-ID / Entity Name Mismatch</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  CNAM claims US Treasury, but route origin points to virtual disposable VoIP tenant.
+                </span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm shadow-sm">
+<span class="material-symbols-outlined text-error text-[22px] mt-0.5">crisis_alert</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface leading-tight">Reported Lure: Criminal Coercion</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  IRS warrant intimidation demanding Bitcoin ATM purchase or immediate Wire transmittal.
+                </span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm shadow-sm">
+<span class="material-symbols-outlined text-error text-[22px] mt-0.5">fingerprint_off</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface leading-tight">STIR/SHAKEN Signature Failure</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Gateway lack of subscriber binding. Attestation grade C indicates spoof vulnerability.
+                </span>
+</div>
+</div>
+</div>
+<!-- Forensic Action Triggers -->
+<div class="pt-space-xs flex flex-col gap-space-xs">
+<button class="w-full py-space-sm px-space-md rounded-lg bg-error-container/20 text-error font-title-sm text-title-sm flex items-center justify-center gap-space-sm hover:bg-error-container/30 transition-all shadow-sm" onclick="toggleReportModal()">
+<span class="material-symbols-outlined text-[18px]">report</span>
+<span>Report Suspected Scam (Submit Evidence)</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="py-space-xs px-space-sm rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-space-xs hover:bg-surface-container-highest transition-all" onclick="alert('Phone number routed to Sentinel Call Quarantine Engine.')">
+<span class="material-symbols-outlined text-[16px] text-tertiary">block</span>
+<span>Add to Blocklist</span>
+</button>
+<button class="py-space-xs px-space-sm rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-space-xs hover:bg-surface-container-highest transition-all" onclick="alert('Exporting signed SHA-256 IC3 dossier payload to PDF.')">
+<span class="material-symbols-outlined text-[16px] text-primary">download</span>
+<span>Export Dossier (IC3)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- C. Corroborated Source Telemetry & Attribution Table (7 cols) -->
+<div class="lg:col-span-7 rounded-xl bg-surface-container p-space-md shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">database</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Corroborated Telephony Registries</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              ALL FEEDS SYNCED
+            </span>
+</div>
+<!-- Table Container -->
+<div class="w-full overflow-x-auto rounded-lg bg-surface-container-lowest shadow-inner">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-high/60 text-outline font-label-sm text-label-sm uppercase">
+<th class="py-space-sm px-space-md font-semibold">Feed / Registry</th>
+<th class="py-space-sm px-space-md font-semibold">Status / Indicator</th>
+<th class="py-space-sm px-space-md font-semibold">Reliability</th>
+<th class="py-space-sm px-space-md font-semibold">Latency</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest/30" id="sources-tbody">
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-sm px-space-md font-title-sm text-title-sm text-on-surface">FTC Sentinel Consumer Network</td>
+<td class="py-space-sm px-space-md font-label-md text-label-md text-error">142 Impersonation Complaints</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-space-xs px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-highest text-on-surface-variant">
+                      VERIFIED REGULATORY FEED (High)
+                    </span>
+</td>
+<td class="py-space-sm px-space-md font-label-sm text-label-sm text-outline">28 mins ago</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-sm px-space-md font-title-sm text-title-sm text-on-surface">STIR/SHAKEN Cryptographic Feed</td>
+<td class="py-space-sm px-space-md font-label-md text-label-md text-error">Attestation Level C (Unauthenticated)</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-space-xs px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-highest text-on-surface-variant">
+                      CARRIER CRYPTOGRAPHIC (Authoritative)
+                    </span>
+</td>
+<td class="py-space-sm px-space-md font-label-sm text-label-sm text-outline">Live</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-sm px-space-md font-title-sm text-title-sm text-on-surface">ScamShield Peer Telemetry</td>
+<td class="py-space-sm px-space-md font-label-md text-label-md text-error">89 Peer Reports (IRS Tax Lien / AnyDesk)</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-space-xs px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-highest text-on-surface-variant">
+                      COMMUNITY REPORTED (Crowdsourced)
+                    </span>
+</td>
+<td class="py-space-sm px-space-md font-label-sm text-label-sm text-outline">14 mins ago</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-sm px-space-md font-title-sm text-title-sm text-on-surface">Carrier CNAM Feed (Live)</td>
+<td class="py-space-sm px-space-md font-label-md text-label-md text-error">CNAM: "US TREASURY DEPT" [MISMATCH]</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-space-xs px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-highest text-on-surface-variant">
+                      CARRIER CNAM FEED
+                    </span>
+</td>
+<td class="py-space-sm px-space-md font-label-sm text-label-sm text-outline">Live</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/60 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-outline">
+              Telemetry hashes generated via NIST FIPS 180-4 standard.
+            </span>
+<span class="font-label-sm text-label-sm text-primary cursor-pointer hover:underline">
+              Inspect Raw JSON Ledger
+            </span>
+</div>
+</div>
+</div>
+</div>
+<!-- PRIVACY-PRESERVING RECENT QUERY HISTORY -->
+<div class="w-full rounded-xl bg-surface-container p-space-md shadow-xl flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline text-[20px]">history_toggle_off</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Ephemeral Query History</span>
+<span class="font-body-sm text-body-sm text-outline">Client-side session memory with auto-masking (Purged upon browser restart)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+            ZERO-LOG ENFORCED
+          </span>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-error hover:bg-surface-container-highest font-label-sm text-label-sm transition-all flex items-center gap-1" id="purge-btn" onclick="purgeHistory()">
+<span class="material-symbols-outlined text-[16px]">delete_sweep</span>
+<span>Purge Memory</span>
+</button>
+</div>
+</div>
+<!-- Anonymized History List -->
+<div class="w-full overflow-x-auto rounded-lg bg-surface-container-lowest shadow-inner">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-high/40 text-outline font-label-sm text-label-sm uppercase">
+<th class="py-space-sm px-space-md font-semibold">Masked Number</th>
+<th class="py-space-sm px-space-md font-semibold">Recorded Result</th>
+<th class="py-space-sm px-space-md font-semibold">Attestation</th>
+<th class="py-space-sm px-space-md font-semibold">Time of Query</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest/20 font-label-md text-label-md" id="history-tbody">
+<tr class="hover:bg-surface-container-high/30 transition-colors">
+<td class="py-space-sm px-space-md text-on-surface">+1 (800) ***-0284</td>
+<td class="py-space-sm px-space-md text-error">CRITICAL (Active Coercion)</td>
+<td class="py-space-sm px-space-md text-outline">Level C (Unauthenticated)</td>
+<td class="py-space-sm px-space-md text-outline">Just now</td>
+</tr>
+<tr class="hover:bg-surface-container-high/30 transition-colors">
+<td class="py-space-sm px-space-md text-on-surface">+1 (415) ***-4412</td>
+<td class="py-space-sm px-space-md text-amber-400">CAUTION (Robocall Spike)</td>
+<td class="py-space-sm px-space-md text-outline">Level B (Partial)</td>
+<td class="py-space-sm px-space-md text-outline">18 mins ago</td>
+</tr>
+<tr class="hover:bg-surface-container-high/30 transition-colors">
+<td class="py-space-sm px-space-md text-on-surface">+44 20 **** 4910</td>
+<td class="py-space-sm px-space-md text-tertiary">CLEAN (Verified Carrier)</td>
+<td class="py-space-sm px-space-md text-outline">Level A (Full Trust)</td>
+<td class="py-space-sm px-space-md text-outline">1 hr ago</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- EVIDENCE SUBMISSION MODAL (Report Scam) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-space-md bg-black/75 backdrop-blur-md" id="report-modal">
+<div class="w-full max-w-xl rounded-2xl bg-surface-container-high p-space-lg shadow-2xl flex flex-col gap-space-md border border-white/5">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-error-container/30 text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-bold">Report Number to ScamShield Sentinel</span>
+<span class="font-label-sm text-label-sm text-outline">Distributed Fraud Consortium Intake</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container-highest transition-all" onclick="toggleReportModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-outline uppercase">Target Number</label>
+<input class="w-full h-11 bg-surface-container-lowest px-space-md rounded-lg font-label-md text-label-md text-on-surface focus:outline-none" readonly="" type="text" value="+1 (800) 419-0284"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-outline uppercase">Primary Threat Vector</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs">
+<button class="p-space-sm rounded-lg bg-surface-container-lowest text-left flex flex-col gap-1 transition-all" onclick="this.classList.toggle('ring-2'); this.classList.toggle('ring-error');">
+<span class="font-title-sm text-title-sm text-on-surface">Impersonation</span>
+<span class="font-label-sm text-label-sm text-outline">IRS, Bank, Police</span>
+</button>
+<button class="p-space-sm rounded-lg bg-surface-container-lowest text-left flex flex-col gap-1 transition-all" onclick="this.classList.toggle('ring-2'); this.classList.toggle('ring-error');">
+<span class="font-title-sm text-title-sm text-on-surface">Robocall / Spam</span>
+<span class="font-label-sm text-label-sm text-outline">Pre-recorded voice</span>
+</button>
+<button class="p-space-sm rounded-lg bg-surface-container-lowest text-left flex flex-col gap-1 transition-all" onclick="this.classList.toggle('ring-2'); this.classList.toggle('ring-error');">
+<span class="font-title-sm text-title-sm text-on-surface">Spoofed ID</span>
+<span class="font-label-sm text-label-sm text-outline">Neighborhood spoof</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-outline uppercase">Forensic Notes / Script Transcript</label>
+<textarea class="w-full bg-surface-container-lowest p-space-md rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none placeholder:text-outline" placeholder="Describe the caller demand, payment mechanisms requested (e.g. Wire, Gift Cards), or software asked to install (AnyDesk, TeamViewer)..." rows="3"></textarea>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Submission will be signed with enclave key #418</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-highest text-on-surface-variant font-title-sm text-title-sm hover:text-on-surface transition-all" onclick="toggleReportModal()">
+            Cancel
+          </button>
+<button class="px-space-md py-2 rounded-lg bg-error text-on-error font-title-sm text-title-sm hover:opacity-90 transition-all flex items-center gap-1" onclick="alert('Evidence packet submitted to FTC Sentinel consortium.'); toggleReportModal();">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Broadcast Report</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest py-space-md mt-space-xl shadow-[0_-1px_4px_rgba(0,0,0,0.15)]"><div class="w-full px-gutter flex flex-col md:flex-row items-center justify-between gap-space-sm"><div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary text-[14px]">verified_user</span><span>SOC2 TYPE II CERTIFIED</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[14px]">lock</span><span>256-BIT ENCLAVE TLS</span></div><span>ZERO-KNOWLEDGE CIPHERTEXT MODE ACTIVE</span></div><div class="font-label-sm text-label-sm text-outline">© 2025 ScamShield AI Threat Systems. All telemetry confidential.</div></div></footer></div></body></html>
